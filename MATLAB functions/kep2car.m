@@ -1,8 +1,8 @@
-function [rr, vv] = par2car(a, e, i, OM, om, th, unit, mu)
+function [rr, vv] = kep2car(a, e, i, OM, om, th, mu)
 
 % Trasformation from Keplerian parameters to cartesian coordinates
 % 
-% [rr, vv] = par2car(a, e, i, OM, om, th, unit, mu)
+% [rr, vv] = kep2car(a, e, i, OM, om, th, mu)
 % 
 % -----------------------------------------------------------------------------------
 % Input arguments:
@@ -12,7 +12,6 @@ function [rr, vv] = par2car(a, e, i, OM, om, th, unit, mu)
 % OM            [1x1]       RAAN (Right Ascension of the Ascending Node)    [rad/deg]
 % om            [1x1]       pericenter anomaly                              [rad/deg]
 % th            [1x1]       true anomaly                                    [rad/deg]
-% unit          [string]    unit of measure of angles ("rad" or "deg")      [-]
 % mu            [1x1]       gravitational parameter                         [km^3/s^2]
 % 
 % -----------------------------------------------------------------------------------
@@ -23,20 +22,8 @@ function [rr, vv] = par2car(a, e, i, OM, om, th, unit, mu)
 % -----------------------------------------------------------------------------------
 
 % If mu is not assigned, the default value is set to Earth
-switch nargin
-    case 6
-        unit = "rad";
-        mu = 3.986 * 10^5;
-    case 7
-        mu = 3.986 * 10^5;
-end
-
-% If angles are in degrees, converts in radians
-if unit == "deg"
-    i = deg2rad(i);
-    OM = deg2rad(OM);
-    om = deg2rad(om);
-    th = deg2rad(th);
+if nargin == 6
+    mu = astroConstants(13);
 end
 
 % -------------------------------------------------------------

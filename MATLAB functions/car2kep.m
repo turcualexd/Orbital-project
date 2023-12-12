@@ -1,14 +1,13 @@
-function [a, e, i, OM, om, th] = car2par(rr, vv, unit, mu)
+function [a, e, i, OM, om, th] = car2kep(rr, vv, mu)
 
 % Trasformation from cartesian coordinates to Keplerian parameters
 % 
-% [a, e, i, OM, om, th] = car2par(rr, vv, unit, mu)
+% [a, e, i, OM, om, th] = car2kep(rr, vv, mu)
 % 
 % -----------------------------------------------------------------------------------
 % Input arguments:
 % rr            [1x1]       position vector                                 [km]
 % vv            [1x1]       velocity vector                                 [km/s]
-% unit          [string]    unit of measure of angles ("rad" or "deg")      [-]
 % mu            [1x1]       gravitational parameter                         [km^3/s^2]
 % 
 % -----------------------------------------------------------------------------------
@@ -23,12 +22,8 @@ function [a, e, i, OM, om, th] = car2par(rr, vv, unit, mu)
 % -----------------------------------------------------------------------------------
 
 % If mu is not assigned, the default value is set to Earth
-switch nargin
-    case 2
-        unit = "rad";
-        mu = 3.986 * 10^5;
-    case 3
-        mu = 3.986 * 10^5;
+if nargin == 2
+    mu = astroConstants(13);
 end
 
 % -------------------------------------------------------------
@@ -73,14 +68,4 @@ vr = dot(vv, rr) / r;
 th = acos( dot(rr, ee) / (r*e) );
 if vr < 0 
     th = 2*pi - th;
-end
-
-% -------------------------------------------------------------
-
-% If output angles have to be in degrees, does the conversion
-if unit == "deg"
-    i = rad2deg(i);
-    OM = rad2deg(OM);
-    om = rad2deg(om);
-    th = rad2deg(th);
 end
