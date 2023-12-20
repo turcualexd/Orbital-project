@@ -3,14 +3,14 @@ clear; close all; clc;
 % Create cost plot for the 1st DV on 1st lambert arc (Mars - Earth) and
 % cost plot for last DV on 2nd lambert arc (Earth - Asteroid65) 
 
-earl_dep_date = [2033 04 01 00 00 00];
-late_arr_date = [2067 09 28 00 00 00];
+earl_dep_date = [2028 01 01 00 00 00];
+late_arr_date = [2041 01 01 00 00 00];
 
 earl_dep_mjd2000 = date2mjd2000(earl_dep_date);
 late_arr_mjd2000 = date2mjd2000(late_arr_date);
 
 
-num             = 1500; %number of elements of array of mjd2000 
+num             = 500; %number of elements of array of mjd2000 
 
 array_mjd2000 = linspace(earl_dep_mjd2000, late_arr_mjd2000, num);
 
@@ -30,7 +30,6 @@ for i = 1:num
     [dV_2(j,i), ~, ~] = cost_lambert_2(earl_dep_date, late_arr_date, 3, 65 , 0);
     end
 
-
 end
 %%
 
@@ -42,6 +41,7 @@ xlabel('Departure MJD200'); ylabel('Arrival MJD200')
 colorbar
 axis equal;
 grid on;
+surf(X,Y,dV_1,'LineStyle','none')
 
 figure;
 [X,Y] = meshgrid(array_mjd2000, array_mjd2000);
@@ -51,6 +51,8 @@ xlabel('Departure MJD200'); ylabel('Arrival MJD200')
 colorbar
 axis equal;
 grid on;
+figure
+surf(X,Y,dV_2,'LineStyle','none')
 
 %%
 
