@@ -41,6 +41,7 @@ xlabel('Departure MJD200'); ylabel('Arrival MJD200')
 colorbar
 axis equal;
 grid on;
+figure
 surf(X,Y,dV_1,'LineStyle','none')
 
 figure;
