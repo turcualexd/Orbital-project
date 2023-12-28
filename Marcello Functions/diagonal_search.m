@@ -14,7 +14,7 @@ for i = 1 : length(range)
 
                 [dv2, V_p, ~] = cost_lambert_2(range(j), range(k), 3, 65, 0 );
 
-                dv3 = norm(V_m - V_p);
+                [dv3, rp] = cost_gravity_assist(range(j), 3, V_m, V_p);
 
                 dvtot = dv1 + dv2 + dv3;
 

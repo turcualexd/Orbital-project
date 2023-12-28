@@ -10,7 +10,7 @@ TOF2 = x(3);
 
 [dv2, V_p, ~] = cost_lambert_2(dep + TOF1, dep + TOF1 + TOF2, 3, 65, 0 );
 
-dv3 = norm(V_m - V_p);
+[dv3, ~] = cost_gravity_assist(dep + TOF1, 3, V_m, V_p);
 
 dv = dv1 + dv2 + dv3;
 

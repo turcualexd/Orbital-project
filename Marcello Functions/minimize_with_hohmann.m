@@ -20,7 +20,7 @@ TOF_hohmann = pi * sqrt(at^3/ksun);
 
 TOF_hohmann = TOF_hohmann / 86400; %hohmann tof in days
 
-fb_date = 1.83*1e4; %mjd2000
+fb_date = 1.25*1e4; %mjd2000
 
 %dep_vec = linspace(earl_dep_mjd2000, late_dep_mjd2000);
 
@@ -30,7 +30,7 @@ dep_vec = fb_date - TOF1_vec;
 
 TOF2_vec = linspace(300, 900, (900-300)/100);
 
-[dv_min, dep, fb, arr] = minimize_cost(dep_vec, TOF1_vec,TOF2_vec);
+[dv_min, dv1_min, dv2_min, dv3_min,  dep, fb, arr, perc] = minimize_cost(dep_vec, TOF1_vec,TOF2_vec);
 
 dttot = (arr - dep)/365;
 
@@ -59,7 +59,7 @@ TOF1 = (fb - dep)*24*3600;
 
 TOF2 = (arr - fb)*24*3600;
 
-[A1,P1,E1,ERROR,VI,VF1,TPAR,THETA1] = lambertMR(R1,R2,TOF1,mu_s,orbitType,0);
+[A1,P1,E1,~,VI,VF1,~,THETA1] = lambertMR(R1,R2,TOF1,mu_s,orbitType,0);
 
 [~,~,I1,O1,W1,theta1] = car2kep(R1,VI', mu_s);
 
@@ -122,7 +122,7 @@ dir_peri = rodrigues(D, u, pi/2 - beta_minus);
 
 r0 = dir_peri * rp;
 
-v_dir = cross(u, dir_peri);
+v_dir = cross(u, dir_peri)/ norm(cross(u, dir_peri));
 
 v0_bk = - vp1 * v_dir;
 
