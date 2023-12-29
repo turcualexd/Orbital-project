@@ -324,7 +324,7 @@ data = data(:,:);
 mean_time_interval = mean(data(2:end,1)-data(1:end-1,1));
 t0_tle = data(1,1);
 tf_tle = data(end,1);
-tspan_tle = linspace(t0_tle,tf_tle,50000); % in MJD2000
+tspan_tle = linspace(t0_tle,tf_tle,50000);
 kep0_tle = [data(1,2:3) deg2rad(data(1,4:7))];
 
 %initial orbit parameters
@@ -424,9 +424,3 @@ end
 fprintf("\nEnd of part %d\n",Section);  
 
 toc
-
-
-
-
-
-
