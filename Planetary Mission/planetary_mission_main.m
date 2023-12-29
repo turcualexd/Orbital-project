@@ -126,6 +126,7 @@ groundtrack_plotting(lon_ko_pt_r,lat_ko_pt_r,'',length(findobj('type','figure'))
     case 2 
 
 %propagation of orbit in Cartesian Coordinates
+
 tic
 N_days = 180; % 180 days = 6 months (2 moon periods = 2 months) -> enough to see fully its perturbations 
 tspan = linspace(0, N_days * 24 * 3600, N_days * 1000); 
