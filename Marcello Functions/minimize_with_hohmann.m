@@ -1,6 +1,6 @@
 clear; close all; clc;
 
-earl_dep_date = [2028 01 01 00 00 00];
+earl_dep_date   = [2028 01 01 00 00 00];
 
 num             = 10; %number of elements of array of mjd2000 
 
@@ -84,9 +84,7 @@ plotorbit_dotted(kep3(1),kep3(2),kep3(3),kep3(4),kep3(5),kep3(6), kep3(6)+2*pi, 
 plotorbit(A1,E1,I1,O1,W1,theta1, theta1+THETA1, dth, mu_s, 'g')
 
 plotorbit(A2,E2,I2,O2,W2,theta2, theta2+THETA2, dth, mu_s, 'k')
-%% plot hyperbola
-
-mu_E = astroConstants(13);
+%% time in the sphere of influence
 
 v_m = VF1' - V2;
 
@@ -94,9 +92,13 @@ v_p = VI' - V2;
 
 RE = astroConstants(23);
 
+mu_E = astroConstants(13);
+
 delta = acos(dot(v_m, v_p) / (norm(v_m) * norm(v_p)));
 
-rp = compute_delta(mu_E, norm(v_m), norm(v_p), delta, RE);
+rp = compute_rp(mu_E, norm(v_m), norm(v_p), delta, RE);
+
+%% plot hyperbola
 
 v_mn = norm(v_m);
 
