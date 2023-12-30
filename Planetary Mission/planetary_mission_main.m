@@ -319,7 +319,7 @@ end
 % Comparison with real data 
 
 tic
-data = extract2LE('artemis.txt'); % 2000(2005-06-23)->4500(2012-04-27) MJD
+data = extract2LE('yamal_101.txt'); % 2000(2005-06-23)->4500(2012-04-27) MJD
 
 data = data(:,:);
 mean_time_interval = mean(data(2:end,1)-data(1:end-1,1));
