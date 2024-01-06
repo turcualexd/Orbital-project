@@ -12,6 +12,7 @@
 \usepackage{authblk}    
 \usepackage{subcaption}
 \usepackage{xcolor}
+\usepackage{siunitx}
 
 
 \geometry{left=25mm, right=25mm, top=25mm, bottom=25mm}
@@ -26,7 +27,7 @@ The  PoliMi  Space  Agency  wants  to  launch  a  Planetary  Explorer  Mission, 
 
 \subsection{Nominal Orbit}
 
-From the provided orbital parameters, this satellite heavily contains geosynchronous orbital characteristics. Hence, the altitude at perigee is chosen as 35786 km - where it is possible to see the moon and J2 perturbation effect. $\Omega, \omega, \text{ and } f_0$ are chosen arbitrarily.
+From the provided orbital parameters this satellite heavily contains geosynchronous orbital characteristics. Hence, the altitude at perigee is chosen as 35786 km - where it is possible to see the moon and J2 perturbation effect. $\Omega, \omega, \text{ and } f_0$ are chosen arbitrarily.
 
 %citation for GSO: https://www.esa.int/ESA_Multimedia/Images/2020/03/Geostationary_orbit
 
@@ -61,10 +62,12 @@ The satellite's orbit is propagated to compute its groundtrack. The motion of th
 \]
 This is solved using Matlab's \texttt{ode113} function, with a relative tolerance of \(1 \times 10^{-12}\) and absolute tolerance of \(1 \times 10^{-12}\).
 
-\subsection{Unperturbed Nominal Orbit}
+%citation for formula: Curtis
 
-The first required analysis of the ground track is for the nominal orbit considering an unperturbed case, where the $\mathbf{a}_{perturbation}$ in equation is null. The ground track was propagated for a period of 1 orbit of the satellite, 1 day and 10 days, as shown below.
+\subsection{Unperturbed Groundtrack}
+\subsubsection{Nominal Orbit Groundtrack}
 
+The first required analysis of the ground track is for the nominal orbit considering an unperturbed case, where the $\mathbf{a}_{perturbation}$ in equation is null. The ground track was propagated for a period of 1 orbit of the satellite, 1 day and 10 days, as shown below.\\
 \begin{figure}[ht]
 	\centering
 	% First row with two figures
@@ -94,11 +97,57 @@ The first required analysis of the ground track is for the nominal orbit conside
 		\label{fig:1d}
 	\end{subfigure}
 	\caption{Ground track of the unperturbed nominal orbit during: (a) 1 orbit; (b) 1 day; (c) 10 days. Ground track path (\reddashedline), Starting point (\textcolor{red}{$\bullet$}), Ending point (\textcolor{red}{$\blacksquare$})
-	}	
-	
+	}
 \end{figure}
-The groundtrack of this satellite has formed an "8" shape, a phenomenon known as the figure-eight groundtrack. At geosynchronous altitude, the location after one revolution is the same, and for geostationary  orbits, the satellite always appears to be stationary over one location. The figure “8” occurs because the satellites relative velocity is less and greater, than locations on the Earth as it travels from the ascending node. 
+
+\begin{flushleft}
+	The groundtrack of this satellite has formed an "8" shape, a phenomenon known as the figure-eight groundtrack. At geosynchronous altitude, the location after one revolution is the same, and for geostationary  orbits, the satellite always appears to be stationary over one location. The figure “8” occurs because the satellites relative velocity is less and greater, than locations on the Earth as it travels from the ascending node. 
+\end{flushleft}
 
 %cite: Vallado, Fundamentals of Astrodynamics, 2013
+
+\subsubsection{Repeating Groundtrack}
+
+
+For establishing a good communication with the network of ground stations of PoliMi Space Agency, a repeating ground track with a ratio of 1:1 (for each orbit of the spacecraft, Earth has performed 1 revolution) is maintained. Therefore, the period of the repeating ground track orbit is computed. For an unperturbed orbit, the period is only a function of the semi-major axis and can be calculated to get the desired repeating ground track. Both equations are listed as below. By extension, the other orbital parameters are kept the same as nominal orbit. 
+
+	
+\begin{equation*}
+	T_{\text{repeating}} = \frac{1}{1} T_{\text{Earth}}
+\end{equation*}
+
+\begin{equation*}
+	T = 2\pi \sqrt{\frac{a^3}{\mu}} \rightarrow a_{\text{repeating}} = \SI{42166}{\kilo\meter}
+\end{equation*} 
+
+\begin{figure}[ht]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{ugro1orb.png}
+		\caption{}
+		\label{fig:1a}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{ugro4orb.png}
+		\caption{}
+		\label{fig:1b}
+	\end{subfigure}
+	
+	\caption{Ground track of the unperturbed repeating orbit during: (a) 1 orbit; (b) 4·k=4 orbits. Ground track path (\reddashedline), Starting point (\textcolor{red}{$\bullet$}), Ending point (\textcolor{red}{$\blacksquare$})
+	}
+\end{figure}
+
+\subsection{Perturbed Groundtrack}
+
+	
+
+
+
+
+
+
+	
+
 	
 \end{document}
