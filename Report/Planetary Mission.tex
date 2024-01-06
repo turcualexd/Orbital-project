@@ -155,7 +155,25 @@ For establishing a good communication with the network of ground stations of Pol
 	\left( \frac{\mathbf{r}_{m/s}}{r_{m/s}^3} - \frac{\mathbf{r}_m}{r_m^3} \right)
 \end{equation*}
 	
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Perturbation chart.png}
+	\caption{Orbit Perturbations.}
+	\label{fig:orbit perturbations}
+\end{figure}
+\subsection{Orbit Propagation}
 
+\begin{align*}
+	\frac{da}{dt} &= \frac{2a^2}{h} \left( e\sin f a_r + \frac{p}{r} a_s \right) \\[10pt]
+	\frac{de}{dt} &= \frac{1}{h} \left( p\sin f a_r + \left( (p + r) \cos f + re \right) a_s \right) \\[10pt]
+	\frac{di}{dt} &= \frac{r\cos (f + \omega)}{h} a_w \\[10pt]
+	\frac{d\Omega}{dt} &= \frac{r\sin (f + \omega)}{h\sin i} a_w \\[10pt]
+	\frac{d\omega}{dt} &= \frac{1}{he} \left( -p\cos f a_r + (p + r)\sin f a_s \right) - \frac{r\sin(f + \omega) \cos i}{h\sin i} a_w \\[10pt]
+	\frac{df}{dt} &= \frac{h}{r^2} + \frac{1}{eh} \left( p\cos f a_r - (p + r)\sin f a_s \right)
+\end{align*}
+
+
+ 
 
 
 
