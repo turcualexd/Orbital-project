@@ -18,6 +18,7 @@
 
 \geometry{left=25mm, right=25mm, top=25mm, bottom=25mm}
 \newcommand{\reddashedline}{\textcolor{red}{---}}
+\newcommand{\greendashedline}{\textcolor{green}{---}}
 \setlength{\parindent}{0pt}
 
 \title{Planetary Mission}
@@ -123,7 +124,7 @@ For establishing a good communication with the network of ground stations of Pol
 	T = 2\pi \sqrt{\frac{a^3}{\mu}} \rightarrow a_{\text{repeating}} = \SI{42166}{\kilo\meter}
 \end{equation*} 
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{ugro1orb.png}
@@ -175,11 +176,32 @@ Possible perturbations are charted in \ref{fig:orbit perturbations}. It is obser
 
 %Citation: T. G. R. Reid. ORBITAL DIVERSITY FOR GLOBAL NAVIGATION SATELLITE SYSTEMS. Stanford University, 2017.
 
-\subsection{Orbit Propagation}
+\subsubsection{Nominal and Repeating Groundtrack}
+
+\begin{figure}[ht]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{pg10d.png}
+		\caption{}
+		\label{fig:1a}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{pgro4orb.png}
+		\caption{}
+		\label{fig:1b}
+	\end{subfigure}
+	
+	\caption{Ground track of the perturbed orbits: (a) Nominal orbit during 10 days; (b) Repeating orbit during 4 orbits. Ground track of unperturbed (\reddashedline), Starting point (\textcolor{red}{$\bullet$}), Ending point (\textcolor{red}{$\blacksquare$}); Ground track of perturbed (\greendashedline), Starting point (\textcolor{green}{$\bullet$}), Ending point (\textcolor{green}{$\blacksquare$}).
+	}
+\end{figure}
+
+
+\section{Orbit Propagation}
 
 Orbits were propagated using Cartesian coordinates (Newton’s equations of motion), or Keplerian elements (Gauss’ planetary equations). Gauss' equations are presented in the Radial-Transversal-Out-of-plane reference frame (RSW). All formulas can be found in ().\\ %{cite: Curtis}
 
-For the moon perturbation, which cannot be directly expressed in RSW frame, it's possible to transform the perturbing accelerations from Cartesian to RSW.The three rotation matrices for this are shown below where a rotation of \(\Omega\) around the third axis of the inertial frame is performed, then a rotation of \(i\) around the first axis of the rotated frame, and finally a rotation of an angle \(\theta\ + \omega\) around the third axis of the last frame. 
+For the moon perturbation, which cannot be directly expressed in RSW frame, it's possible to transform the perturbing accelerations from Cartesian to RSW. The three rotation matrices for this are shown below where a rotation of \(\Omega\) around the third axis of the inertial frame is performed, then a rotation of \(i\) around the first axis of the rotated frame, and finally a rotation of an angle \(\theta\ + \omega\) around the third axis of the last frame. 
 
 \[
 R_{\Omega} = \begin{bmatrix}
@@ -199,7 +221,9 @@ R_{\theta + \omega} = \begin{bmatrix}
 \end{bmatrix}
 \]
 
- 
+\subsection{History of the Keplerian Elements} 
+
+
 
 
 
