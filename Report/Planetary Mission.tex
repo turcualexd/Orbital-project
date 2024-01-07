@@ -152,7 +152,7 @@ Here, \( J_2 \) term is considered for modelling which is correlated to Earth ob
 \begin{equation*}
 	\mathbf{a}_{J_2} = \frac{3}{2} \frac{J_2 \mu R_E^2}{r^4} \left[ \left( \frac{x}{r} \left( \frac{5z^2}{r^2} - 1 \right) \right) \mathbf{i} + \left( \frac{y}{r} \left( \frac{5z^2}{r^2} - 1 \right) \right) \mathbf{j} + \left( \frac{z}{r} \left( \frac{5z^2}{r^2} - 3 \right) \right) \mathbf{k} \right]
 \end{equation*}
-%citation: Vallado, Curtis
+
 Perturbation due to the moon acting on the orbit is modelled through a two body problem scenario taking into account the force of the moon as a perturbing acceleration. This acceleration is computed from:
 \begin{equation*}
 	\label{eq:moon_perturbation}
@@ -160,13 +160,18 @@ Perturbation due to the moon acting on the orbit is modelled through a two body 
 	\left( \frac{\mathbf{r}_{m/s}}{r_{m/s}^3} - \frac{\mathbf{r}_m}{r_m^3} \right)
 \end{equation*}
 where \( \mathbf{r}_{m/s} \) is the vector that goes from the S/C to the moon and \( \mathbf{r}_m \) is the vector that goes from Earth to Moon. 
+%citation: Vallado, Curtis
+
+Possible perturbations are charted in \ref{fig:orbit perturbations}. It is observed that the \( J_2 \) effect (\( C_{2,0} \) in figure) and moon perturbation are one of the primary sources of orbital perturbation. Hence, our models and altitude choice consistent.   
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Perturbation chart.png}
+	\includegraphics[width=0.6\textwidth]{Perturbation chart.png}
 	\caption{Orbit Perturbations.}
 	\label{fig:orbit perturbations}
 \end{figure}
+
+%Citation: T. G. R. Reid. ORBITAL DIVERSITY FOR GLOBAL NAVIGATION SATELLITE SYSTEMS. Stanford University, 2017.
 
 \subsection{Orbit Propagation}
 
