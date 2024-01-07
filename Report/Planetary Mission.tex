@@ -13,10 +13,13 @@
 \usepackage{subcaption}
 \usepackage{xcolor}
 \usepackage{siunitx}
+\usepackage{float}
 
 
 \geometry{left=25mm, right=25mm, top=25mm, bottom=25mm}
 \newcommand{\reddashedline}{\textcolor{red}{---}}
+\setlength{\parindent}{0pt}
+
 \title{Planetary Mission}
 
 \begin{document}
@@ -44,9 +47,9 @@ From the provided orbital parameters this satellite heavily contains geosynchron
 	\caption{Keplerian elements of the orbit.}
 	\label{tab:keplerian_elements}
 \end{table}
-\begin{flushleft}
-	The unperturbed nominal orbit is propagated as below in the Earth-centered reference frame:
-\end{flushleft}
+
+The unperturbed nominal orbit is propagated as below in the Earth-centered reference frame:
+
 
 \begin{figure}[ht]
 	\centering
@@ -100,9 +103,9 @@ The first required analysis of the ground track is for the nominal orbit conside
 	}
 \end{figure}
 
-\begin{flushleft}
-	The groundtrack of this satellite has formed an "8" shape, a phenomenon known as the figure-eight groundtrack. At geosynchronous altitude, the location after one revolution is the same, and for geostationary  orbits, the satellite always appears to be stationary over one location. The figure “8” occurs because the satellites relative velocity is less and greater, than locations on the Earth as it travels from the ascending node. 
-\end{flushleft}
+
+The groundtrack of this satellite has formed an "8" shape, a phenomenon known as the figure-eight groundtrack. At geosynchronous altitude, the location after one revolution is the same, and for geostationary  orbits, the satellite always appears to be stationary over one location. The figure “8” occurs because the satellites relative velocity is less and greater, than locations on the Earth as it travels from the ascending node. 
+
 
 %cite: Vallado, Fundamentals of Astrodynamics, 2013
 
@@ -152,21 +155,20 @@ Here, \( J_2 \) term is considered for modelling which is correlated to Earth ob
 \begin{equation*}
 	\mathbf{a}_{J_2} = \frac{3}{2} \frac{J_2 \mu R_E^2}{r^4} \left[ \left( \frac{x}{r} \left( \frac{5z^2}{r^2} - 1 \right) \right) \mathbf{i} + \left( \frac{y}{r} \left( \frac{5z^2}{r^2} - 1 \right) \right) \mathbf{j} + \left( \frac{z}{r} \left( \frac{5z^2}{r^2} - 3 \right) \right) \mathbf{k} \right]
 \end{equation*}
-
+%citation: Vallado, Curtis
 Perturbation due to the moon acting on the orbit is modelled through a two body problem scenario taking into account the force of the moon as a perturbing acceleration. This acceleration is computed from:
 \begin{equation*}
 	\label{eq:moon_perturbation}
 	\mathbf{a}_{\text{Moon}} = \mu_{\text{Moon}}
 	\left( \frac{\mathbf{r}_{m/s}}{r_{m/s}^3} - \frac{\mathbf{r}_m}{r_m^3} \right)
 \end{equation*}
-where \( \mathbf{r}_{m/s} \) is the vector that goes from the S/C to the moon and \( \mathbf{r}_m \) is the vector that goes from Earth to Moon. 
-%citation: Vallado, Curtis
+where \( \mathbf{r}_{m/s} \) is the vector that goes from the S/C to the moon and \( \mathbf{r}_m \) is the vector that goes from Earth to Moon.\\ 
 
 Possible perturbations are charted in \ref{fig:orbit perturbations}. It is observed that the \( J_2 \) effect (\( C_{2,0} \) in figure) and moon perturbation are one of the primary sources of orbital perturbation. Hence, our models and altitude choice consistent.   
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{Perturbation chart.png}
+	\includegraphics[width=0.5\textwidth]{Perturbation chart.png}
 	\caption{Orbit Perturbations.}
 	\label{fig:orbit perturbations}
 \end{figure}
@@ -175,23 +177,33 @@ Possible perturbations are charted in \ref{fig:orbit perturbations}. It is obser
 
 \subsection{Orbit Propagation}
 
-\begin{align*}
-	\frac{da}{dt} &= \frac{2a^2}{h} \left( e\sin f a_r + \frac{p}{r} a_s \right) \\[10pt]
-	\frac{de}{dt} &= \frac{1}{h} \left( p\sin f a_r + \left( (p + r) \cos f + re \right) a_s \right) \\[10pt]
-	\frac{di}{dt} &= \frac{r\cos (f + \omega)}{h} a_w \\[10pt]
-	\frac{d\Omega}{dt} &= \frac{r\sin (f + \omega)}{h\sin i} a_w \\[10pt]
-	\frac{d\omega}{dt} &= \frac{1}{he} \left( -p\cos f a_r + (p + r)\sin f a_s \right) - \frac{r\sin(f + \omega) \cos i}{h\sin i} a_w \\[10pt]
-	\frac{df}{dt} &= \frac{h}{r^2} + \frac{1}{eh} \left( p\cos f a_r - (p + r)\sin f a_s \right)
-\end{align*}
+Orbits were propagated using Cartesian coordinates (Newton’s equations of motion), or Keplerian elements (Gauss’ planetary equations). Gauss' equations are presented in the Radial-Transversal-Out-of-plane reference frame (RSW). All formulas can be found in ().\\ %{cite: Curtis}
 
+For the moon perturbation, which cannot be directly expressed in RSW frame, it's possible to transform the perturbing accelerations from Cartesian to RSW.The three rotation matrices for this are shown below where a rotation of \(\Omega\) around the third axis of the inertial frame is performed, then a rotation of \(i\) around the first axis of the rotated frame, and finally a rotation of an angle \(\theta\ + \omega\) around the third axis of the last frame. 
+
+\[
+R_{\Omega} = \begin{bmatrix}
+	\cos \Omega & \sin \Omega & 0 \\
+	-\sin \Omega & \cos \Omega & 0 \\
+	0 & 0 & 1
+\end{bmatrix}, \quad
+R_{i} = \begin{bmatrix}
+	1 & 0 & 0 \\
+	0 & \cos i & \sin i \\
+	0 & -\sin i & \cos i
+\end{bmatrix}, \quad
+R_{\theta + \omega} = \begin{bmatrix}
+	\cos (\theta + \omega) & \sin (\theta + \omega) & 0 \\
+	-\sin (\theta + \omega) & \cos (\theta + \omega) & 0 \\
+	0 & 0 & 1
+\end{bmatrix}
+\]
 
  
 
 
 
 
-
-	
 
 	
 \end{document}
