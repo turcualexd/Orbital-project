@@ -141,26 +141,33 @@ For establishing a good communication with the network of ground stations of Pol
 \subsection{Perturbed Groundtrack}
 \subsubsection{Assigned Perturbations}
 
+This project has been assigned with two perturbations: \( J_2 \) effect and Moon perturbation. \( J_2 \) effect consists of a perturbing potential on top of the central gravity field of the Earth. In order to model it, a zonal harmonic potential is used, function of the geocentric distance \( r \) and of the coelevation \( \phi \).
+
 \begin{equation*}
 	R(r, \phi) = \frac{\mu}{r} \left( -1 + \sum_{n=2}^{\infty} \left( \frac{R_E}{r} \right)^n J_n P_n(\cos\phi) \right)
 \end{equation*}
 
+Here, \( J_2 \) term is considered for modelling which is correlated to Earth oblateness. The perturbing acceleration due to \( J_2 \) effect is given as:
+
 \begin{equation*}
 	\mathbf{a}_{J_2} = \frac{3}{2} \frac{J_2 \mu R_E^2}{r^4} \left[ \left( \frac{x}{r} \left( \frac{5z^2}{r^2} - 1 \right) \right) \mathbf{i} + \left( \frac{y}{r} \left( \frac{5z^2}{r^2} - 1 \right) \right) \mathbf{j} + \left( \frac{z}{r} \left( \frac{5z^2}{r^2} - 3 \right) \right) \mathbf{k} \right]
 \end{equation*}
-
+%citation: Vallado, Curtis
+Perturbation due to the moon acting on the orbit is modelled through a two body problem scenario taking into account the force of the moon as a perturbing acceleration. This acceleration is computed from:
 \begin{equation*}
 	\label{eq:moon_perturbation}
 	\mathbf{a}_{\text{Moon}} = \mu_{\text{Moon}}
 	\left( \frac{\mathbf{r}_{m/s}}{r_{m/s}^3} - \frac{\mathbf{r}_m}{r_m^3} \right)
 \end{equation*}
-	
+where \( \mathbf{r}_{m/s} \) is the vector that goes from the S/C to the moon and \( \mathbf{r}_m \) is the vector that goes from Earth to Moon. 
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Perturbation chart.png}
 	\caption{Orbit Perturbations.}
 	\label{fig:orbit perturbations}
 \end{figure}
+
 \subsection{Orbit Propagation}
 
 \begin{align*}
