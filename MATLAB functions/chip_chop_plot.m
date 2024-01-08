@@ -4,12 +4,13 @@ clear; close all; clc;
 % cost plot for last DV on 2nd lambert arc (Earth - Asteroid65) 
 
 earl_dep_date = [2028 01 01 00 00 00];
-late_arr_date = [2041 01 01 00 00 00];
+late_arr_date = [2058 01 01 00 00 00];
 
 earl_dep_mjd2000 = date2mjd2000(earl_dep_date);
 late_arr_mjd2000 = date2mjd2000(late_arr_date);
 
-num             = 500; %number of elements of array of mjd2000 
+
+num             = 100; %number of elements of array of mjd2000 
 
 array_mjd2000 = linspace(earl_dep_mjd2000, late_arr_mjd2000, num);
 
@@ -29,34 +30,37 @@ for i = 1:num
     [dV_2(j,i), ~, ~] = cost_lambert_2(earl_dep_date, late_arr_date, 3, 65 , 0);
     end
 
+
 end
 %%
 
 figure;
 [X,Y] = meshgrid(array_mjd2000, array_mjd2000);
-contour(X,Y,dV_1,linspace(1,10,10));
-title('Mars - Earth Leg','Interpreter','latex','FontSize',1.5)
-xlabel('Departure MJD200','Interpreter','latex');
-ylabel('Arrival MJD200', 'Interpreter','latex')
-clr1 = colorbar;
-clr1.
+contour(X,Y,dV_1,linspace(1,10,100));
+title('Mars - Earth Leg', 'Interpreter','latex', 'FontSize',15)
+xlabel('Departure MJD2000', 'Interpreter','latex');
+ylabel('Arrival MJD2000', 'Interpreter','latex')
+clr = colorbar;
+clr.set('TickLabelInterpreter', 'latex')
+clr.Label.String = '$\Delta v \, [km/s]$';
+clr.Label.FontSize = 15;
+clr.Label.Interpreter='latex';
 axis equal;
 grid on;
-figure
-surf(X,Y,dV_1,'LineStyle','none')
 
 figure;
 [X,Y] = meshgrid(array_mjd2000, array_mjd2000);
-contour(X,Y,dV_2,linspace(1,10,10));
-title('Earth - Asteroid65 Leg', 'Interpreter','latex')
-xlabel('Departure MJD200', 'Interpreter','latex');
-ylabel('Arrival MJD200', 'Interpreter','latex')
+contour(X,Y,dV_2,linspace(1,10,100));
+title('Earth - Asteroid65 Leg', 'Interpreter','latex', 'FontSize',15)
+xlabel('Departure MJD2000', 'Interpreter','latex');
+ylabel('Arrival MJD2000', 'Interpreter','latex')
 clr2 = colorbar;
-
+clr2.set('TickLabelInterpreter', 'latex')
+clr2.Label.String = '$\Delta v \, [km/s]$';
+clr2.Label.FontSize = 15;
+clr2.Label.Interpreter='latex';
 axis equal;
 grid on;
-figure
-surf(X,Y,dV_2,'LineStyle','none')
 
 %%
 
