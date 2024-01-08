@@ -1,0 +1,42 @@
+\section{Algorithms description}
+\label{sec:algo_description}
+
+The targeting problem previously defined can be seen as an optimization problem with three degrees of freedom (DOFs). Indeed, once the departing date and the two times of flight of the heliocentric legs are chosen, both the Lambert's arcs and the fly-by hyperbola are fully defined.  
+Regarding the formulation of the Lambert's problem, it requires the knowledge of the initial and final position and also the imposed time of flight between them. For two Lambert's arcs it would be needed a total of six DOFs, but this quantities are dependant one to each other:
+\begin{itemize}
+    [wide,itemsep=3pt,topsep=3pt]
+    \item the final position vector of the first arc corresponds to the initial position of the second one;
+    \item the initial date for the departing on the second arc corresponds the arrival date on the first arc;
+    \item fixing the first Lambert's arc, the final position and arrival date for the second Lambert's arc are related through the analytical ephemerides.
+\end{itemize}
+
+\pagebreak
+
+Once the two heliocentric legs are determined, the powered gravity assist follows as the geocentric velocity vectors are known.
+
+Two methods were implemented to solve the optimization problem: \textbf{brute force algorithm} and the \textbf{gradient descent algorithm}.
+
+\subsection{Brute force algorithm}
+\label{subsec:brute_force_algo}
+
+\begin{algorithm}
+    \caption{Bruteforce algorithm} \label{alg:brute}
+    \begin{algorithmic}
+    \Require $T_{dep}, T_{fly by}, T_{arr}$
+    \Ensure $\Delta V_{min}$
+    \State $\Delta V_{min} = 10^{10}$
+    \For{$i$ in $T_{dep}$}
+        \For{$j$ in $T_{fly by}$}
+            \For{$k$ in $T_{arr}$}
+                \State 
+            \EndFor
+        \EndFor
+    \EndFor
+    \end{algorithmic}
+\end{algorithm}
+
+
+\subsection{Gradient descent algorithm}
+\label{subsec:gradient_algo}
+
+\autoref{alg:brute}
