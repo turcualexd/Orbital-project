@@ -4,6 +4,55 @@
 \subsection{Resonance period analysis}
 \label{subsec:res_period}
 
+The first natural reduction on the domain of interest that could come to mind is to search the frequency on which the three celestial bodies repeat the relative positions on their orbits. On the approximation of circular orbits, this particular time period would be the synodic period generalized for the case of three bodies.
+However, this path is unviable because the orbit of the asteroid has a relevant eccentricity. To better comprehend the problem of having that eccentricity, particular attention have to be paid on the definitions of phasing and synodic period for two bodies:
+
+\begin{itemize}
+    [wide,itemsep=3pt,topsep=3pt]
+    \item \textbf{Phasing $\bm{\phi}$} $\rightarrow$ the angle between two celestial bodies, calculated as the difference in their \textbf{true anomalies}:
+    \vspace*{-8pt}
+    \begin{equation}
+        \phi (t) = \theta^{(2)} (t) - \theta^{(1)} (t)
+    \end{equation}
+
+    \item \textbf{Synodic period $\bm{T_{syn}}$} $\rightarrow$ if two celestial bodies have initial phasing $\phi_0$, they will return to the same phasing after a synodic period $T_{syn}$:
+    \vspace*{-10pt}
+    \begin{equation}
+        \phi (t_0) = \phi_0 \quad \rightarrow \quad
+        \phi (t_0 + T_{syn}) = \phi_0
+    \end{equation}
+\end{itemize}
+
+As the definitions rely on the \textbf{true anomalies} of celestial bodies, non-circular orbits mean that the same phasing does NOT imply the same relative positions between them.
+In other words, once the synodic period has passed, the phasing of the three considered bodies could result in a completely different relative positions with respect to the initial condition.
+
+The problem needs to be reformulated. The goal is to find the period of time that elapses between a state of orbital positions of the bodies and the next occurrence of the same state. In literature, this particular period is called \textbf{period of orbital resonance} and it will be here indicated as $T_{res}$. Supposing that the orbits keep the other Keplerian elements unchanged during the revolution, the relation on true anomalies can be expressed as:
+
+\begin{equation}
+    \begin{dcases}
+        \theta^{(1)} (t_0) = \theta_0^{(1)} \\
+        \theta^{(2)} (t_0) = \theta_0^{(2)} \\
+        \theta^{(3)} (t_0) = \theta_0^{(3)}
+    \end{dcases}
+    \quad \rightarrow \quad
+    \begin{dcases}
+        \theta^{(1)} (t_0 + T_{res}) = \theta_0^{(1)} \\
+        \theta^{(2)} (t_0 + T_{res}) = \theta_0^{(2)} \\
+        \theta^{(3)} (t_0 + T_{res}) = \theta_0^{(3)}
+    \end{dcases}
+\end{equation}
+
+Since the true anomaly for an orbit repeats itself every orbit period $T$, it results:
+
+\begin{equation}
+    \begin{dcases}
+        \theta^{(1)} (t_0) = \theta_0^{(1)} \\
+        \theta^{(2)} (t_0) = \theta_0^{(2)} \\
+        \theta^{(3)} (t_0) = \theta_0^{(3)}
+    \end{dcases}
+\end{equation}
+
+
 \subsection{Cost-plot analysis}
 \label{subsec:cost_plot_analysis}
 

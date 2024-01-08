@@ -19,5 +19,24 @@ Two methods were implemented to solve the optimization problem: \textbf{brute fo
 \subsection{Brute force algorithm}
 \label{subsec:brute_force_algo}
 
+\begin{algorithm}
+    \caption{Bruteforce algorithm} \label{alg:brute}
+    \begin{algorithmic}
+    \Require $T_{dep}, T_{fly by}, T_{arr}$
+    \Ensure $\Delta V_{min}$
+    \State $\Delta V_{min} = 10^{10}$
+    \For{$i$ in $T_{dep}$}
+        \For{$j$ in $T_{fly by}$}
+            \For{$k$ in $T_{arr}$}
+                \State 
+            \EndFor
+        \EndFor
+    \EndFor
+    \end{algorithmic}
+\end{algorithm}
+
+
 \subsection{Gradient descent algorithm}
 \label{subsec:gradient_algo}
+
+\autoref{alg:brute}

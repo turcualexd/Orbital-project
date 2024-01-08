@@ -233,10 +233,14 @@ INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\algorithms\algorithmic.sty
-INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\algorithms\algorithmic.sty
-INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\algorithms\algorithmic.sty
-INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\algorithms\algorithmic.sty
+INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algpseudocode.sty
+INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algpseudocode.sty
+INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algpseudocode.sty
+INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algpseudocode.sty
+INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algorithmicx.sty
+INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algorithmicx.sty
+INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algorithmicx.sty
+INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algorithmicx.sty
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref.sty
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref.sty
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref.sty
@@ -888,6 +892,8 @@ INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\type1\public\kpfonts\jk
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\type1\public\kpfonts\jkpbsc8a.pfb
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\type1\public\kpfonts\jkpbsy.pfb
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\type1\public\kpfonts\jkpbsy.pfb
+INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\type1\public\kpfonts\jkpex.pfb
+INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\type1\public\kpfonts\jkpex.pfb
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\type1\public\kpfonts\jkpmi.pfb
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\type1\public\kpfonts\jkpmi.pfb
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\type1\public\kpfonts\jkpmia.pfb
