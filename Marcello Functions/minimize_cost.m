@@ -1,82 +1,71 @@
-function [dv, dep, TOF_1, TOF_2] = minimize_cost(date_dep, date_arr)
+function [dv_min, dv1_min, dv2_min, dv3_min,  dep_min, fb_min, arr_min, perc] = minimize_cost(dep_vec, TOF1_vec,TOF2_vec)
 
-mjd2000_dep_min = date2mjd2000(date_dep);
+dv_min = 1e6;
 
-mjd2000_arr_max = date2mjd2000(date_arr);
+dep_min = NaN;
 
-dtprec = (mjd2000_arr_max - mjd2000_dep_min) / 2;
+fb_min = NaN;
 
-dtofprec = (2*365-1*365) / 2;
+arr_min = NaN;
 
-mjd2000_deptilde = mjd2000_dep_min + dtprec;
+dv1_min = NaN;
 
-TOF1tilde = 1 * 365 + dtofprec;
+dv2_min = NaN; 
 
-TOF2tilde = 1 * 365 + dtofprec;
+dv3_min = NaN;
 
-dv = 1e10;
+perc = NaN;
 
-dvprec = dv;
+fun = @(x) total_cost(x);
 
-toll = 1e-6;
+for i = 1 : length(dep_vec)
 
-while 1
+    dep_date = dep_vec(i);
 
-    dt = dtprec / 2;
+    for j = 1 : length(TOF1_vec)
 
-    dtof = dtofprec / 2;
+        TOF1 = TOF1_vec(j);
 
-    for mjd2000_dep = mjd2000_deptilde - dtprec : dt : mjd2000_deptilde + dtprec
+        for k = 1 : length(TOF2_vec)
 
-        for TOF1 = TOF1tilde - dtofprec : dtof : TOF1tilde + dtofprec
+            TOF2 = TOF2_vec(k);
 
-            for TOF2 = TOF2tilde - dtprec : dt : TOF2tilde + dtprec
+            x0 = [dep_date; TOF1; TOF2];
 
-                [dv1, ~, V_m] = cost_lambert(mjd2000_dep, mjd2000_dep + TOF1, 4, 3, 0);
+            [x, dv] = fminunc(fun, x0);
 
-                [dv2, ~, V_p] = cost_lambert_2(mjd2000_dep + TOF1, mjd2000_dep + TOF1 + TOF2, 3, 65, 0 );
+            [dv1, ~, V_m] = cost_lambert(x(1), x(1) + x(2), 4, 3, 0);
+            
+            [dv2, V_p, ~] = cost_lambert_2(x(1) + x(2), x(1) + x(2) + x(3), 3, 65, 0 );
 
-                dv3 = cost_gravity_assist(mjd2000_dep + TOF1, 3, V_m, V_p);
+            [dv3, rp] = cost_gravity_assist(x(1) + x(2), 3, V_m, V_p);
 
-                dvtot = dv1 + dv2 + dv3;
+            DV3 = norm(V_m - V_p);
 
-                dt_tot = mjd2000_dep + TOF1 + TOF2;
+            if dv < dv_min && rp > astroConstants(23) + 200
 
-                condition = (dvtot<dv).*(dt_tot<mjd2000_arr_max);
+                dep_min = x(1);
 
-                if condition == 1
+                fb_min = dep_min + x(2);
 
-                    dv = dvtot;
+                arr_min = fb_min + x(3);
 
-                    dep = mjd2000_dep; 
+                dv_min = dv;
 
-                    TOF_1 = TOF1;
+                dv1_min = dv1; 
 
-                    TOF_2 = TOF2;
+                dv2_min = dv2;
+                
+                dv3_min = dv3;
 
-                end
+                perc = dv3_min / DV3;
+
             end
 
         end
 
     end
 
-    dtprec = dt;
-
-    dtofprec = dtof;
-
-    mjd2000_deptilde = dep;
-
-    TOF1tilde = TOF_1;
-
-    TOF2tilde = TOF_2;
-
-    if abs(dv-dvprec) < toll
-
-        break
-
-    end
-
-    dvprec = dv;
+end
 
 end

@@ -1,4 +1,4 @@
-function dv = cost_gravity_assist(time, id, V_m, V_p)
+function [dv, rp] = cost_gravity_assist(time, id, V_m, V_p)
 
 mu_E = astroConstants(13);
 
@@ -26,6 +26,4 @@ vp2 = sqrt(v_pn^2 + 2*mu_E/rp);
 
 dv = norm(vp1 - vp2);
 
-
-
-
+end
