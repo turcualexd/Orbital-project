@@ -1678,13 +1678,6 @@ INPUT Sections\Section_1\04_time_windows_reduction.tex
 INPUT .\Sections\Section_1\04_time_windows_reduction.tex
 INPUT .\Sections\Section_1\04_time_windows_reduction.tex
 INPUT Sections\Section_1\04_time_windows_reduction.tex
-INPUT .\Sections\Section_1\05_conclusion_results.tex
-INPUT .\Sections\Section_1\05_conclusion_results.tex
-INPUT .\Sections\Section_1\05_conclusion_results.tex
-INPUT Sections\Section_1\05_conclusion_results.tex
-INPUT .\Sections\Section_1\05_conclusion_results.tex
-INPUT .\Sections\Section_1\05_conclusion_results.tex
-INPUT Sections\Section_1\05_conclusion_results.tex
 INPUT C:\Miktex\fonts\vf\public\kpfonts\jkpbn8t.vf
 INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpbn8r.tfm
 INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpbne.tfm
@@ -1699,6 +1692,13 @@ INPUT C:\Miktex\fonts\vf\public\kpfonts\jkpmn7t.vf
 INPUT C:\Miktex\fonts\vf\public\kpfonts\jkpbn7t.vf
 INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpbne.tfm
 INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpbn8r.tfm
+INPUT .\Sections\Section_1\05_conclusion_results.tex
+INPUT .\Sections\Section_1\05_conclusion_results.tex
+INPUT .\Sections\Section_1\05_conclusion_results.tex
+INPUT Sections\Section_1\05_conclusion_results.tex
+INPUT .\Sections\Section_1\05_conclusion_results.tex
+INPUT .\Sections\Section_1\05_conclusion_results.tex
+INPUT Sections\Section_1\05_conclusion_results.tex
 INPUT .\Orbital_report.bbl
 INPUT Orbital_report.bbl
 INPUT .\Orbital_report.bbl

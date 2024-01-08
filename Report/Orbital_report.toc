@@ -1,15 +1,15 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{Contents}{II}{Doc-Start}%
-\contentsline {section}{\numberline {1}Interplanetary mission}{1}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Symbols}{1}{subsection.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.1}Analisi della missione}{1}{subsubsection.1.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.2}Analisi della missione 2}{1}{subsubsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.2}Introduction}{1}{subsection.1.2}%
-\contentsline {subsubsection}{\numberline {1.2.1}Description of the problem}{1}{subsubsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2}Assigned data and constraints}{1}{subsubsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.3}Algorithms description}{1}{subsection.1.3}%
+\contentsline {section}{\numberline {1}Interplanetary mission}{III}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Symbols}{III}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Analisi della missione}{III}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Analisi della missione 2}{III}{subsubsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.2}Introduction}{III}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Description of the problem}{III}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Assigned data and constraints}{III}{subsubsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.3}Algorithms description}{III}{subsection.1.3}%
 \contentsline {subsubsection}{\numberline {1.3.1}Brute force algorithm}{1}{subsubsection.1.3.1}%
-\contentsline {subsubsection}{\numberline {1.3.2}Gradient method algorithm}{1}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.2}Gradient descent algorithm}{1}{subsubsection.1.3.2}%
 \contentsline {subsection}{\numberline {1.4}Reduction of the time windows}{1}{subsection.1.4}%
 \contentsline {subsubsection}{\numberline {1.4.1}Resonance period analysis}{1}{subsubsection.1.4.1}%
 \contentsline {subsubsection}{\numberline {1.4.2}Cost-plot analysis}{1}{subsubsection.1.4.2}%
