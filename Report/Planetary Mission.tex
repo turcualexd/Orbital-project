@@ -31,7 +31,7 @@ The  PoliMi  Space  Agency  wants  to  launch  a  Planetary  Explorer  Mission, 
 
 \subsection{Nominal Orbit}
 
-From the provided orbital parameters this satellite heavily contains geosynchronous orbital characteristics. Hence, the altitude at perigee is chosen as 35786 km - where it is possible to see the moon and J2 perturbation effect. $\Omega, \omega, \text{ and } f_0$ are chosen arbitrarily.
+From the provided orbital parameters this satellite heavily contains geosynchronous orbital characteristics. Hence, the altitude at perigee is chosen as 35786 km - where it is possible to see the moon and J2 perturbation effect. $\Omega$ (right ascension of ascending node, $\omega$ (argument of perigee), and $f_0$ (initial true anomaly) are chosen arbitrarily.
 
 %citation for GSO: https://www.esa.int/ESA_Multimedia/Images/2020/03/Geostationary_orbit
 
@@ -52,9 +52,9 @@ From the provided orbital parameters this satellite heavily contains geosynchron
 The unperturbed nominal orbit is propagated as below in the Earth-centered reference frame:
 
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{nominal_orbit.png}
+	\includegraphics[width=0.8\textwidth]{nominal_orbit.eps}
 	\caption{Assigned orbit.}
 	\label{fig:nominal_orbit}
 \end{figure}
@@ -72,17 +72,17 @@ This is solved using Matlab's \texttt{ode113} function, with a relative toleranc
 \subsubsection{Nominal Orbit Groundtrack}
 
 The first required analysis of the ground track is for the nominal orbit considering an unperturbed case, where the $\mathbf{a}_{perturbation}$ in equation is null. The ground track was propagated for a period of 1 orbit of the satellite, 1 day and 10 days, as shown below.\\
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
 	% First row with two figures
 	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{ug1orb.png}
+		\includegraphics[width=\textwidth]{ug1orb.eps}
 		\caption{}
 		\label{fig:1a}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{ug1d.png}
+		\includegraphics[width=\textwidth]{ug1d.eps}
 		\caption{}
 		\label{fig:1b}
 	\end{subfigure}
@@ -90,7 +90,7 @@ The first required analysis of the ground track is for the nominal orbit conside
 	% Second row with two figures
 	\vspace{1cm} % Adjust the vertical spacing as needed
 	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{ug10d.png}
+		\includegraphics[width=\textwidth]{ug10d.eps}
 		\caption{}
 		\label{fig:1c}
 	\end{subfigure}
@@ -127,13 +127,13 @@ For establishing a good communication with the network of ground stations of Pol
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{ugro1orb.png}
+		\includegraphics[width=\textwidth]{ugro1orb.eps}
 		\caption{}
 		\label{fig:1a}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{ugro4orb.png}
+		\includegraphics[width=\textwidth]{ugro4orb.eps}
 		\caption{}
 		\label{fig:1b}
 	\end{subfigure}
@@ -178,16 +178,16 @@ Possible perturbations are charted in \ref{fig:orbit perturbations}. It is obser
 
 \subsubsection{Nominal and Repeating Groundtrack}
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{pg10d.png}
+		\includegraphics[width=\textwidth]{pg10d.eps}
 		\caption{}
 		\label{fig:1a}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{pgro4orb.png}
+		\includegraphics[width=\textwidth]{pgro4orb.eps}
 		\caption{}
 		\label{fig:1b}
 	\end{subfigure}
@@ -200,6 +200,16 @@ Possible perturbations are charted in \ref{fig:orbit perturbations}. It is obser
 \section{Orbit Propagation}
 
 Orbits were propagated using Cartesian coordinates (Newton’s equations of motion), or Keplerian elements (Gauss’ planetary equations). Gauss' equations are presented in the Radial-Transversal-Out-of-plane reference frame (RSW). All formulas can be found in ().\\ %{cite: Curtis}
+
+\begin{align*}
+	\frac{da}{dt} &= \frac{2a^2}{h} \left( e\sin f a_r + \frac{p}{r} a_s \right) \\[10pt]
+	\frac{de}{dt} &= \frac{1}{h} \left( p\sin f a_r + \left( (p + r) \cos f + re \right) a_s \right) \\[10pt]
+	\frac{di}{dt} &= \frac{r\cos (f + \omega)}{h} a_w \\[10pt]
+	\frac{d\Omega}{dt} &= \frac{r\sin (f + \omega)}{h\sin i} a_w \\[10pt]
+	\frac{d\omega}{dt} &= \frac{1}{he} \left( -p\cos f a_r + (p + r)\sin f a_s \right) - \frac{r\sin(f + \omega) \cos i}{h\sin i} a_w \\[10pt]
+	\frac{df}{dt} &= \frac{h}{r^2} + \frac{1}{eh} \left( p\cos f a_r - (p + r)\sin f a_s \right)
+\end{align*}
+\\
 
 For the moon perturbation, which cannot be directly expressed in RSW frame, it's possible to transform the perturbing accelerations from Cartesian to RSW. The three rotation matrices for this are shown below where a rotation of \(\Omega\) around the third axis of the inertial frame is performed, then a rotation of \(i\) around the first axis of the rotated frame, and finally a rotation of an angle \(\theta\ + \omega\) around the third axis of the last frame. 
 
@@ -223,9 +233,102 @@ R_{\theta + \omega} = \begin{bmatrix}
 
 \subsection{History of the Keplerian Elements} 
 
+The Keplerian elements were obtained through the integration of the equation of motion and 
+of the Gauss planetary equations. The propagation time is taken as 10 years, so it's sufficient to see the perturbations fully developed for this project's case. The evolution of the data and of the relative error between both methods of integration are below:
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{orbitprop10yrs.eps}
+	\caption{Orbit Perturbations.}
+	\label{fig:orbitprop10yrs}
+\end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{relative_error10yrs.eps}
+	\caption{Orbit Perturbations.}
+	\label{fig:relative_error10yrs}
+\end{figure}
 
+\subsection{Representation of the Evolution of the Orbit} 
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{evolutionorbit2.eps}
+		\caption{}
+		\label{fig:1a}
+	\end{subfigure}%
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{evolutionorbit3.eps}
+		\caption{}
+		\label{fig:1b}
+	\end{subfigure}
+	\caption{Orbit evolution representation in the 3D plane. Color are used in order to let the reader understand the evolution of the orbit: in chronological order there are: blue, orange, yellow, purple, green, light blue and magenta.
+	}
+\end{figure}
+
+\subsection{Filtering} 
+
+The filtering of results is now performed to see how the perturbations generate behaviours with different frequencies, and to retrieve the long-period and the secular evolution of the data.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{filter0.5year.eps}
+	\caption{Orbit Perturbations.}
+	\label{fig:relative_error10yrs}
+\end{figure}
+
+Here, long-periodic behaviour is related to moon perturbation and short-periodic perturbation is related to J2 effect. This is due to the fact that the J2 perturbation is related to the oblateness of the Earth and of the S/C’s orbit, whose period is much lower than the Moon orbit period
+
+\section{Comparison with Real Data}
+
+\begin{figure}[H]
+	\centering
+	% First row with two figures
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{a_TLE.eps}
+		\caption{}
+		\label{fig:1a}
+	\end{subfigure}%
+    \hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{e_TLE.eps}
+		\caption{}
+		\label{fig:1b}
+	\end{subfigure}%
+	
+	% Second row with two figures
+	\vspace{1cm} % Adjust the vertical spacing as needed
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{i_TLE.eps}
+		\caption{}
+		\label{fig:1c}
+	\end{subfigure}%
+    \hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{RAAN_TLE.eps}
+		\caption{}
+		\label{fig:1d}
+	\end{subfigure}%
+	
+ % third row with two figures
+	\vspace{1cm} % Adjust the vertical spacing as needed
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{w_TLE.eps}
+		\caption{}
+		\label{fig:1c}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{TA_TLE.eps}
+		\caption{}
+		\label{fig:1d}
+	\end{subfigure}
+	
+	\caption{Numerical, filtered and TLE data
+	}
+\end{figure}
 
 
 
