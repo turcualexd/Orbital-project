@@ -9,7 +9,6 @@ late_arr_date = [2041 01 01 00 00 00];
 earl_dep_mjd2000 = date2mjd2000(earl_dep_date);
 late_arr_mjd2000 = date2mjd2000(late_arr_date);
 
-
 num             = 500; %number of elements of array of mjd2000 
 
 array_mjd2000 = linspace(earl_dep_mjd2000, late_arr_mjd2000, num);
@@ -36,9 +35,11 @@ end
 figure;
 [X,Y] = meshgrid(array_mjd2000, array_mjd2000);
 contour(X,Y,dV_1,linspace(1,10,10));
-title('Mars - Earth Leg')
-xlabel('Departure MJD200'); ylabel('Arrival MJD200')
-colorbar
+title('Mars - Earth Leg','Interpreter','latex','FontSize',1.5)
+xlabel('Departure MJD200','Interpreter','latex');
+ylabel('Arrival MJD200', 'Interpreter','latex')
+clr1 = colorbar;
+clr1.
 axis equal;
 grid on;
 figure
@@ -47,9 +48,11 @@ surf(X,Y,dV_1,'LineStyle','none')
 figure;
 [X,Y] = meshgrid(array_mjd2000, array_mjd2000);
 contour(X,Y,dV_2,linspace(1,10,10));
-title('Earth - Asteroid65 Leg')
-xlabel('Departure MJD200'); ylabel('Arrival MJD200')
-colorbar
+title('Earth - Asteroid65 Leg', 'Interpreter','latex')
+xlabel('Departure MJD200', 'Interpreter','latex');
+ylabel('Arrival MJD200', 'Interpreter','latex')
+clr2 = colorbar;
+
 axis equal;
 grid on;
 figure
