@@ -1708,6 +1708,7 @@ INPUT C:\Miktex\fonts\vf\public\kpfonts\jkpmn7t.vf
 INPUT C:\Miktex\fonts\vf\public\kpfonts\jkpbn7t.vf
 INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpbne.tfm
 INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpbn8r.tfm
+INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpmit8t.tfm
 INPUT .\Body\Chapter_1\04_time_windows_reduction.tex
 INPUT .\Body\Chapter_1\04_time_windows_reduction.tex
 INPUT .\Body\Chapter_1\04_time_windows_reduction.tex
@@ -1715,6 +1716,9 @@ INPUT Body\Chapter_1\04_time_windows_reduction.tex
 INPUT .\Body\Chapter_1\04_time_windows_reduction.tex
 INPUT .\Body\Chapter_1\04_time_windows_reduction.tex
 INPUT Body\Chapter_1\04_time_windows_reduction.tex
+INPUT C:\Miktex\fonts\vf\public\kpfonts\jkpmit8t.vf
+INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpmit8r.tfm
+INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpmite.tfm
 INPUT .\Body\Chapter_1\05_conclusion_results.tex
 INPUT .\Body\Chapter_1\05_conclusion_results.tex
 INPUT .\Body\Chapter_1\05_conclusion_results.tex
@@ -1728,10 +1732,6 @@ INPUT .\Orbital_report.bbl
 INPUT Orbital_report.bbl
 INPUT .\Orbital_report.bbl
 INPUT Orbital_report.bbl
-INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpmit8t.tfm
-INPUT C:\Miktex\fonts\vf\public\kpfonts\jkpmit8t.vf
-INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpmit8r.tfm
-INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpmite.tfm
 INPUT Orbital_report.aux
 INPUT .\Orbital_report.out
 INPUT .\Orbital_report.out

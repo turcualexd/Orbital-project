@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  8 JAN 2024 16:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  8 JAN 2024 18:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1290,7 +1290,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//logo_polimi_ing_indinf-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//logo_polimi_ing_indinf-eps-converted-to.pdf, id=74, 493.845pt x 227.85126pt>
+<Images//logo_polimi_ing_indinf-eps-converted-to.pdf, id=70, 493.845pt x 227.85126pt>
 File: Images//logo_polimi_ing_indinf-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//logo_polimi_ing_indinf-eps-converted-to.pdf>
 Package pdftex.def Info: Images//logo_polimi_ing_indinf-eps-converted-to.pdf  used on input line 9.
@@ -1332,7 +1332,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//raggiera_polimi-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//raggiera_polimi-eps-converted-to.pdf, id=75, 502.87875pt x 502.87875pt>
+<Images//raggiera_polimi-eps-converted-to.pdf, id=71, 502.87875pt x 502.87875pt>
 File: Images//raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//raggiera_polimi-eps-converted-to.pdf>
 Package pdftex.def Info: Images//raggiera_polimi-eps-converted-to.pdf  used on input line 13.
@@ -1373,20 +1373,20 @@ See the caption package documentation for explanation.
 
 ] (Orbital_report.aux)
 Package rerunfilecheck Info: File `Orbital_report.out' has not changed.
-(rerunfilecheck)             Checksum: F0D8BF6E74F75709C495CBD810212828;2653.
+(rerunfilecheck)             Checksum: 583ADF271A1AE3B33C568842164EFF67;2498.
  ) ) 
 Here is how much of TeX's memory you used:
- 32680 strings out of 475385
- 591795 string characters out of 2793321
- 1026132 words of memory out of 3000000
- 53372 multiletter control sequences out of 15000+600000
+ 32700 strings out of 475385
+ 592003 string characters out of 2793321
+ 1023132 words of memory out of 3000000
+ 53377 multiletter control sequences out of 15000+600000
  604159 words of font info for 182 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,16n,81p,795b,752s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 83i,16n,80p,795b,839s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Miktex/fonts/enc/dvips/base/8r.enc}{C:/Miktex/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}<C:/Miktex/fonts/type1/public/kpfonts/jkpbmi.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbsy.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpex.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpsy.pfb>
-Output written on Orbital_report.pdf (7 pages, 252143 bytes).
+Output written on Orbital_report.pdf (7 pages, 257916 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 48 named destinations out of 1000 (max. 500000)
- 159 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 252 PDF objects out of 1000 (max. 8388607)
+ 63 named destinations out of 1000 (max. 500000)
+ 151 words of extra memory for PDF output out of 10000 (max. 10000000)
 
