@@ -47,3 +47,18 @@ for i = 1 : length(T_dep)
         end
     end
 end
+
+[dv_min, dv1_min, dv2_min, dv3_min,  dep_min, fb_min, arr_min, perc] = ...
+minimize_cost(dep_vec, TOF1_vec,TOF2_vec);
+
+
+
+
+
+
+
+
+
+
+
+

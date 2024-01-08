@@ -8,13 +8,12 @@ TOF = (arrival - departure)*24*3600;
 
 [kep2,ksun2] = uplanet(arrival, ibody2);
 
-[RF, V2] = kep2car(kep2(1),kep2(2),kep2(3),kep2(4),kep2(5),kep2(6), ksun2);
+[RF, ~] = kep2car(kep2(1),kep2(2),kep2(3),kep2(4),kep2(5),kep2(6), ksun2);
 
 [~,~,~,~,VI,VF,~,~] = lambertMR(RI,RF,TOF,ksun1,orbitType,0);
 
 deltav1 = norm(VI'-V1);
 
-%deltav2 = norm(VF'-V2);
 
 VI = VI';
 
@@ -22,4 +21,4 @@ VF = VF';
 
 deltav_tot = deltav1;
 
-return
+end

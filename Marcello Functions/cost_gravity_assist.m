@@ -26,4 +26,10 @@ vp2 = sqrt(v_pn^2 + 2*mu_E/rp);
 
 dv = norm(vp1 - vp2);
 
+    if rp < (astroConstants(23) + 500)
+        
+        dv = 10;
+
+    end
+
 end

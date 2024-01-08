@@ -24,11 +24,12 @@ fb_date = 1.25*1e4; %mjd2000
 
 %dep_vec = linspace(earl_dep_mjd2000, late_dep_mjd2000);
 
-TOF1_vec = linspace(0.65,2,5) * TOF_hohmann;
+TOF1_vec = linspace(0.65,2,10) * TOF_hohmann;
 
 dep_vec = fb_date - TOF1_vec;
 
-TOF2_vec = linspace(300, 900, (900-300)/100);
+TOF2_vec = linspace(300, 900, (900-300)/60);
+
 
 [dv_min, dv1_min, dv2_min, dv3_min,  dep, fb, arr, perc] = minimize_cost(dep_vec, TOF1_vec,TOF2_vec);
 
@@ -39,6 +40,8 @@ dep_date = mjd20002date(dep);
 fb_date = mjd20002date(fb);
 
 arr_date = mjd20002date(arr);
+
+
 %%
 
 orbitType = 0;
