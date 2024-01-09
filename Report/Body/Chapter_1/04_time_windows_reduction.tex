@@ -42,15 +42,61 @@ The problem needs to be reformulated. The goal is to find the period of time tha
     \end{dcases}
 \end{equation}
 
-Since the true anomaly for an orbit repeats itself every orbit period $T$, it results:
+Since the true anomaly for an orbit repeats itself every orbital period $T$, it results:
 
-\begin{equation}
+\begin{equation} \label{eq:t_res}
     \begin{dcases}
-        \theta^{(1)} (t_0) = \theta_0^{(1)} \\
-        \theta^{(2)} (t_0) = \theta_0^{(2)} \\
-        \theta^{(3)} (t_0) = \theta_0^{(3)}
+        \theta_0^{(1)} = \theta^{(1)} (t_0 + i T^{(1)}) =
+        \theta^{(1)} (t_0 + T_{res}) \\
+        \theta_0^{(2)} = \theta^{(2)} (t_0 + j T^{(2)}) =
+        \theta^{(2)} (t_0 + T_{res}) \\
+        \theta_0^{(3)} = \theta^{(3)} (t_0 + k T^{(3)}) =
+        \theta^{(3)} (t_0 + T_{res})
     \end{dcases}
+    \quad \rightarrow \quad
+    T_{res} = i T^{(1)} = j T^{(2)} = k T^{(3)}
+    \qquad
+    (i, j, k \in \mathbbm{N})
 \end{equation}
+\vspace*{5pt}
+
+As obtained in \autoref{eq:t_res}, the resonance period $T_{res}$ must be a multiple of all the three orbital periods. To find three compatible natural numbers for $i, j, k$, the following procedure can be followed:
+
+\vspace*{5pt}
+\begin{minipage}{0.65\linewidth}
+    \begin{algorithmic}
+        \State $i = 1; \quad j = i \cdot T^{(1)}/T^{(2)}; \quad
+        k = i \cdot T^{(1)}/T^{(3)}$
+        \While{$j \notin \mathbbm{N}$ or $k \notin \mathbbm{N}$}
+        \Comment a tolerance $tol$ must be implemented
+        \State $i = i + 1$
+        \State $j = i \cdot T^{(1)}/T^{(2)}$
+        \State $k = i \cdot T^{(1)}/T^{(3)}$
+        \EndWhile\\
+        \Return $i, j, k$
+    \end{algorithmic}
+\end{minipage}
+\vspace*{5pt}
+
+Note that, since a perfect resonance of three celestial bodies is realistically impossible, a certain tolerance $tol$ must be introduced when evaluating $j, k \in \mathbbm{N}$ in order to compute a reasonable $T_{res}$. In the specific case of this report, the execution of the above algorithm returned the following results:
+
+\begin{table}[H]
+
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    $\bm{tol}$ & $\bm{i \; (Earth)}$ & $\bm{j \; (Mars)}$ & $\bm{k \; (1036 \, Ganymed)}$ \\
+    \hline
+    $0.1159$ & $13$ & $6.9119$ & $4.8841$ \\
+    \hline
+    \end{tabular}
+    
+    \caption{Results of the resonance analysis}
+    \label{table:resonance}
+    
+\end{table}
+
+$T_{res}$ results to be 13 Earth's sidereal years, so the time domain can be restricted accordingly. It is important to keep in mind that this is an approximation, but since the mission has to departure in a reasonable date, it is acceptable to restrain the time window to the first 13 years. In any case, the cost of the mission will repeat similarly after 13 years.
 
 
 \subsection{Cost-plot analysis}

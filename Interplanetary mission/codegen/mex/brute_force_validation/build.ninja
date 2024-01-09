@@ -1,0 +1,69 @@
+# CompilerName=msvc170
+# Mode=optim
+ninja_required_version = 1.3
+
+# Basic folders
+root = .
+builddir = $root\build\win64
+matlabdir = C:\Program Files\MATLAB\R2023b
+startdir = C:\Users\turcu\Desktop\Progetti\Orbital-project\Interplanetary mission
+
+# Toolchain information
+cc = cl
+cxx = cl
+linker = link
+linkerxx = link
+
+cflags =  /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I "$root" /I "$startdir" /I "$root\interface" /I "$matlabdir\extern\include" /I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex  
+
+cxxflags =   /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I "$root" /I "$startdir" /I "$root\interface" /I "$matlabdir\extern\include" /I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex  
+
+ldflags =  /nologo /manifest   /DLL /LIBPATH:"$matlabdir\extern\lib\win64\microsoft" libmx.lib libmex.lib libmat.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  /out:"brute_force_validation_mex.mexw64" /LIBPATH:"$matlabdir\extern\lib\win64\microsoft" libmwblas.lib libmwlapack.lib libemlrt.lib libcovrt.lib libut.lib libmwmathutil.lib  /export:mexFunction /export:mexfilerequiredapiversion /export:emlrtMexFcnProperties /export:brute_force_validation /export:brute_force_validation_initialize /export:brute_force_validation_terminate /export:brute_force_validation_atexit /export:b_error /export:emxEnsureCapacity_real_T /export:emxFree_real_T /export:emxInit_real_T
+
+linkobjs = 
+
+# Build Rules
+rule cc
+    command = $cc $cflags $in /Fo$out
+
+rule cxx
+    command = $cxx $cxxflags $in /Fo$out
+
+rule link
+    command = $linker @$out.rsp $linkobjs $ldflags
+    rspfile = $out.rsp
+    rspfile_content = $in
+
+rule linkxx
+    command = $linkerxx $in $linkobjs $ldflags
+
+# Build
+build $builddir\brute_force_validation_data.obj : cc $root\brute_force_validation_data.c
+build $builddir\rt_nonfinite.obj : cc $root\rt_nonfinite.c
+build $builddir\brute_force_validation_initialize.obj : cc $root\brute_force_validation_initialize.c
+build $builddir\brute_force_validation_terminate.obj : cc $root\brute_force_validation_terminate.c
+build $builddir\brute_force_validation.obj : cc $root\brute_force_validation.c
+build $builddir\date2jd.obj : cc $root\date2jd.c
+build $builddir\linspace.obj : cc $root\linspace.c
+build $builddir\uplanet.obj : cc $root\uplanet.c
+build $builddir\lambertMR.obj : cc $root\lambertMR.c
+build $builddir\dot.obj : cc $root\dot.c
+build $builddir\norm.obj : cc $root\norm.c
+build $builddir\lsqnonlin.obj : cc $root\lsqnonlin.c
+build $builddir\compute_delta.obj : cc $root\compute_delta.c
+build $builddir\mjd20002date.obj : cc $root\mjd20002date.c
+build $builddir\_coder_brute_force_validation_api.obj : cc $root\interface\_coder_brute_force_validation_api.c
+build $builddir\_coder_brute_force_validation_mex.obj : cc $root\interface\_coder_brute_force_validation_mex.c
+build $builddir\kep2car.obj : cc $root\kep2car.c
+build $builddir\computeFiniteDifferences.obj : cc $root\computeFiniteDifferences.c
+build $builddir\linearLeastSquares.obj : cc $root\linearLeastSquares.c
+build $builddir\finDiffEvalAndChkErr.obj : cc $root\finDiffEvalAndChkErr.c
+build $builddir\brute_force_validation_emxutil.obj : cc $root\brute_force_validation_emxutil.c
+build $builddir\driver.obj : cc $root\driver.c
+build $builddir\checkStoppingCriteria.obj : cc $root\checkStoppingCriteria.c
+build $builddir\brute_force_validation_mexutil.obj : cc $root\brute_force_validation_mexutil.c
+build $builddir\_coder_brute_force_validation_info.obj : cc $root\interface\_coder_brute_force_validation_info.c
+build $builddir\c_mexapi_version.obj : cc $matlabdir\extern\version\c_mexapi_version.c
+
+# Link
+build $root\brute_force_validation_mex.mexw64 : link $builddir\brute_force_validation_data.obj $builddir\rt_nonfinite.obj $builddir\brute_force_validation_initialize.obj $builddir\brute_force_validation_terminate.obj $builddir\brute_force_validation.obj $builddir\date2jd.obj $builddir\linspace.obj $builddir\uplanet.obj $builddir\lambertMR.obj $builddir\dot.obj $builddir\norm.obj $builddir\lsqnonlin.obj $builddir\compute_delta.obj $builddir\mjd20002date.obj $builddir\_coder_brute_force_validation_api.obj $builddir\_coder_brute_force_validation_mex.obj $builddir\kep2car.obj $builddir\computeFiniteDifferences.obj $builddir\linearLeastSquares.obj $builddir\finDiffEvalAndChkErr.obj $builddir\brute_force_validation_emxutil.obj $builddir\driver.obj $builddir\checkStoppingCriteria.obj $builddir\brute_force_validation_mexutil.obj $builddir\_coder_brute_force_validation_info.obj $builddir\c_mexapi_version.obj 
