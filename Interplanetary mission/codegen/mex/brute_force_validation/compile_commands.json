@@ -1,0 +1,158 @@
+[
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   brute_force_validation_data.c /Fobuild\\win64\\brute_force_validation_data.obj",
+    "file": "brute_force_validation_data.c",
+    "output": "build/win64/brute_force_validation_data.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   rt_nonfinite.c /Fobuild\\win64\\rt_nonfinite.obj",
+    "file": "rt_nonfinite.c",
+    "output": "build/win64/rt_nonfinite.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   brute_force_validation_initialize.c /Fobuild\\win64\\brute_force_validation_initialize.obj",
+    "file": "brute_force_validation_initialize.c",
+    "output": "build/win64/brute_force_validation_initialize.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   brute_force_validation_terminate.c /Fobuild\\win64\\brute_force_validation_terminate.obj",
+    "file": "brute_force_validation_terminate.c",
+    "output": "build/win64/brute_force_validation_terminate.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   brute_force_validation.c /Fobuild\\win64\\brute_force_validation.obj",
+    "file": "brute_force_validation.c",
+    "output": "build/win64/brute_force_validation.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   date2jd.c /Fobuild\\win64\\date2jd.obj",
+    "file": "date2jd.c",
+    "output": "build/win64/date2jd.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   linspace.c /Fobuild\\win64\\linspace.obj",
+    "file": "linspace.c",
+    "output": "build/win64/linspace.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   uplanet.c /Fobuild\\win64\\uplanet.obj",
+    "file": "uplanet.c",
+    "output": "build/win64/uplanet.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   lambertMR.c /Fobuild\\win64\\lambertMR.obj",
+    "file": "lambertMR.c",
+    "output": "build/win64/lambertMR.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   dot.c /Fobuild\\win64\\dot.obj",
+    "file": "dot.c",
+    "output": "build/win64/dot.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   norm.c /Fobuild\\win64\\norm.obj",
+    "file": "norm.c",
+    "output": "build/win64/norm.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   lsqnonlin.c /Fobuild\\win64\\lsqnonlin.obj",
+    "file": "lsqnonlin.c",
+    "output": "build/win64/lsqnonlin.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   compute_delta.c /Fobuild\\win64\\compute_delta.obj",
+    "file": "compute_delta.c",
+    "output": "build/win64/compute_delta.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   mjd20002date.c /Fobuild\\win64\\mjd20002date.obj",
+    "file": "mjd20002date.c",
+    "output": "build/win64/mjd20002date.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   interface\\_coder_brute_force_validation_api.c /Fobuild\\win64\\_coder_brute_force_validation_api.obj",
+    "file": "interface/_coder_brute_force_validation_api.c",
+    "output": "build/win64/_coder_brute_force_validation_api.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   interface\\_coder_brute_force_validation_mex.c /Fobuild\\win64\\_coder_brute_force_validation_mex.obj",
+    "file": "interface/_coder_brute_force_validation_mex.c",
+    "output": "build/win64/_coder_brute_force_validation_mex.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   kep2car.c /Fobuild\\win64\\kep2car.obj",
+    "file": "kep2car.c",
+    "output": "build/win64/kep2car.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   computeFiniteDifferences.c /Fobuild\\win64\\computeFiniteDifferences.obj",
+    "file": "computeFiniteDifferences.c",
+    "output": "build/win64/computeFiniteDifferences.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   linearLeastSquares.c /Fobuild\\win64\\linearLeastSquares.obj",
+    "file": "linearLeastSquares.c",
+    "output": "build/win64/linearLeastSquares.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   finDiffEvalAndChkErr.c /Fobuild\\win64\\finDiffEvalAndChkErr.obj",
+    "file": "finDiffEvalAndChkErr.c",
+    "output": "build/win64/finDiffEvalAndChkErr.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   brute_force_validation_emxutil.c /Fobuild\\win64\\brute_force_validation_emxutil.obj",
+    "file": "brute_force_validation_emxutil.c",
+    "output": "build/win64/brute_force_validation_emxutil.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   driver.c /Fobuild\\win64\\driver.obj",
+    "file": "driver.c",
+    "output": "build/win64/driver.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   checkStoppingCriteria.c /Fobuild\\win64\\checkStoppingCriteria.obj",
+    "file": "checkStoppingCriteria.c",
+    "output": "build/win64/checkStoppingCriteria.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   brute_force_validation_mexutil.c /Fobuild\\win64\\brute_force_validation_mexutil.obj",
+    "file": "brute_force_validation_mexutil.c",
+    "output": "build/win64/brute_force_validation_mexutil.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   interface\\_coder_brute_force_validation_info.c /Fobuild\\win64\\_coder_brute_force_validation_info.obj",
+    "file": "interface/_coder_brute_force_validation_info.c",
+    "output": "build/win64/_coder_brute_force_validation_info.obj"
+  },
+  {
+    "directory": "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\\codegen\\mex\\brute_force_validation",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary mission\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=brute_force_validation_mex   \"C:\\Program Files\\MATLAB\\R2023b\\extern\\version\\c_mexapi_version.c\" /Fobuild\\win64\\c_mexapi_version.obj",
+    "file": "C:/Program Files/MATLAB/R2023b/extern/version/c_mexapi_version.c",
+    "output": "build/win64/c_mexapi_version.obj"
+  }
+]

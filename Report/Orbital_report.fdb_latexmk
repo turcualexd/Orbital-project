@@ -1,21 +1,25 @@
 # Fdb version 4
-["bibtex Orbital_report"] 1704727900 "Orbital_report.aux" "Orbital_report.bbl" "Orbital_report" 1704727903 0
+["bibtex Orbital_report"] 1704744346 "Orbital_report.aux" "Orbital_report.bbl" "Orbital_report" 1704752512 0
   "./bibliography.bib" 1704671322 154 5c57771bc961821334460094bfe53c64 ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/unsrt.bst" 1291864736 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "Orbital_report.aux" 1704727902 5711 341947c08f0553279a7fbaf432f88ab8 "pdflatex"
+  "Orbital_report.aux" 1704752511 6167 f5f34734a5ffc70be49440c81f54f5f3 "pdflatex"
   (generated)
   "Orbital_report.bbl"
   "Orbital_report.blg"
   (rewritten before read)
-["pdflatex"] 1704727901 "c:/Users/turcu/Desktop/Progetti/Orbital-project/Report/Orbital_report.tex" "Orbital_report.pdf" "Orbital_report" 1704727903 0
+["pdflatex"] 1704752510 "c:/Users/turcu/Desktop/Progetti/Orbital-project/Report/Orbital_report.tex" "Orbital_report.pdf" "Orbital_report" 1704752512 0
   "Body.tex" 1704680460 1478 fc6a8b852e0b1a5dbbdad0b16ab061c0 ""
   "Body/Chapter_1/01_symbols.tex" 1704681920 977 ea3c62c5aff7dbde7f6d57f536a5627b ""
   "Body/Chapter_1/02_introduction.tex" 1704709599 2711 b67413e1d0ffda8c971c09247c859f4a ""
   "Body/Chapter_1/03_algorithms_description.tex" 1704713415 1958 c299e76ec1ba8f0b42d0c4e9f32bdb50 ""
-  "Body/Chapter_1/04_time_windows_reduction.tex" 1704727897 3150 d6186dfee37f8fec674e27b82c1781e3 ""
+  "Body/Chapter_1/04_time_windows_reduction.tex" 1704752509 5271 99d8f5cb3e9115873702cad6010ba38f ""
   "Body/Chapter_1/05_conclusion_results.tex" 1704674163 78 3da24a88a90d921bcc3abd12b92df47a ""
   "Body/abstract.tex" 1704676335 106 9ea3c678a6256fb5378d0f97f2f2202b ""
   "C:/Users/turcu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1704711348 95607 034e0737ccfe37fc78b0169eb44187f4 ""
+  "C:/Users/turcu/AppData/Local/MiKTeX/fonts/pk/ljfour/public/bbm/dpi600/bbm10.pk" 1704371220 6984 bd25a4b4415283b6065e84f837471319 ""
+  "C:/Users/turcu/AppData/Local/MiKTeX/fonts/tfm/public/bbm/bbm10.tfm" 1704371217 560 39fd35b5e4a6aca3672660cc548ba860 ""
+  "C:/Users/turcu/AppData/Local/MiKTeX/fonts/tfm/public/bbm/bbm6.tfm" 1704371218 560 4c5ff0e6c23877f3f630ae9d8ef92c6e ""
+  "C:/Users/turcu/AppData/Local/MiKTeX/fonts/tfm/public/bbm/bbm8.tfm" 1704371217 560 2e80f8a1cb59527f57d99bb5fccd0f3c ""
   "C:/Users/turcu/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1684232945 23188739 a2fc3e86f82404b52dad9870f4800c11 ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/kpfonts/kpfonts-expert.enc" 1674488844 2639 b7bbeb66c016cde6fdcad9263fe54a4a ""
@@ -63,6 +67,7 @@
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb" 1674488844 35294 e88bb6b7bdd82f594dee041ddea9423c ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb" 1674488844 18013 a3754f8df0b4dd3a76b5353fabb31650 ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb" 1674488844 25860 1e4d17fc7bf1d0b47e9b47e6099f1971 ""
+  "C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsyc.pfb" 1674488844 30452 9ecaa7ccc78b5d3e23f0e8f870dd5088 ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/vf/public/kpfonts/jkpbn7t.vf" 1674488844 984 cb10e437de92fc0b8181a6322b62c9aa ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/vf/public/kpfonts/jkpbn8t.vf" 1674488844 1800 bde6e91770b65baf214fcc34f4229391 ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/vf/public/kpfonts/jkpbsc8t.vf" 1674488844 1772 ac24da4a9b20c1dc80e2fecfab43b945 ""
@@ -157,6 +162,7 @@
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/tex/latex/base/report.cls" 1669844196 23203 3d69f4661dd74a5edb1507ff18e40fb9 ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo" 1669844196 8448 c33a4e1cb35cee9b33c2b21033b73e39 ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/tex/latex/base/textcomp.sty" 1669844196 2894 f2f8ee7d4fb94263f9f255fa22cab2d3 ""
+  "C:/Users/turcu/AppData/Local/Programs/MiKTeX/tex/latex/bbm/ubbm.fd" 1227195129 2187 62f898e14cad3357133b5cbf57b61c0a ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty" 1678645786 55778 14d5c99aa26410e440820bb9ea5b8b3a ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty" 1678645786 71836 1a735454ad10692452eb2f2fc37f3865 ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/tex/latex/caption/ltcaption.sty" 1678645786 7418 021d7c4eb11bde94592761855a3d046e ""
@@ -259,11 +265,11 @@
   "Configuration files/title_page.tex" 1704664586 1357 11c8e85a7b8ae732b6f942d64c274f7a ""
   "Images//logo_polimi_ing_indinf.eps" 1704468103 1016894 50c9d95dbacdb6a7531ebeec13361098 ""
   "Images//raggiera_polimi.eps" 1704468103 1813066 68b21695bbcbb6d7e09839c06406f8f3 ""
-  "Orbital_report.aux" 1704727902 5711 341947c08f0553279a7fbaf432f88ab8 "pdflatex"
-  "Orbital_report.bbl" 1704727901 185 6c5facbf921bcbb67c4b9b8cefdd8ccf "bibtex Orbital_report"
-  "Orbital_report.out" 1704727902 2653 f0d8bf6e74f75709c495cbd810212828 "pdflatex"
+  "Orbital_report.aux" 1704752511 6167 f5f34734a5ffc70be49440c81f54f5f3 "pdflatex"
+  "Orbital_report.bbl" 1704744347 185 6c5facbf921bcbb67c4b9b8cefdd8ccf "bibtex Orbital_report"
+  "Orbital_report.out" 1704752511 2653 a63a8ddd7cb9529cb90630d7b38665f8 "pdflatex"
   "Orbital_report.tex" 1704713504 5099 4d235a04e10300e9822bbb5827ebe432 ""
-  "Orbital_report.toc" 1704727902 1544 58c1c86a81f36574ceba269d2eee4999 "pdflatex"
+  "Orbital_report.toc" 1704752511 1544 c5a785cdb95d15bb671bc433de4d3b73 "pdflatex"
   "c:/Users/turcu/Desktop/Progetti/Orbital-project/Report/Orbital_report.tex" 1704713504 5099 4d235a04e10300e9822bbb5827ebe432 ""
   (generated)
   "Orbital_report.aux"

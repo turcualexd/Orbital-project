@@ -58,7 +58,7 @@ function [kep,mass,M,d] = ephNEO(time,id)
 % -------------------------------------------------------------------------
 
 id=round(id)-11;
-neo = zeros(84,9);
+neo = zeros(88,9);
 
 % to UPDATE use this layout:
 % %   name, class
