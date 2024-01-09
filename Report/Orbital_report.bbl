@@ -1,5 +1,23 @@
 \begin{thebibliography}{1}
 
+\bibitem{phd_menzio}
+Davide Menzio.
+\newblock Grid-search applications for trajectory design in presence of flybys.
+\newblock PhD Dissertation, 2019.
+\newblock Site: \url{https://www.politesi.polimi.it/handle/10589/152568}.
+
+\bibitem{battin}
+Richard Battin.
+\newblock {\em An introduction to the mathematics and methods of
+  astrodynamics}.
+\newblock AIAA Education Series, 1987.
+
+\bibitem{global_optimisation}
+Gianmarco~Radice Pierluigi Di~Lizia.
+\newblock Advanced global optimisation tools for mission analysis and design.
+\newblock Paper, 2004.
+\newblock Site: \url{https://www.esa.int/gsp/ACT/resources/act_papers}.
+
 \bibitem{curtis_book}
 Howard~D. Curtis.
 \newblock {\em Orbital Mechanics for Engineering Students}.
