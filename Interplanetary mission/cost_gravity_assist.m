@@ -14,9 +14,7 @@ v_p = V_p - VP;
 
 x = dot(v_m, v_p) / (norm(v_m) * norm(v_p));
 if abs(x) > 1
-    dv = 1000;
-    rp = 0;
-    return
+    delta = 0;
 else
     delta = acos(x);
 end
@@ -35,7 +33,7 @@ dv = norm(vp1 - vp2);
 
     if rp < (astroConstants(23) + 500)
         
-        dv = 10;
+        dv = 1e4;
 
     end
 

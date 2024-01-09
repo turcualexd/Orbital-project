@@ -254,35 +254,35 @@ static emlrtRSInfo sc_emlrtRSI = {
 };
 
 static emlrtRSInfo tc_emlrtRSI = {
-    21,                    /* lineNo */
+    19,                    /* lineNo */
     "cost_gravity_assist", /* fcnName */
     "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary "
     "mission\\cost_gravity_assist.m" /* pathName */
 };
 
 static emlrtRSInfo uc_emlrtRSI = {
-    24,                    /* lineNo */
+    22,                    /* lineNo */
     "cost_gravity_assist", /* fcnName */
     "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary "
     "mission\\cost_gravity_assist.m" /* pathName */
 };
 
 static emlrtRSInfo vc_emlrtRSI = {
-    30,                    /* lineNo */
+    28,                    /* lineNo */
     "cost_gravity_assist", /* fcnName */
     "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary "
     "mission\\cost_gravity_assist.m" /* pathName */
 };
 
 static emlrtRSInfo wc_emlrtRSI = {
-    32,                    /* lineNo */
+    30,                    /* lineNo */
     "cost_gravity_assist", /* fcnName */
     "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary "
     "mission\\cost_gravity_assist.m" /* pathName */
 };
 
 static emlrtRSInfo xc_emlrtRSI = {
-    36,                    /* lineNo */
+    34,                    /* lineNo */
     "cost_gravity_assist", /* fcnName */
     "C:\\Users\\turcu\\Desktop\\Progetti\\Orbital-project\\Interplanetary "
     "mission\\cost_gravity_assist.m" /* pathName */
@@ -422,6 +422,7 @@ void brute_force_validation(const emlrtStack *sp, real_T n, real_T *dv_min,
   real_T b_data[3];
   real_T v_m[3];
   real_T v_p[3];
+  real_T a__4;
   real_T a__5;
   real_T a__6;
   real_T arr_date;
@@ -430,7 +431,6 @@ void brute_force_validation(const emlrtStack *sp, real_T n, real_T *dv_min,
   real_T fb_date;
   real_T phi;
   real_T t;
-  real_T x;
   real_T *TOF1_data;
   real_T *dep_mjd2000_data;
   int32_T b_i;
@@ -640,7 +640,7 @@ void brute_force_validation(const emlrtStack *sp, real_T n, real_T *dv_min,
               v_m);
       c_st.site = &w_emlrtRSI;
       lambertMR(&c_st, RI, RF, (T_fb - dep_mjd2000_data[b_i]) * 24.0 * 3600.0,
-                &ddf, &x, &a__5, v_m, VF, &a__6, &t);
+                &ddf, &a__4, &a__5, v_m, VF, &a__6, &t);
       r = _mm_loadu_pd(&v_m[0]);
       r1 = _mm_loadu_pd(&V1[0]);
       _mm_storeu_pd(&v_m[0], _mm_sub_pd(r, r1));
@@ -1459,8 +1459,8 @@ void brute_force_validation(const emlrtStack *sp, real_T n, real_T *dv_min,
                                          muDoubleScalarTan(phi * 0.5)),
                 RF, V2);
         c_st.site = &oc_emlrtRSI;
-        lambertMR(&c_st, RI, RF, (T_arr - T_fb) * 24.0 * 3600.0, &phi, &ddf, &x,
-                  v_p, b_VF, &a__5, &a__6);
+        lambertMR(&c_st, RI, RF, (T_arr - T_fb) * 24.0 * 3600.0, &phi, &ddf,
+                  &a__4, v_p, b_VF, &a__5, &a__6);
         /* deltav1 = norm(VI'-V1); */
         b_st.site = &l_emlrtRSI;
         c_st.site = &pc_emlrtRSI;
@@ -1899,263 +1899,259 @@ void brute_force_validation(const emlrtStack *sp, real_T n, real_T *dv_min,
         v_p[2] = ddf;
         a_data[2] = phi;
         b_data[2] = ddf;
-        phi = b_norm(v_m);
-        ddf = b_norm(v_p);
+        ddf = b_norm(v_m);
+        a__4 = b_norm(v_p);
         n_t = (ptrdiff_t)3;
         incx_t = (ptrdiff_t)1;
         incy_t = (ptrdiff_t)1;
         t = ddot(&n_t, &a_data[0], &incx_t, &b_data[0], &incy_t);
-        x = t / (phi * ddf);
-        if (muDoubleScalarAbs(x) > 1.0) {
-          t = 1000.0;
-          a__5 = 0.0;
+        phi = t / (ddf * a__4);
+        if (muDoubleScalarAbs(phi) > 1.0) {
+          t = 0.0;
         } else {
           c_st.site = &tc_emlrtRSI;
-          if ((x < -1.0) || (x > 1.0)) {
+          if ((phi < -1.0) || (phi > 1.0)) {
             emlrtErrorWithMessageIdR2018a(
                 &c_st, &emlrtRTEI, "Coder:toolbox:ElFunDomainError",
                 "Coder:toolbox:ElFunDomainError", 3, 4, 4, "acos");
           }
-          c_st.site = &uc_emlrtRSI;
-          /*  options.Display = 'off'; */
-          /*  options = optimoptions('fsolve','Algorithm','levenberg-marquardt',
-           * 'Display', 'off'); */
-          /*  rp = fsolve(fun, R_plan, options); */
-          d_st.site = &yc_emlrtRSI;
-          a__5 = lsqnonlin(&d_st, phi, ddf, muDoubleScalarAcos(x));
-          c_st.site = &vc_emlrtRSI;
-          d_st.site = &q_emlrtRSI;
-          c_st.site = &vc_emlrtRSI;
-          x = phi * phi + 797200.866 / a__5;
-          if (x < 0.0) {
-            emlrtErrorWithMessageIdR2018a(
-                &c_st, &b_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
-                "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
-          }
-          c_st.site = &wc_emlrtRSI;
-          d_st.site = &q_emlrtRSI;
-          c_st.site = &wc_emlrtRSI;
-          t = ddf * ddf + 797200.866 / a__5;
-          if (t < 0.0) {
-            emlrtErrorWithMessageIdR2018a(
-                &c_st, &b_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
-                "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
-          }
-          t = muDoubleScalarAbs(muDoubleScalarSqrt(x) - muDoubleScalarSqrt(t));
-          c_st.site = &xc_emlrtRSI;
-          /*  astroConstants.m - Returns astrodynamic-related physical
-           * constants. */
-          /*  */
-          /*  PROTOTYPE: */
-          /*    out = astro_constants(in) */
-          /*  */
-          /*  DESCRIPTION: */
-          /*    Returns a row vector of constants, in which there is the
-           * corresponding */
-          /*    constant for each element of the input vector. */
-          /*  */
-          /*    List of identifiers: */
-          /*        Generic astronomical constants: */
-          /*            1   Universal gravity constant (G) (from DITAN and
-           * Horizon) [km^3/(kg*s^2)] */
-          /*            2   Astronomical Unit (AU) (from DE405) [km] */
-          /*                Note:  The value for 1 au is from the IAU 2012
-           * Resolution B1. */
-          /*        Sun related: */
-          /*            3   Sun mean radius (from DITAN) [km] */
-          /*            4   Sun planetary constant (mu = mass * G) (from DE405)
-           */
-          /*                [km^3/s^2] */
-          /*            31  Energy flux density of the Sun (from Wertz,SMAD) */
-          /*                [W/m2 at 1 AU] */
-          /*        Other: */
-          /*            5   Speed of light in the vacuum (definition in the SI
-           * and Horizon) [km/s] */
-          /*            6   Standard free fall (the acceleration due to gravity
-           * on the */
-          /*                Earth's surface at sea level) (from Wertz,SMAD)
-           * [m/s^2] */
-          /*            7   Mean distance Earth-Moon (from Wertz,SMAD) [km] */
-          /*            8   Obliquity (angle) of the ecliptic at Epoch 2000
-           * (from */
-          /*                Horizon) [rad] */
-          /*            9   Gravitatonal field constant of the Earth (from
-           * Wertz,SMAD, */
-          /*                taken from JGM-2). This should be used in
-           * conjunction to */
-          /*                Earth radius = 6378.1363 km */
-          /*            32  Days in a Julian year y = 365.25 d  (from Horizon)
-           */
-          /*        Planetary constants of the planets (mu = mass * G)
-           * [km^3/s^2]: */
-          /*            11  Me      (from DE405) */
-          /*            12  V       (from DE405) */
-          /*            13  E       (from DE405) */
-          /*            14  Ma      (from DE405) */
-          /*            15  J       (from DE405) */
-          /*            16  S       (from DE405) */
-          /*            17  U       (from DE405) */
-          /*            18  N       (from DE405) */
-          /*            19  P       (from DE405) */
-          /*            20  Moon    (from DE405) */
-          /*        Mean radius of the planets [km]: */
-          /*            21  Me      (from Horizon) */
-          /*            22  V       (from Horizon) */
-          /*            23  E       (from Horizon) */
-          /*            24  Ma      (from Horizon) */
-          /*            25  J       (from Horizon) */
-          /*            26  S       (from Horizon) */
-          /*            27  U       (from Horizon) */
-          /*            28  N       (from Horizon) */
-          /*            29  P       (from Horizon) */
-          /*            30  Moon    (from Horizon) */
-          /*  */
-          /*    Notes for upgrading this function: */
-          /*        It is possible to add new constants. */
-          /*        - DO NOT change the structure of the function, as well as
-           * its */
-          /*            prototype. */
-          /*        - DO NOT change the identifiers of the constants that have
-           * already */
-          /*            been defined in this function. If you want to add a new
-           */
-          /*            constant, use an unused identifier. */
-          /*        - DO NOT add constants that can be easily computed starting
-           * form */
-          /*            other ones (avoid redundancy). */
-          /*        Contact the author for modifications. */
-          /*  */
-          /*  INPUT: */
-          /*    in      Vector of identifiers of required constants. */
-          /*  */
-          /*  OUTPUT: */
-          /*    out     Vector of constants. */
-          /*  */
-          /*  EXAMPLE: */
-          /*    astroConstants([2, 4, 26]) */
-          /*       Returns a row vector in which there is the value of the AU,
-           * the Sun */
-          /*       planetary constant and the mean radius of Saturn. */
-          /*  */
-          /*    astroConstants(10 + [1:9]) */
-          /*       Returns a row vector with the planetary constant of each
-           * planet. */
-          /*  */
-          /*  REFERENCES: */
-          /*    - DITAN (Direct Interplanetary Trajectory Analysis),
-           * Massimiliano */
-          /*        Vasile, 2006. */
-          /* 	- Wertz J. R., Larson W. J., "Space Mission Analysis and
-           * Design", Third */
-          /*        Edition, Space Technology Library 2003. */
-          /*    [A]   DE405 -
-           * http://iau-comm4.jpl.nasa.gov/de405iom/de405iom.pdf */
-          /*    [B]   Explanatory Supplement to the Astronomical Almanac. 1992.
-           * K. P. */
-          /*          Seidelmann, Ed., p.706 (Table 15.8) and p.316
-           * (Table 5.8.1), */
-          /*          University Science Books, Mill Valley, California.  */
-          /*    [C]   Tholen, D.J. and Buie, M.W. 1990. "Further Analysis of */
-          /*          Pluto-Charon Mutual Event Observations" BAAS 22(3):1129.
-           */
-          /*    [D]   Seidelmann, P.K. et al. 2007. "Report of the IAU/IAG
-           * Working */
-          /*          Group on cartographic coordinates and rotational elements:
-           * 2006" */
-          /*          Celestial Mech. Dyn. Astr. 98:155-180.  */
-          /*    [F]   Anderson, J.D., et al. 1987. "The mass, gravity field, and
-           */
-          /*          ephemeris of Mercury" Icarus 71:337-349. */
-          /*    [G]   Konopliv, A.S., et al. 1999. "Venus gravity: 180th degree
-           * and */
-          /*          order model" Icarus 139:3-18. */
-          /*    [H]   Folkner, W.M. and Williams, J.G. 2008. "Mass parameters
-           * and */
-          /*          uncertainties in planetary ephemeris DE421." Interoffice
-           * Memo. */
-          /*          343R-08-004 (internal document), Jet Propulsion
-           * Laboratory, */
-          /*          Pasadena, CA.  */
-          /*    [I]   Jacobson, R.A. 2008. "Ephemerides of the Martian
-           * Satellites - */
-          /*          MAR080" Interoffice Memo. 343R-08-006 (internal document),
-           */
-          /*          Jet Propulsion Laboratory, Pasadena, CA.  */
-          /*    [J]   Jacobson, R.A. 2005. "Jovian Satellite ephemeris - JUP230"
-           */
-          /*          private communication.  */
-          /*    [K]   Jacobson, R.A., et al. 2006. "The gravity field of the
-           * Saturnian */
-          /*          system from satellite observations and spacecraft tracking
-           * data" */
-          /*          AJ 132(6):2520-2526.  */
-          /*    [L]   Jacobson, R.A. 2007. "The gravity field of the Uranian
-           * system and */
-          /*          the orbits of the Uranian satellites and rings" BAAS
-           * 39(3):453.  */
-          /*    [M]   Jacobson, R.A. 2008. "The orbits of the Neptunian
-           * satellites and */
-          /*          the orientation of the pole of Neptune" BAAS 40(2):296. */
-          /*    [N]   Jacobson, R.A. 2007. "The orbits of the satellites of
-           * Pluto - */
-          /*          Ephemeris PLU017" private communication. */
-          /*    [W1]  http://ssd.jpl.nasa.gov/?planet_phys_par Last retrieved */
-          /*          20/03/2013 */
-          /*    [W2]  http://ssd.jpl.nasa.gov/?sat_phys_par Last retrieved */
-          /*          20/03/2013 */
-          /*    [W3]  http://ssd.jpl.nasa.gov/horizons.cgi Last retrieved */
-          /*          20/03/2013 */
-          /*    [M1]  Bills, B.G. and Ferrari, A.J. 1977. ``A Harmonic Analysis
-           * of */
-          /*          Lunar Topography'', Icarus 31, 244-259. */
-          /*    [M2]  Standish, E. M. 1998. JPL Planetary and Lunar Ephemerides,
-           */
-          /*          DE405/LE405. */
-          /*    [M3]  Lunar Constants and Models Document, Ralph B. Roncoli, 23
-           * Sept 2005, */
-          /*          JPL Technical Document D-32296  */
-          /*  */
-          /*  CALLED FUNCTIONS: */
-          /*    (none) */
-          /*  */
-          /*  AUTHOR: */
-          /*    Matteo Ceriotti, 2006, MATLAB, astroConstants.m */
-          /*  */
-          /*  PREVIOUS VERSION: */
-          /*    Matteo Ceriotti, 2006, MATLAB, astro_constants.m, Ver. 1.2 */
-          /*        - Header and function name in accordance with guidlines. */
-          /*  */
-          /*  CHANGELOG: */
-          /*    26/10/2006, Camilla Colombo: Updated. */
-          /*    22/10/2007, Camilla Colombo: astroConstants(8) added (Obliquity
-           * (angle) */
-          /*        of the ecliptic at Epoch 2000). */
-          /*    02/10/2009, Camilla Colombo: Header and function name in
-           * accordance */
-          /*        with guidlines. */
-          /*    12/11/2010, Camilla Colombo: astroConstants(9) added (J2) Note:
-           * the */
-          /*        present value of J2 is not consistent with the value of the
-           * Earth */
-          /*        radius. This value of J2 should be used in conjunction to
-           * Earth */
-          /*        radius = 6378.1363 km */
-          /*    19/03/2013, Camilla Colombo: constants updated to NASA JPL
-           * website. */
-          /*        References added. */
-          /*    20/03/2013, REVISION, Francesca Letizia. */
-          /*    22/03/2013, Francesca Letizia: all GM from DE405. */
-          /*  */
-          /*  -------------------------------------------------------------------------
-           */
-          /*  9: J2 */
-          /*  32: 365.25 */
-          /*  out(i)=0.63781600000000E+04; % From DITAN */
-          /*  out(i)=6371.00; % From Horizon [B] */
-          /*  From Horizon [W3] */
-          if (a__5 < 6871.01) {
-            t = 10.0;
-          }
+          t = muDoubleScalarAcos(phi);
+        }
+        c_st.site = &uc_emlrtRSI;
+        /*  options.Display = 'off'; */
+        /*  options = optimoptions('fsolve','Algorithm','levenberg-marquardt',
+         * 'Display', 'off'); */
+        /*  rp = fsolve(fun, R_plan, options); */
+        d_st.site = &yc_emlrtRSI;
+        a__5 = lsqnonlin(&d_st, ddf, a__4, t);
+        c_st.site = &vc_emlrtRSI;
+        d_st.site = &q_emlrtRSI;
+        c_st.site = &vc_emlrtRSI;
+        phi = ddf * ddf + 797200.866 / a__5;
+        if (phi < 0.0) {
+          emlrtErrorWithMessageIdR2018a(
+              &c_st, &b_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
+              "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
+        }
+        c_st.site = &wc_emlrtRSI;
+        d_st.site = &q_emlrtRSI;
+        c_st.site = &wc_emlrtRSI;
+        t = a__4 * a__4 + 797200.866 / a__5;
+        if (t < 0.0) {
+          emlrtErrorWithMessageIdR2018a(
+              &c_st, &b_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
+              "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
+        }
+        t = muDoubleScalarAbs(muDoubleScalarSqrt(phi) - muDoubleScalarSqrt(t));
+        c_st.site = &xc_emlrtRSI;
+        /*  astroConstants.m - Returns astrodynamic-related physical constants.
+         */
+        /*  */
+        /*  PROTOTYPE: */
+        /*    out = astro_constants(in) */
+        /*  */
+        /*  DESCRIPTION: */
+        /*    Returns a row vector of constants, in which there is the
+         * corresponding */
+        /*    constant for each element of the input vector. */
+        /*  */
+        /*    List of identifiers: */
+        /*        Generic astronomical constants: */
+        /*            1   Universal gravity constant (G) (from DITAN and
+         * Horizon) [km^3/(kg*s^2)] */
+        /*            2   Astronomical Unit (AU) (from DE405) [km] */
+        /*                Note:  The value for 1 au is from the IAU 2012
+         * Resolution B1. */
+        /*        Sun related: */
+        /*            3   Sun mean radius (from DITAN) [km] */
+        /*            4   Sun planetary constant (mu = mass * G) (from DE405) */
+        /*                [km^3/s^2] */
+        /*            31  Energy flux density of the Sun (from Wertz,SMAD) */
+        /*                [W/m2 at 1 AU] */
+        /*        Other: */
+        /*            5   Speed of light in the vacuum (definition in the SI and
+         * Horizon) [km/s] */
+        /*            6   Standard free fall (the acceleration due to gravity on
+         * the */
+        /*                Earth's surface at sea level) (from Wertz,SMAD)
+         * [m/s^2] */
+        /*            7   Mean distance Earth-Moon (from Wertz,SMAD) [km] */
+        /*            8   Obliquity (angle) of the ecliptic at Epoch 2000 (from
+         */
+        /*                Horizon) [rad] */
+        /*            9   Gravitatonal field constant of the Earth (from
+         * Wertz,SMAD, */
+        /*                taken from JGM-2). This should be used in conjunction
+         * to */
+        /*                Earth radius = 6378.1363 km */
+        /*            32  Days in a Julian year y = 365.25 d  (from Horizon) */
+        /*        Planetary constants of the planets (mu = mass * G) [km^3/s^2]:
+         */
+        /*            11  Me      (from DE405) */
+        /*            12  V       (from DE405) */
+        /*            13  E       (from DE405) */
+        /*            14  Ma      (from DE405) */
+        /*            15  J       (from DE405) */
+        /*            16  S       (from DE405) */
+        /*            17  U       (from DE405) */
+        /*            18  N       (from DE405) */
+        /*            19  P       (from DE405) */
+        /*            20  Moon    (from DE405) */
+        /*        Mean radius of the planets [km]: */
+        /*            21  Me      (from Horizon) */
+        /*            22  V       (from Horizon) */
+        /*            23  E       (from Horizon) */
+        /*            24  Ma      (from Horizon) */
+        /*            25  J       (from Horizon) */
+        /*            26  S       (from Horizon) */
+        /*            27  U       (from Horizon) */
+        /*            28  N       (from Horizon) */
+        /*            29  P       (from Horizon) */
+        /*            30  Moon    (from Horizon) */
+        /*  */
+        /*    Notes for upgrading this function: */
+        /*        It is possible to add new constants. */
+        /*        - DO NOT change the structure of the function, as well as its
+         */
+        /*            prototype. */
+        /*        - DO NOT change the identifiers of the constants that have
+         * already */
+        /*            been defined in this function. If you want to add a new */
+        /*            constant, use an unused identifier. */
+        /*        - DO NOT add constants that can be easily computed starting
+         * form */
+        /*            other ones (avoid redundancy). */
+        /*        Contact the author for modifications. */
+        /*  */
+        /*  INPUT: */
+        /*    in      Vector of identifiers of required constants. */
+        /*  */
+        /*  OUTPUT: */
+        /*    out     Vector of constants. */
+        /*  */
+        /*  EXAMPLE: */
+        /*    astroConstants([2, 4, 26]) */
+        /*       Returns a row vector in which there is the value of the AU, the
+         * Sun */
+        /*       planetary constant and the mean radius of Saturn. */
+        /*  */
+        /*    astroConstants(10 + [1:9]) */
+        /*       Returns a row vector with the planetary constant of each
+         * planet. */
+        /*  */
+        /*  REFERENCES: */
+        /*    - DITAN (Direct Interplanetary Trajectory Analysis), Massimiliano
+         */
+        /*        Vasile, 2006. */
+        /* 	- Wertz J. R., Larson W. J., "Space Mission Analysis and
+         * Design", Third */
+        /*        Edition, Space Technology Library 2003. */
+        /*    [A]   DE405 - http://iau-comm4.jpl.nasa.gov/de405iom/de405iom.pdf
+         */
+        /*    [B]   Explanatory Supplement to the Astronomical Almanac. 1992. K.
+         * P. */
+        /*          Seidelmann, Ed., p.706 (Table 15.8) and p.316 (Table 5.8.1),
+         */
+        /*          University Science Books, Mill Valley, California.  */
+        /*    [C]   Tholen, D.J. and Buie, M.W. 1990. "Further Analysis of */
+        /*          Pluto-Charon Mutual Event Observations" BAAS 22(3):1129. */
+        /*    [D]   Seidelmann, P.K. et al. 2007. "Report of the IAU/IAG Working
+         */
+        /*          Group on cartographic coordinates and rotational elements:
+         * 2006" */
+        /*          Celestial Mech. Dyn. Astr. 98:155-180.  */
+        /*    [F]   Anderson, J.D., et al. 1987. "The mass, gravity field, and
+         */
+        /*          ephemeris of Mercury" Icarus 71:337-349. */
+        /*    [G]   Konopliv, A.S., et al. 1999. "Venus gravity: 180th degree
+         * and */
+        /*          order model" Icarus 139:3-18. */
+        /*    [H]   Folkner, W.M. and Williams, J.G. 2008. "Mass parameters and
+         */
+        /*          uncertainties in planetary ephemeris DE421." Interoffice
+         * Memo. */
+        /*          343R-08-004 (internal document), Jet Propulsion Laboratory,
+         */
+        /*          Pasadena, CA.  */
+        /*    [I]   Jacobson, R.A. 2008. "Ephemerides of the Martian Satellites
+         * - */
+        /*          MAR080" Interoffice Memo. 343R-08-006 (internal document),
+         */
+        /*          Jet Propulsion Laboratory, Pasadena, CA.  */
+        /*    [J]   Jacobson, R.A. 2005. "Jovian Satellite ephemeris - JUP230"
+         */
+        /*          private communication.  */
+        /*    [K]   Jacobson, R.A., et al. 2006. "The gravity field of the
+         * Saturnian */
+        /*          system from satellite observations and spacecraft tracking
+         * data" */
+        /*          AJ 132(6):2520-2526.  */
+        /*    [L]   Jacobson, R.A. 2007. "The gravity field of the Uranian
+         * system and */
+        /*          the orbits of the Uranian satellites and rings" BAAS
+         * 39(3):453.  */
+        /*    [M]   Jacobson, R.A. 2008. "The orbits of the Neptunian satellites
+         * and */
+        /*          the orientation of the pole of Neptune" BAAS 40(2):296.  */
+        /*    [N]   Jacobson, R.A. 2007. "The orbits of the satellites of Pluto
+         * - */
+        /*          Ephemeris PLU017" private communication. */
+        /*    [W1]  http://ssd.jpl.nasa.gov/?planet_phys_par Last retrieved */
+        /*          20/03/2013 */
+        /*    [W2]  http://ssd.jpl.nasa.gov/?sat_phys_par Last retrieved */
+        /*          20/03/2013 */
+        /*    [W3]  http://ssd.jpl.nasa.gov/horizons.cgi Last retrieved */
+        /*          20/03/2013 */
+        /*    [M1]  Bills, B.G. and Ferrari, A.J. 1977. ``A Harmonic Analysis of
+         */
+        /*          Lunar Topography'', Icarus 31, 244-259. */
+        /*    [M2]  Standish, E. M. 1998. JPL Planetary and Lunar Ephemerides,
+         */
+        /*          DE405/LE405. */
+        /*    [M3]  Lunar Constants and Models Document, Ralph B. Roncoli, 23
+         * Sept 2005, */
+        /*          JPL Technical Document D-32296  */
+        /*  */
+        /*  CALLED FUNCTIONS: */
+        /*    (none) */
+        /*  */
+        /*  AUTHOR: */
+        /*    Matteo Ceriotti, 2006, MATLAB, astroConstants.m */
+        /*  */
+        /*  PREVIOUS VERSION: */
+        /*    Matteo Ceriotti, 2006, MATLAB, astro_constants.m, Ver. 1.2 */
+        /*        - Header and function name in accordance with guidlines. */
+        /*  */
+        /*  CHANGELOG: */
+        /*    26/10/2006, Camilla Colombo: Updated. */
+        /*    22/10/2007, Camilla Colombo: astroConstants(8) added (Obliquity
+         * (angle) */
+        /*        of the ecliptic at Epoch 2000). */
+        /*    02/10/2009, Camilla Colombo: Header and function name in
+         * accordance */
+        /*        with guidlines. */
+        /*    12/11/2010, Camilla Colombo: astroConstants(9) added (J2) Note:
+         * the */
+        /*        present value of J2 is not consistent with the value of the
+         * Earth */
+        /*        radius. This value of J2 should be used in conjunction to
+         * Earth */
+        /*        radius = 6378.1363 km */
+        /*    19/03/2013, Camilla Colombo: constants updated to NASA JPL
+         * website. */
+        /*        References added. */
+        /*    20/03/2013, REVISION, Francesca Letizia. */
+        /*    22/03/2013, Francesca Letizia: all GM from DE405. */
+        /*  */
+        /*  -------------------------------------------------------------------------
+         */
+        /*  9: J2 */
+        /*  32: 365.25 */
+        /*  out(i)=0.63781600000000E+04; % From DITAN */
+        /*  out(i)=6371.00; % From Horizon [B] */
+        /*  From Horizon [W3] */
+        if (a__5 < 6871.01) {
+          t = 10000.0;
         }
         r = _mm_loadu_pd(&b_VF[0]);
         r1 = _mm_loadu_pd(&V2[0]);
