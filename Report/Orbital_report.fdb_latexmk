@@ -1,18 +1,18 @@
 # Fdb version 4
-["bibtex Orbital_report"] 1704731761 "Orbital_report.aux" "Orbital_report.bbl" "Orbital_report" 1704735510 0
+["bibtex Orbital_report"] 1704751894 "Orbital_report.aux" "Orbital_report.bbl" "Orbital_report" 1704752031 0
   "./bibliography.bib" 1704728202 154 5c57771bc961821334460094bfe53c64 ""
   "C:/Miktex/bibtex/bst/bibtex/unsrt.bst" 1291864736 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "Orbital_report.aux" 1704735509 5421 44e42929359c05c9735862864eeeb775 "pdflatex"
+  "Orbital_report.aux" 1704752030 5919 7cd0b2f06f7ccff93cfd18e3320b9027 "pdflatex"
   (generated)
   "Orbital_report.bbl"
   "Orbital_report.blg"
   (rewritten before read)
-["pdflatex"] 1704735506 "c:/Users/danie/Documents/GitHub/Orbital-project/Report/Orbital_report.tex" "Orbital_report.pdf" "Orbital_report" 1704735510 0
+["pdflatex"] 1704752013 "c:/Users/danie/Documents/GitHub/Orbital-project/Report/Orbital_report.tex" "Orbital_report.pdf" "Orbital_report" 1704752031 0
   "Body.tex" 1704728201 1478 fc6a8b852e0b1a5dbbdad0b16ab061c0 ""
   "Body/Chapter_1/01_symbols.tex" 1704728201 977 ea3c62c5aff7dbde7f6d57f536a5627b ""
   "Body/Chapter_1/02_introduction.tex" 1704728201 2711 b67413e1d0ffda8c971c09247c859f4a ""
-  "Body/Chapter_1/03_algorithms_description.tex" 1704735506 4390 b6139bbf360349a741d0b48a1f7324c4 ""
-  "Body/Chapter_1/04_time_windows_reduction.tex" 1704728201 3150 d6186dfee37f8fec674e27b82c1781e3 ""
+  "Body/Chapter_1/03_algorithms_description.tex" 1704751874 4459 422e2524c1a4bc4dbfc444dece7e5e5c ""
+  "Body/Chapter_1/04_time_windows_reduction.tex" 1704746283 3150 d6186dfee37f8fec674e27b82c1781e3 ""
   "Body/Chapter_1/05_conclusion_results.tex" 1704728201 78 3da24a88a90d921bcc3abd12b92df47a ""
   "Body/abstract.tex" 1704728201 106 9ea3c678a6256fb5378d0f97f2f2202b ""
   "C:/Miktex/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -259,14 +259,15 @@
   "C:/Users/danie/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1671211142 10771596 76531b1fe281d06023726f73b68370e1 ""
   "Configuration files/config.tex" 1704728201 3370 6e9a59e375b334702a57d74d8f975de5 ""
   "Configuration files/title_page.tex" 1704728201 1357 11c8e85a7b8ae732b6f942d64c274f7a ""
+  "Images//chip_tof_1.eps" 1704752005 28607595 ea8ac223b77c405c1608d677e2714fb2 ""
   "Images//logo_polimi_ing_indinf.eps" 1704728201 1016894 50c9d95dbacdb6a7531ebeec13361098 ""
   "Images//raggiera_polimi.eps" 1704728201 1813066 68b21695bbcbb6d7e09839c06406f8f3 ""
-  "Orbital_report.aux" 1704735509 5421 44e42929359c05c9735862864eeeb775 "pdflatex"
-  "Orbital_report.bbl" 1704731761 185 6c5facbf921bcbb67c4b9b8cefdd8ccf "bibtex Orbital_report"
-  "Orbital_report.out" 1704735509 2498 583adf271a1ae3b33c568842164eff67 "pdflatex"
-  "Orbital_report.tex" 1704728202 5099 4d235a04e10300e9822bbb5827ebe432 ""
-  "Orbital_report.toc" 1704735509 1456 2b55d7019a65ce7b22b931baa0dbce1e "pdflatex"
-  "c:/Users/danie/Documents/GitHub/Orbital-project/Report/Orbital_report.tex" 1704728202 5099 4d235a04e10300e9822bbb5827ebe432 ""
+  "Orbital_report.aux" 1704752030 5919 7cd0b2f06f7ccff93cfd18e3320b9027 "pdflatex"
+  "Orbital_report.bbl" 1704751894 185 6c5facbf921bcbb67c4b9b8cefdd8ccf "bibtex Orbital_report"
+  "Orbital_report.out" 1704752030 2498 5b1aebe982b1b1a12d42a4ca5a32b1c1 "pdflatex"
+  "Orbital_report.tex" 1704746283 5099 4d235a04e10300e9822bbb5827ebe432 ""
+  "Orbital_report.toc" 1704752030 1456 da76318fd6e0d720373851d1bf0e886c "pdflatex"
+  "c:/Users/danie/Documents/GitHub/Orbital-project/Report/Orbital_report.tex" 1704746283 5099 4d235a04e10300e9822bbb5827ebe432 ""
   (generated)
   "Orbital_report.aux"
   "Orbital_report.log"

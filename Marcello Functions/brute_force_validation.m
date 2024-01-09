@@ -3,7 +3,7 @@ clear; close all; clc;
 earl_dep_date   = [2028 01 01 00 00 00];
 late_arr_date   = [2028 + 13 01 01 00 00 00];
 
-dep_mjd2000     = linspace(date2mjd2000(earl_dep_date), date2mjd2000(late_arr_date), 343);
+dep_mjd2000     = linspace(date2mjd2000(earl_dep_date), date2mjd2000(late_arr_date), 200);
 fb_mjd2000      = dep_mjd2000;
 TOF1            = fb_mjd2000  - dep_mjd2000(1);
 TOF2            = TOF1;

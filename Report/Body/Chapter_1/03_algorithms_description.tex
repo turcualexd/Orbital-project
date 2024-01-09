@@ -56,3 +56,5 @@ The presented \autoref{alg:brute} is reliable, yet  computationally demanding si
 As a consequence, it was decided to perform a physical analysis (\autoref{sec:time_red}) in order to wisely reduce the time domains for departure, fly-by and arrival. The idea of \autoref{alg:brute} is that, once this reduction is performed, the brute-force search can be carried out on a small but refined grid. To speed up the process and refine the solution, \textit{fminunc} of \textit{MATLAB} was used. The selected initial guess is the outcome of the brute force research.
 
 In order to completely validate the results, the robustness of the brute force algorithm has been exploited. Referring to \autoref{alg:brute}, \textit{fminunc} was removed after the for-loop search and the research grid was refined. Moreover, with this computation it is possible to validate the time reduction analyzed in \autoref{sec:time_red}.
+
+\twofigII{chip_tof_1.eps}{aa}{aaa}{chip_tof_1.eps}{aaa}{aaaaa}{1}

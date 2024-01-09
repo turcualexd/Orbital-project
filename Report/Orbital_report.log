@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  8 JAN 2024 18:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  8 JAN 2024 23:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1355,38 +1355,68 @@ Chapter 1.
 
 ]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 23.
-) (Body/Chapter_1/04_time_windows_reduction.tex [2]) (Body/Chapter_1/05_conclusion_results.tex) [3]
+Package epstopdf Info: Source file: <Images//chip_tof_1.eps>
+(epstopdf)                    date: 2024-01-08 23:13:25
+(epstopdf)                    size: 28607595 bytes
+(epstopdf)             Output file: <Images//chip_tof_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-08 23:11:32
+(epstopdf)                    size: 2683960 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//chip_tof_1-eps-converted-to.pdf Images//chip_tof_1.eps>
+(epstopdf)             \includegraphics on input line 60.
+runsystem(miktex-epstopdf --outfile=Images//chip_tof_1-eps-converted-to.pdf Images//chip_tof_1.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <Images//chip_tof_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-08 23:13:50
+(epstopdf)                    size: 2683994 bytes.
+
+
+pdfTeX warning: pdflatex (file ./Images//chip_tof_1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images//chip_tof_1-eps-converted-to.pdf, id=134, 421.575pt x 316.18124pt>
+File: Images//chip_tof_1-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//chip_tof_1-eps-converted-to.pdf>
+Package pdftex.def Info: Images//chip_tof_1-eps-converted-to.pdf  used on input line 60.
+(pdftex.def)             Requested size: 245.82962pt x 184.37427pt.
+Package epstopdf Info: Source file: <Images//chip_tof_1.eps>
+(epstopdf)                    date: 2024-01-08 23:13:25
+(epstopdf)                    size: 28607595 bytes
+(epstopdf)             Output file: <Images//chip_tof_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-08 23:13:50
+(epstopdf)                    size: 2683994 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//chip_tof_1-eps-converted-to.pdf Images//chip_tof_1.eps>
+(epstopdf)             \includegraphics on input line 60.
+Package epstopdf Info: Output file is already uptodate.
+File: Images//chip_tof_1-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//chip_tof_1-eps-converted-to.pdf>
+Package pdftex.def Info: Images//chip_tof_1-eps-converted-to.pdf  used on input line 60.
+(pdftex.def)             Requested size: 245.82962pt x 184.37427pt.
+) (Body/Chapter_1/04_time_windows_reduction.tex [2]) (Body/Chapter_1/05_conclusion_results.tex) [3 <./Images//chip_tof_1-eps-converted-to.pdf>] [4]
 Chapter 2.
-[4
+[5
 
 ] (Orbital_report.bbl)
-
-Package caption Warning: Unused \captionsetup[figure] on input line 22.
-See the caption package documentation for explanation.
-
 
 Package caption Warning: Unused \captionsetup[table] on input line 23.
 See the caption package documentation for explanation.
 
-[5
+[6
 
 
 ] (Orbital_report.aux)
 Package rerunfilecheck Info: File `Orbital_report.out' has not changed.
-(rerunfilecheck)             Checksum: 583ADF271A1AE3B33C568842164EFF67;2498.
+(rerunfilecheck)             Checksum: 5B1AEBE982B1B1A12D42A4CA5A32B1C1;2498.
  ) ) 
 Here is how much of TeX's memory you used:
- 32700 strings out of 475385
- 592003 string characters out of 2793321
- 1023132 words of memory out of 3000000
- 53377 multiletter control sequences out of 15000+600000
+ 32718 strings out of 475385
+ 592429 string characters out of 2793321
+ 1022132 words of memory out of 3000000
+ 53392 multiletter control sequences out of 15000+600000
  604159 words of font info for 182 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,16n,80p,795b,839s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 83i,16n,80p,795b,622s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Miktex/fonts/enc/dvips/base/8r.enc}{C:/Miktex/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}<C:/Miktex/fonts/type1/public/kpfonts/jkpbmi.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbsy.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpex.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpsy.pfb>
-Output written on Orbital_report.pdf (7 pages, 257916 bytes).
+Output written on Orbital_report.pdf (8 pages, 2941148 bytes).
 PDF statistics:
- 252 PDF objects out of 1000 (max. 8388607)
- 63 named destinations out of 1000 (max. 500000)
- 151 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 264 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 

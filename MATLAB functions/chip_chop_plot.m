@@ -36,12 +36,11 @@ end
 
 figure;
 [X,Y] = meshgrid(array_mjd2000, array_mjd2000);
-contour(X,Y,dV_1,linspace(1,10,100));
+contour(X,Y,dV_1,linspace(1,10,500));
 title('Mars - Earth Leg', 'Interpreter','latex', 'FontSize',15)
-xlabel('Departure MJD2000', 'Interpreter','latex');
+xlabel("Departure MJD2000"+newline+"$\Delta v \, [km/s]$", 'Interpreter','latex');
 ylabel('Arrival MJD2000', 'Interpreter','latex')
 clr = colorbar;
-clr.set('TickLabelInterpreter', 'latex')
 clr.Label.String = '$\Delta v \, [km/s]$';
 clr.Label.FontSize = 15;
 clr.Label.Interpreter='latex';
@@ -50,12 +49,11 @@ grid on;
 
 figure;
 [X,Y] = meshgrid(array_mjd2000, array_mjd2000);
-contour(X,Y,dV_2,linspace(1,10,100));
+contour(X,Y,dV_2,linspace(1,10,500));
 title('Earth - Asteroid65 Leg', 'Interpreter','latex', 'FontSize',15)
-xlabel('Departure MJD2000', 'Interpreter','latex');
+xlabel("Departure MJD2000"+newline+"$\Delta v \, [km/s]$", 'Interpreter','latex');
 ylabel('Arrival MJD2000', 'Interpreter','latex')
 clr2 = colorbar;
-clr2.set('TickLabelInterpreter', 'latex')
 clr2.Label.String = '$\Delta v \, [km/s]$';
 clr2.Label.FontSize = 15;
 clr2.Label.Interpreter='latex';
