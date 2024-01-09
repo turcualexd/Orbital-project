@@ -1,5 +1,5 @@
 \begin{document}
-\pagenumbering{Roman}
+%\pagenumbering{Roman}
 
 %---------------------------------------------------------------------------
 % TITLE PAGE
@@ -27,11 +27,11 @@
 % BEGINNING OF THE WRITTEN PART
 %---------------------------------------------------------------------------
 
-\setcounter{page}{1}
-\pagenumbering{arabic}
+%\setcounter{page}{1}
+%\pagenumbering{arabic}
 
 \chapter{Interplanetary mission}
-\input{Body/Chapter_1/01_symbols}
+%\input{Body/Chapter_1/01_symbols}
 \input{Body/Chapter_1/02_introduction}
 \input{Body/Chapter_1/03_algorithms_description}
 \input{Body/Chapter_1/04_time_windows_reduction}
@@ -40,13 +40,17 @@
 %---------------------------------------------------------------------------
 
 \chapter{Planetary mission}
-
+\input{Body/Chapter_2/01_introduction}
+\input{Body/Chapter_2/02_groundtrack}
+\input{Body/Chapter_2/03_orbit_propagation}
+\input{Body/Chapter_2/04_comparison}
 
 %---------------------------------------------------------------------------
 % BIBLIOGRAFIA
 %---------------------------------------------------------------------------
 
-\clearpage
-\bibliography{bibliography}
+{\let\clearpage\relax
+\vspace*{15mm}
+\bibliography{bibliography}}
 
 \end{document}

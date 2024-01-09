@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  8 JAN 2024 23:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  9 JAN 2024 22:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1275,10 +1275,10 @@ Package hyperref Info: Link coloring ON on input line 1.
 
 (Configuration files/title_page.tex
 Package epstopdf Info: Source file: <Images//logo_polimi_ing_indinf.eps>
-(epstopdf)                    date: 2024-01-05 16:21:43
+(epstopdf)                    date: 2024-01-09 18:00:20
 (epstopdf)                    size: 1016894 bytes
 (epstopdf)             Output file: <Images//logo_polimi_ing_indinf-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-08 00:49:22
+(epstopdf)                    date: 2024-01-09 18:00:20
 (epstopdf)                    size: 81914 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//logo_polimi_ing_indinf-eps-converted-to.pdf Images//logo_polimi_ing_indinf.eps>
 (epstopdf)             \includegraphics on input line 9.
@@ -1286,7 +1286,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//logo_polimi_ing_indinf-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//logo_polimi_ing_indinf-eps-converted-to.pdf, id=74, 493.845pt x 227.85126pt>
+<Images//logo_polimi_ing_indinf-eps-converted-to.pdf, id=110, 493.845pt x 227.85126pt>
 File: Images//logo_polimi_ing_indinf-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//logo_polimi_ing_indinf-eps-converted-to.pdf>
 Package pdftex.def Info: Images//logo_polimi_ing_indinf-eps-converted-to.pdf  used on input line 9.
@@ -1317,10 +1317,10 @@ LaTeX Font Info:    Trying to load font information for TS1+jkp on input line 21
 File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
 )) (Body/abstract.tex)
 Package epstopdf Info: Source file: <Images//raggiera_polimi.eps>
-(epstopdf)                    date: 2024-01-05 16:21:43
+(epstopdf)                    date: 2024-01-09 18:00:20
 (epstopdf)                    size: 1813066 bytes
 (epstopdf)             Output file: <Images//raggiera_polimi-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-08 00:49:23
+(epstopdf)                    date: 2024-01-09 18:00:20
 (epstopdf)                    size: 40466 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//raggiera_polimi-eps-converted-to.pdf Images//raggiera_polimi.eps>
 (epstopdf)             \includegraphics on input line 13.
@@ -1328,7 +1328,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//raggiera_polimi-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//raggiera_polimi-eps-converted-to.pdf, id=75, 502.87875pt x 502.87875pt>
+<Images//raggiera_polimi-eps-converted-to.pdf, id=111, 502.87875pt x 502.87875pt>
 File: Images//raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//raggiera_polimi-eps-converted-to.pdf>
 Package pdftex.def Info: Images//raggiera_polimi-eps-converted-to.pdf  used on input line 13.
@@ -1344,80 +1344,371 @@ Package pdftex.def Info: Images//raggiera_polimi-eps-converted-to.pdf  used on i
 
 ]
 Chapter 1.
-(Body/Chapter_1/01_symbols.tex
-\ltmcbox=\box139
-) (Body/Chapter_1/02_introduction.tex) (Body/Chapter_1/03_algorithms_description.tex [1
+(Body/Chapter_1/02_introduction.tex) (Body/Chapter_1/03_algorithms_description.tex
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 21.
+) (Body/Chapter_1/04_time_windows_reduction.tex [3
 
 
 {C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 23.
-) (Body/Chapter_1/04_time_windows_reduction.tex
 LaTeX Font Info:    Trying to load font information for U+bbm on input line 60.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/bbm\ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [2]
+) [4]) (Body/Chapter_1/05_conclusion_results.tex) [5
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.68         \State
-                    $i = 1; \quad j = i \cdot T^{(1)}/T^{(2)}; \quad
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.42 \chapter
+             {Planetary mission}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.70         \While
-                   {$j \notin \mathbbm{N}$ or $k \notin \mathbbm{N}$}
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.42 \chapter
+             {Planetary mission}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.72         \State
-                    $i = i + 1$
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.42 \chapter
+             {Planetary mission}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.73         \State
-                    $j = i \cdot T^{(1)}/T^{(2)}$
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.42 \chapter
+             {Planetary mission}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.74         \State
-                    $k = i \cdot T^{(1)}/T^{(3)}$
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.42 \chapter
+             {Planetary mission}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.75         \EndWhile
-                      \\
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.42 \chapter
+             {Planetary mission}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.76         \Return
-                     $i, j, k$) (Body/Chapter_1/05_conclusion_results.tex) [3]
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.42 \chapter
+             {Planetary mission}]
 Chapter 2.
-[4
+(Body/Chapter_2/01_introduction.tex
+Package epstopdf Info: Source file: <Images//nominal_orbit.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 142084 bytes
+(epstopdf)             Output file: <Images//nominal_orbit-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 187107 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//nominal_orbit-eps-converted-to.pdf Images//nominal_orbit.eps>
+(epstopdf)             \includegraphics on input line 28.
+Package epstopdf Info: Output file is already uptodate.
+<Images//nominal_orbit-eps-converted-to.pdf, id=210, 1101.11375pt x 529.98pt>
+File: Images//nominal_orbit-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//nominal_orbit-eps-converted-to.pdf>
+Package pdftex.def Info: Images//nominal_orbit-eps-converted-to.pdf  used on input line 28.
+(pdftex.def)             Requested size: 512.14963pt x 246.51093pt.
+) (Body/Chapter_2/02_groundtrack.tex
+LaTeX Font Info:    Trying to load font information for T1+jkptt on input line 10.
+ (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\t1jkptt.fd
+File: t1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for T1/jkptt.
+) [6
 
-] (Orbital_report.bbl)
-
-Package caption Warning: Unused \captionsetup[figure] on input line 22.
-See the caption package documentation for explanation.
-
-[5
-
-
-] (Orbital_report.aux)
+ <./Images//nominal_orbit-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Images//ug1orb.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 2363834 bytes
+(epstopdf)             Output file: <Images//ug1orb-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 1657130 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//ug1orb-eps-converted-to.pdf Images//ug1orb.eps>
+(epstopdf)             \includegraphics on input line 22.
+Package epstopdf Info: Output file is already uptodate.
+<Images//ug1orb-eps-converted-to.pdf, id=224, 1101.11375pt x 529.98pt>
+File: Images//ug1orb-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//ug1orb-eps-converted-to.pdf>
+Package pdftex.def Info: Images//ug1orb-eps-converted-to.pdf  used on input line 22.
+(pdftex.def)             Requested size: 245.82962pt x 118.31845pt.
+Package epstopdf Info: Source file: <Images//ug1d.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 2361450 bytes
+(epstopdf)             Output file: <Images//ug1d-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 1656307 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//ug1d-eps-converted-to.pdf Images//ug1d.eps>
+(epstopdf)             \includegraphics on input line 22.
+Package epstopdf Info: Output file is already uptodate.
+<Images//ug1d-eps-converted-to.pdf, id=225, 1101.11375pt x 529.98pt>
+File: Images//ug1d-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//ug1d-eps-converted-to.pdf>
+Package pdftex.def Info: Images//ug1d-eps-converted-to.pdf  used on input line 22.
+(pdftex.def)             Requested size: 245.82962pt x 118.31845pt.
+Package epstopdf Info: Source file: <Images//ug10d.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 2293014 bytes
+(epstopdf)             Output file: <Images//ug10d-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 1639722 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//ug10d-eps-converted-to.pdf Images//ug10d.eps>
+(epstopdf)             \includegraphics on input line 22.
+Package epstopdf Info: Output file is already uptodate.
+<Images//ug10d-eps-converted-to.pdf, id=226, 1101.11375pt x 529.98pt>
+File: Images//ug10d-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//ug10d-eps-converted-to.pdf>
+Package pdftex.def Info: Images//ug10d-eps-converted-to.pdf  used on input line 22.
+(pdftex.def)             Requested size: 245.82962pt x 118.31845pt.
+<Images//ugstartend.png, id=227, 1927.2pt x 926.71219pt>
+File: Images//ugstartend.png Graphic file (type png)
+<use Images//ugstartend.png>
+Package pdftex.def Info: Images//ugstartend.png  used on input line 22.
+(pdftex.def)             Requested size: 245.82962pt x 118.2002pt.
+Package epstopdf Info: Source file: <Images//ugro1orb.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 2365578 bytes
+(epstopdf)             Output file: <Images//ugro1orb-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 1658029 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//ugro1orb-eps-converted-to.pdf Images//ugro1orb.eps>
+(epstopdf)             \includegraphics on input line 38.
+Package epstopdf Info: Output file is already uptodate.
+<Images//ugro1orb-eps-converted-to.pdf, id=228, 1101.11375pt x 529.98pt>
+File: Images//ugro1orb-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//ugro1orb-eps-converted-to.pdf>
+Package pdftex.def Info: Images//ugro1orb-eps-converted-to.pdf  used on input line 38.
+(pdftex.def)             Requested size: 208.95667pt x 100.56784pt.
+Package epstopdf Info: Source file: <Images//ugro4orb.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 2367458 bytes
+(epstopdf)             Output file: <Images//ugro4orb-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 1666049 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//ugro4orb-eps-converted-to.pdf Images//ugro4orb.eps>
+(epstopdf)             \includegraphics on input line 38.
+Package epstopdf Info: Output file is already uptodate.
+<Images//ugro4orb-eps-converted-to.pdf, id=229, 1101.11375pt x 529.98pt>
+File: Images//ugro4orb-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//ugro4orb-eps-converted-to.pdf>
+Package pdftex.def Info: Images//ugro4orb-eps-converted-to.pdf  used on input line 38.
+(pdftex.def)             Requested size: 208.95667pt x 100.56784pt.
+ [7 <./Images//ug1orb-eps-converted-to.pdf> <./Images//ug1d-eps-converted-to.pdf> <./Images//ug10d-eps-converted-to.pdf> <./Images//ugstartend.png (PNG copy)> <./Images//ugro1orb-eps-converted-to.pdf> <./Images//ugro4orb-eps-converted-to.pdf>]
+<Images//Perturbation chart.png, id=287, 472.76625pt x 366.94232pt>
+File: Images//Perturbation chart.png Graphic file (type png)
+<use Images//Perturbation chart.png>
+Package pdftex.def Info: Images//Perturbation chart.png  used on input line 69.
+(pdftex.def)             Requested size: 256.07481pt x 198.7562pt.
+Package epstopdf Info: Source file: <Images//pg10d.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 2407933 bytes
+(epstopdf)             Output file: <Images//pg10d-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 1676612 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//pg10d-eps-converted-to.pdf Images//pg10d.eps>
+(epstopdf)             \includegraphics on input line 78.
+Package epstopdf Info: Output file is already uptodate.
+<Images//pg10d-eps-converted-to.pdf, id=289, 1101.11375pt x 529.98pt>
+File: Images//pg10d-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//pg10d-eps-converted-to.pdf>
+Package pdftex.def Info: Images//pg10d-eps-converted-to.pdf  used on input line 78.
+(pdftex.def)             Requested size: 245.82962pt x 118.31845pt.
+Package epstopdf Info: Source file: <Images//pgro4orb.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 2551592 bytes
+(epstopdf)             Output file: <Images//pgro4orb-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 1727709 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//pgro4orb-eps-converted-to.pdf Images//pgro4orb.eps>
+(epstopdf)             \includegraphics on input line 82.
+Package epstopdf Info: Output file is already uptodate.
+<Images//pgro4orb-eps-converted-to.pdf, id=290, 1101.11375pt x 529.98pt>
+File: Images//pgro4orb-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//pgro4orb-eps-converted-to.pdf>
+Package pdftex.def Info: Images//pgro4orb-eps-converted-to.pdf  used on input line 82.
+(pdftex.def)             Requested size: 245.82962pt x 118.31845pt.
+Package epstopdf Info: Source file: <Images//zoompgro4orb.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 112591 bytes
+(epstopdf)             Output file: <Images//zoompgro4orb-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 61736 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//zoompgro4orb-eps-converted-to.pdf Images//zoompgro4orb.eps>
+(epstopdf)             \includegraphics on input line 88.
+Package epstopdf Info: Output file is already uptodate.
+<Images//zoompgro4orb-eps-converted-to.pdf, id=291, 1101.11375pt x 529.98pt>
+File: Images//zoompgro4orb-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//zoompgro4orb-eps-converted-to.pdf>
+Package pdftex.def Info: Images//zoompgro4orb-eps-converted-to.pdf  used on input line 88.
+(pdftex.def)             Requested size: 307.2929pt x 147.90009pt.
+ [8 <./Images//Perturbation chart.png> <./Images//pg10d-eps-converted-to.pdf> <./Images//pgro4orb-eps-converted-to.pdf>]) (Body/Chapter_2/03_orbit_propagation.tex
+Package epstopdf Info: Source file: <Images//orbitprop10yrs.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 1836089 bytes
+(epstopdf)             Output file: <Images//orbitprop10yrs-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 435884 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//orbitprop10yrs-eps-converted-to.pdf Images//orbitprop10yrs.eps>
+(epstopdf)             \includegraphics on input line 43.
+Package epstopdf Info: Output file is already uptodate.
+<Images//orbitprop10yrs-eps-converted-to.pdf, id=326, 1101.11375pt x 529.98pt>
+File: Images//orbitprop10yrs-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//orbitprop10yrs-eps-converted-to.pdf>
+Package pdftex.def Info: Images//orbitprop10yrs-eps-converted-to.pdf  used on input line 43.
+(pdftex.def)             Requested size: 512.14963pt x 246.51093pt.
+ [9 <./Images//zoompgro4orb-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Images//relative_error10yrs.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 1481564 bytes
+(epstopdf)             Output file: <Images//relative_error10yrs-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 469482 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//relative_error10yrs-eps-converted-to.pdf Images//relative_error10yrs.eps>
+(epstopdf)             \includegraphics on input line 45.
+Package epstopdf Info: Output file is already uptodate.
+<Images//relative_error10yrs-eps-converted-to.pdf, id=339, 1101.11375pt x 529.98pt>
+File: Images//relative_error10yrs-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//relative_error10yrs-eps-converted-to.pdf>
+Package pdftex.def Info: Images//relative_error10yrs-eps-converted-to.pdf  used on input line 45.
+(pdftex.def)             Requested size: 512.14963pt x 246.51093pt.
+Package epstopdf Info: Source file: <Images//evolutionorbit2.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 125893 bytes
+(epstopdf)             Output file: <Images//evolutionorbit2-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 218267 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//evolutionorbit2-eps-converted-to.pdf Images//evolutionorbit2.eps>
+(epstopdf)             \includegraphics on input line 54.
+Package epstopdf Info: Output file is already uptodate.
+<Images//evolutionorbit2-eps-converted-to.pdf, id=341, 1101.11375pt x 529.98pt>
+File: Images//evolutionorbit2-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//evolutionorbit2-eps-converted-to.pdf>
+Package pdftex.def Info: Images//evolutionorbit2-eps-converted-to.pdf  used on input line 54.
+(pdftex.def)             Requested size: 245.82962pt x 118.31845pt.
+Package epstopdf Info: Source file: <Images//evolutionorbit3.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 174629 bytes
+(epstopdf)             Output file: <Images//evolutionorbit3-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 292116 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//evolutionorbit3-eps-converted-to.pdf Images//evolutionorbit3.eps>
+(epstopdf)             \includegraphics on input line 54.
+Package epstopdf Info: Output file is already uptodate.
+<Images//evolutionorbit3-eps-converted-to.pdf, id=342, 1101.11375pt x 529.98pt>
+File: Images//evolutionorbit3-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//evolutionorbit3-eps-converted-to.pdf>
+Package pdftex.def Info: Images//evolutionorbit3-eps-converted-to.pdf  used on input line 54.
+(pdftex.def)             Requested size: 245.82962pt x 118.31845pt.
+ [10 <./Images//orbitprop10yrs-eps-converted-to.pdf> <./Images//relative_error10yrs-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Images//filter0.5year.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 1864025 bytes
+(epstopdf)             Output file: <Images//filter0.5year-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 513373 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//filter0.5year-eps-converted-to.pdf Images//filter0.5year.eps>
+(epstopdf)             \includegraphics on input line 61.
+Package epstopdf Info: Output file is already uptodate.
+<Images//filter0.5year-eps-converted-to.pdf, id=359, 1101.11375pt x 529.98pt>
+File: Images//filter0.5year-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//filter0.5year-eps-converted-to.pdf>
+Package pdftex.def Info: Images//filter0.5year-eps-converted-to.pdf  used on input line 61.
+(pdftex.def)             Requested size: 512.14963pt x 246.51093pt.
+) (Body/Chapter_2/04_comparison.tex
+Package epstopdf Info: Source file: <Images//a_TLE.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 311894 bytes
+(epstopdf)             Output file: <Images//a_TLE-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 102120 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//a_TLE-eps-converted-to.pdf Images//a_TLE.eps>
+(epstopdf)             \includegraphics on input line 9.
+Package epstopdf Info: Output file is already uptodate.
+<Images//a_TLE-eps-converted-to.pdf, id=360, 421.575pt x 316.18124pt>
+File: Images//a_TLE-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//a_TLE-eps-converted-to.pdf>
+Package pdftex.def Info: Images//a_TLE-eps-converted-to.pdf  used on input line 9.
+(pdftex.def)             Requested size: 172.07997pt x 129.06102pt.
+Package epstopdf Info: Source file: <Images//e_TLE.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 289861 bytes
+(epstopdf)             Output file: <Images//e_TLE-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 101981 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//e_TLE-eps-converted-to.pdf Images//e_TLE.eps>
+(epstopdf)             \includegraphics on input line 13.
+Package epstopdf Info: Output file is already uptodate.
+<Images//e_TLE-eps-converted-to.pdf, id=361, 421.575pt x 316.18124pt>
+File: Images//e_TLE-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//e_TLE-eps-converted-to.pdf>
+Package pdftex.def Info: Images//e_TLE-eps-converted-to.pdf  used on input line 13.
+(pdftex.def)             Requested size: 172.07997pt x 129.06102pt.
+Package epstopdf Info: Source file: <Images//i_TLE.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 145030 bytes
+(epstopdf)             Output file: <Images//i_TLE-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 54765 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//i_TLE-eps-converted-to.pdf Images//i_TLE.eps>
+(epstopdf)             \includegraphics on input line 18.
+Package epstopdf Info: Output file is already uptodate.
+<Images//i_TLE-eps-converted-to.pdf, id=362, 421.575pt x 316.18124pt>
+File: Images//i_TLE-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//i_TLE-eps-converted-to.pdf>
+Package pdftex.def Info: Images//i_TLE-eps-converted-to.pdf  used on input line 18.
+(pdftex.def)             Requested size: 172.07997pt x 129.06102pt.
+Package epstopdf Info: Source file: <Images//RAAN_TLE.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 143473 bytes
+(epstopdf)             Output file: <Images//RAAN_TLE-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 54548 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//RAAN_TLE-eps-converted-to.pdf Images//RAAN_TLE.eps>
+(epstopdf)             \includegraphics on input line 22.
+Package epstopdf Info: Output file is already uptodate.
+<Images//RAAN_TLE-eps-converted-to.pdf, id=363, 421.575pt x 316.18124pt>
+File: Images//RAAN_TLE-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//RAAN_TLE-eps-converted-to.pdf>
+Package pdftex.def Info: Images//RAAN_TLE-eps-converted-to.pdf  used on input line 22.
+(pdftex.def)             Requested size: 172.07997pt x 129.06102pt.
+Package epstopdf Info: Source file: <Images//w_TLE.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 189973 bytes
+(epstopdf)             Output file: <Images//w_TLE-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 73085 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//w_TLE-eps-converted-to.pdf Images//w_TLE.eps>
+(epstopdf)             \includegraphics on input line 27.
+Package epstopdf Info: Output file is already uptodate.
+<Images//w_TLE-eps-converted-to.pdf, id=364, 421.575pt x 316.18124pt>
+File: Images//w_TLE-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//w_TLE-eps-converted-to.pdf>
+Package pdftex.def Info: Images//w_TLE-eps-converted-to.pdf  used on input line 27.
+(pdftex.def)             Requested size: 172.07997pt x 129.06102pt.
+Package epstopdf Info: Source file: <Images//TA_TLE.eps>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 137934 bytes
+(epstopdf)             Output file: <Images//TA_TLE-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-09 17:53:41
+(epstopdf)                    size: 50167 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//TA_TLE-eps-converted-to.pdf Images//TA_TLE.eps>
+(epstopdf)             \includegraphics on input line 31.
+Package epstopdf Info: Output file is already uptodate.
+<Images//TA_TLE-eps-converted-to.pdf, id=365, 421.575pt x 316.18124pt>
+File: Images//TA_TLE-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//TA_TLE-eps-converted-to.pdf>
+Package pdftex.def Info: Images//TA_TLE-eps-converted-to.pdf  used on input line 31.
+(pdftex.def)             Requested size: 172.07997pt x 129.06102pt.
+) [11 <./Images//evolutionorbit2-eps-converted-to.pdf> <./Images//evolutionorbit3-eps-converted-to.pdf> <./Images//filter0.5year-eps-converted-to.pdf>] (Orbital_report.bbl) [12 <./Images//a_TLE-eps-converted-to.pdf> <./Images//e_TLE-eps-converted-to.pdf> <./Images//i_TLE-eps-converted-to.pdf> <./Images//RAAN_TLE-eps-converted-to.pdf> <./Images//w_TLE-eps-converted-to.pdf> <./Images//TA_TLE-eps-converted-to.pdf>] (Orbital_report.aux)
 Package rerunfilecheck Info: File `Orbital_report.out' has not changed.
-(rerunfilecheck)             Checksum: A63A8DDD7CB9529CB90630D7B38665F8;2653.
+(rerunfilecheck)             Checksum: DC8A28FAA9C3D9204AB7F93080053A8C;4246.
  ) ) 
 Here is how much of TeX's memory you used:
- 32958 strings out of 476361
- 614740 string characters out of 5788046
- 1878993 words of memory out of 5000000
- 52674 multiletter control sequences out of 15000+600000
- 652637 words of font info for 190 fonts, out of 8000000 for 9000
+ 33317 strings out of 476361
+ 625163 string characters out of 5788046
+ 1879993 words of memory out of 5000000
+ 52950 multiletter control sequences out of 15000+600000
+ 647696 words of font info for 180 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,16n,80p,795b,620s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\turcu\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm10.pk><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpex.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsyc.pfb>
-Output written on Orbital_report.pdf (7 pages, 262024 bytes).
+ 83i,18n,81p,858b,746s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\turcu\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm10.pk><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpex.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsya.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsyc.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
+Output written on Orbital_report.pdf (12 pages, 14748742 bytes).
 PDF statistics:
- 247 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 159 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 522 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
+ 341 words of extra memory for PDF output out of 10000 (max. 10000000)
 
