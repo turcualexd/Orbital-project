@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  8 JAN 2024 20:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  8 JAN 2024 20:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1271,7 +1271,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//logo_polimi_ing_indinf-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//logo_polimi_ing_indinf-eps-converted-to.pdf, id=75, 493.845pt x 227.85126pt>
+<Images//logo_polimi_ing_indinf-eps-converted-to.pdf, id=83, 493.845pt x 227.85126pt>
 File: Images//logo_polimi_ing_indinf-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//logo_polimi_ing_indinf-eps-converted-to.pdf>
 Package pdftex.def Info: Images//logo_polimi_ing_indinf-eps-converted-to.pdf  used on input line 9.
@@ -1313,7 +1313,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//raggiera_polimi-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//raggiera_polimi-eps-converted-to.pdf, id=76, 502.87875pt x 502.87875pt>
+<Images//raggiera_polimi-eps-converted-to.pdf, id=84, 502.87875pt x 502.87875pt>
 File: Images//raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//raggiera_polimi-eps-converted-to.pdf>
 Package pdftex.def Info: Images//raggiera_polimi-eps-converted-to.pdf  used on input line 13.
@@ -1352,21 +1352,21 @@ See the caption package documentation for explanation.
 
 ] (./Orbital_report.aux)
 Package rerunfilecheck Info: File `Orbital_report.out' has not changed.
-(rerunfilecheck)             Checksum: 2CEF8165767C11E6C5EA38BF87DDC869;2652.
+(rerunfilecheck)             Checksum: 54C4408C907A21C5D016A46E054CDDFC;2937.
  ) ) 
 Here is how much of TeX's memory you used:
- 32302 strings out of 476025
- 596439 string characters out of 5790016
+ 32310 strings out of 476025
+ 596581 string characters out of 5790016
  1870388 words of memory out of 5000000
- 52099 multiletter control sequences out of 15000+600000
+ 52105 multiletter control sequences out of 15000+600000
  647187 words of font info for 186 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,15n,80p,815b,620s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/kpfonts/jkpbmi.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/kpfonts/jkpbn8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/kpfonts/jkpbsc8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/kpfonts/jkpbsy.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/kpfonts/jkpmi.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/kpfonts/jkpmia.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/kpfonts/jkpmit8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/kpfonts/jkpmne.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/kpfonts/jkpsy.pfb>
-Output written on Orbital_report.pdf (6 pages, 216533 bytes).
+Output written on Orbital_report.pdf (6 pages, 218625 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 159 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 214 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
+ 175 words of extra memory for PDF output out of 10000 (max. 10000000)
 

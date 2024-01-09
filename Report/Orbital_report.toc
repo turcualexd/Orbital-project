@@ -16,5 +16,7 @@
 \contentsline {subsection}{\numberline {1.4.2}Cost-plot analysis}{2}{subsection.1.4.2}%
 \contentsline {subsection}{\numberline {1.4.3}Final time window selection}{2}{subsection.1.4.3}%
 \contentsline {section}{\numberline {1.5}Conclusion and results}{2}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}heliocentric legs}{2}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}gravity assist}{2}{subsection.1.5.2}%
 \contentsline {chapter}{\numberline {2}Planetary mission}{3}{chapter.2}%
 \contentsline {chapter}{Bibliography}{4}{chapter*.6}%
