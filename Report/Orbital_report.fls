@@ -1779,6 +1779,16 @@ INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpbex.tfm
 INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpbex.tfm
 INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpmn7c.tfm
 INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpmn7c.tfm
+INPUT .\Images\\chip_tof_1.pdf
+INPUT Images\\chip_tof_1.pdf
+INPUT .\Images\\chip_tof_1.pdf
+INPUT .\Images\\chip_tof_1.pdf
+INPUT .\Images\\chip_tof_1.pdf
+INPUT .\Images\\chip_tof_2.pdf
+INPUT Images\\chip_tof_2.pdf
+INPUT .\Images\\chip_tof_2.pdf
+INPUT .\Images\\chip_tof_2.pdf
+INPUT .\Images\\chip_tof_2.pdf
 INPUT C:\Miktex\fonts\vf\public\kpfonts\jkpmn8t.vf
 INPUT .\Body\Chapter_1\05_conclusion_results.tex
 INPUT .\Body\Chapter_1\05_conclusion_results.tex

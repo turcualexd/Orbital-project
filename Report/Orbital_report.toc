@@ -13,7 +13,6 @@
 \contentsline {section}{\numberline {1.4}Reduction of the time windows}{2}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Resonance period analysis}{2}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Cost-plot analysis}{3}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Final time window selection}{5}{subsection.1.4.3}%
 \contentsline {section}{\numberline {1.5}Conclusion and results}{5}{section.1.5}%
 \contentsline {chapter}{\numberline {2}Planetary mission}{6}{chapter.2}%
-\contentsline {chapter}{Bibliography}{7}{chapter*.13}%
+\contentsline {chapter}{Bibliography}{7}{chapter*.14}%
