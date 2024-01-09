@@ -25,15 +25,15 @@ orbitType = 0;
 
 [kep1,~] = uplanet(dep, 4); %Mars param in dep date
 
-[kep2,mu_s] = uplanet(fb, 3); %Earth param in fb date
+[kep2,mu_s] = uplanet(fb, 3); %Earth param 
 
-[kep3] = ephNEO(arr, 65); %Ganymed param in arr date
+[kep3] = ephNEO(arr, 65); %Ganymed
 
-[R1, V1] = kep2car(kep1(1),kep1(2),kep1(3),kep1(4),kep1(5),kep1(6), mu_s); %car Mars dep
+[R1, V1] = kep2car(kep1(1),kep1(2),kep1(3),kep1(4),kep1(5),kep1(6), mu_s);
 
-[R2, V2] = kep2car(kep2(1),kep2(2),kep2(3),kep2(4),kep2(5),kep2(6), mu_s); %car Earth fb
+[R2, V2] = kep2car(kep2(1),kep2(2),kep2(3),kep2(4),kep2(5),kep2(6), mu_s);
 
-[R3, V3] = kep2car(kep3(1),kep3(2),kep3(3),kep3(4),kep3(5),kep3(6), mu_s); %car Ganymed arr
+[R3, V3] = kep2car(kep3(1),kep3(2),kep3(3),kep3(4),kep3(5),kep3(6), mu_s);
 
 TOF1 = (fb - dep)*24*3600;
 

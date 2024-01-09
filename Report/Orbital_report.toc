@@ -19,4 +19,4 @@
 \contentsline {subsection}{\numberline {1.5.1}heliocentric legs}{2}{subsection.1.5.1}%
 \contentsline {subsection}{\numberline {1.5.2}gravity assist}{2}{subsection.1.5.2}%
 \contentsline {chapter}{\numberline {2}Planetary mission}{3}{chapter.2}%
-\contentsline {chapter}{Bibliography}{4}{chapter*.6}%
+\contentsline {chapter}{Bibliography}{4}{chapter*.7}%

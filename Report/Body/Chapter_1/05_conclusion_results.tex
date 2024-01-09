@@ -2,10 +2,31 @@
 \label{sec:conclusion}
 \subsection{heliocentric legs}
 \label{subsec:heliocentric}
+The two eliocentric legs associated with the solution computed through ref aloritmo, can be characterized through the keplerian elements, shown in \autoref{table:Orb_Par}:
+\begin{table}[H]
+
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+    Arc & Dep & Arr & $a  \ [AU]$ & $e \ [-]$ & $i \ [deg]$ & $\Omega \ [deg]$ & $\omega \ [deg]$ & $\theta_{dep} \ [deg]$ & $\theta_{arr} \ [deg]$ \\
+    \hline
+    M$\to$E & $3 \ June \ 2033$ & $10 \ Feb \ 2034$ & $1.1602$ & $0.2870$ & $1.18$ & $321.55$ & $105.97$ & $195.38$ & $74.03$ \\
+    \hline
+    E$\to$G & $10 \ Feb \ 2034$ & $27 \ March \ 2036$ & $1.9445$ & $0.5029$ & $4.17$ & $141.55$ & $339.91$ & $20.09$ & $231.37$ \\
+    \hline
+    \end{tabular}
+    
+    \caption{Heliocentric legs}
+    \label{table:Orb_Par} 
+\end{table}
+
 \subsection{gravity assist}
+
 \label{subsec:ga}
 Known the incoming and outcoming heliocentric velocities of the spacecraft it was possible to completely characterize the 
-fly by hyperbola in an Earth-centred ecliptic frame. $v_{\infty}^{-}$ and $v_{\infty}^{+}$ will in general be different, so
+fly by hyperbola in an Earth-centred ecliptic frame. $v_{\infty}^{-}$ and $v_{\infty}^{+}$, computed by substracting 
+the velocity of the planet to the incoming and outcoming velocity of the Lambert's arcs,,will in general be different, so
 the gravity assist had to be powered: an impulse $\Delta v_{3}=2.7715 \ 10^{-6}  \ Km/s $ was given at the common pericenter
 of the two hyperbolic arcs. All the most relevant parameters are shown in table.
+
 \cite{curtis_book}

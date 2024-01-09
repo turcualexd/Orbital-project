@@ -1,7 +1,7 @@
 clear; close all; clc;
 
 earl_dep_date = [2028 01 01 00 00 00];
-late_arr_date = [2041 01 01 00 00 00];
+late_arr_date = [2058 01 01 00 00 00];
 
 
 num             = 200; %number of elements of array of mjd2000 
@@ -44,7 +44,7 @@ end
 figure;
 hold on
 [X,Y] = meshgrid(array_mjd2000, tof_array);
-contour(X,Y,dV_1,linspace(0,6,100));
+contour(X,Y,dV_1,linspace(0,6,200));
 for i = 1 : length(range)
 
     plot(array_mjd2000, range(i)*TOF_hohmann*ones(size(array_mjd2000)), 'Color','k', 'LineWidth',2)
@@ -56,7 +56,7 @@ grid on;
 
 figure;
 [X,Y] = meshgrid(array_mjd2000, tof_array);
-contour(X,Y,dV_2,linspace(0,6,100));
+contour(X,Y,dV_2,linspace(0,6,200));
 title('Earth - Asteroid65 Leg')
 xlabel('Departure MJD200'); ylabel('TOF MJD200')
 colorbar
