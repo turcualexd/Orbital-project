@@ -18,8 +18,15 @@
 
 \geometry{left=25mm, right=25mm, top=25mm, bottom=25mm}
 \newcommand{\reddashedline}{\textcolor{red}{---}}
+\newcommand{\orangedashedline}{\textcolor{orange}{---}}
+\newcommand{\yellowdashedline}{\textcolor{yellow}{---}}
 \newcommand{\greendashedline}{\textcolor{green}{---}}
+\newcommand{\bluedashedline}{\textcolor{blue}{---}}
+\newcommand{\purpledashedline}{\textcolor{purple}{---}}
+\newcommand{\cyandashedline}{\textcolor{cyan}{---}}
+\newcommand{\magentadashedline}{\textcolor{magenta}{---}}
 \setlength{\parindent}{0pt}
+
 
 \title{Planetary Mission}
 
@@ -31,7 +38,7 @@ The  PoliMi  Space  Agency  wants  to  launch  a  Planetary  Explorer  Mission, 
 
 \subsection{Nominal Orbit}
 
-From the provided orbital parameters this satellite heavily contains geosynchronous orbital characteristics. Hence, the altitude at perigee is chosen as 35786 km - where it is possible to see the moon and J2 perturbation effect. $\Omega$ (right ascension of ascending node, $\omega$ (argument of perigee), and $f_0$ (initial true anomaly) are chosen arbitrarily.
+From the provided orbital parameters this satellite heavily contains geosynchronous orbital characteristics. Hence, the altitude at perigee is chosen as 35786 km - where it is possible to see the moon and J2 perturbation effect. $\Omega$ (right ascension of ascending node, $\omega$ (argument of perigee), and $f_0$ (initial true anomaly) are chosen arbitrarily for a simpler analysis.
 
 %citation for GSO: https://www.esa.int/ESA_Multimedia/Images/2020/03/Geostationary_orbit
 
@@ -64,7 +71,7 @@ The satellite's orbit is propagated to compute its groundtrack. The motion of th
 \[
 \dot{\mathbf{r}} = -\frac{\mu}{r^3} \mathbf{r} + \mathbf{a}_{\text{perturbation}}
 \]
-This is solved using Matlab's \texttt{ode113} function, with a relative tolerance of \(1 \times 10^{-12}\) and absolute tolerance of \(1 \times 10^{-12}\).
+This is solved using Matlab's multi-step solver \texttt{ode113} function which is based on the Adams-Bashforth-Moulton method; it's chosen for its high accuracy over an extended period. A relative tolerance of \(1 \times 10^{-12}\) and absolute tolerance of \(1 \times 10^{-12}\) were selected for more precision.
 
 %citation for formula: Curtis
 
@@ -105,7 +112,7 @@ The first required analysis of the ground track is for the nominal orbit conside
 \end{figure}
 
 
-The groundtrack of this satellite has formed an "8" shape, a phenomenon known as the figure-eight groundtrack. At geosynchronous altitude, the location after one revolution is the same, and for geostationary  orbits, the satellite always appears to be stationary over one location. The figure “8” occurs because the satellites relative velocity is less and greater, than locations on the Earth as it travels from the ascending node. 
+The groundtrack of this satellite has formed an “8” shape, a phenomenon known as the figure-eight groundtrack. At geosynchronous altitude, the location after one revolution is the same, and for geostationary  orbits, the satellite always appears to be stationary over one location. The figure “8” occurs because the satellites relative velocity is less and greater, than locations on the Earth as it travels from the ascending node. 
 
 
 %cite: Vallado, Fundamentals of Astrodynamics, 2013
@@ -113,7 +120,7 @@ The groundtrack of this satellite has formed an "8" shape, a phenomenon known as
 \subsubsection{Repeating Groundtrack}
 
 
-For establishing a good communication with the network of ground stations of PoliMi Space Agency, a repeating ground track with a ratio of 1:1 (for each orbit of the spacecraft, Earth has performed 1 revolution) is maintained. Therefore, the period of the repeating ground track orbit is computed. For an unperturbed orbit, the period is only a function of the semi-major axis and can be calculated to get the desired repeating ground track. Both equations are listed as below. By extension, the other orbital parameters are kept the same as nominal orbit. 
+For establishing a good communication with the network of ground stations of PoliMi Space Agency, a repeating ground track with a ratio of 1:1 (for each orbit of the spacecraft, Earth has performed 1 revolution) is maintained. Therefore, the period of the repeating ground track orbit is computed. For an unperturbed orbit, the period is only a function of the semi-major axis and can be calculated to get the desired repeating ground track. Both equations are listed below. By extension, the other orbital parameters are kept the same as the nominal orbit. 
 
 	
 \begin{equation*}
@@ -165,7 +172,7 @@ Perturbation due to the moon acting on the orbit is modelled through a two body 
 \end{equation*}
 where \( \mathbf{r}_{m/s} \) is the vector that goes from the S/C to the moon and \( \mathbf{r}_m \) is the vector that goes from Earth to Moon.\\ 
 
-Possible perturbations are charted in \ref{fig:orbit perturbations}. It is observed that the \( J_2 \) effect (\( C_{2,0} \) in figure) and moon perturbation are one of the primary sources of orbital perturbation. Hence, our models and altitude choice consistent.   
+Possible perturbations are charted in \ref{fig:orbit perturbations}. It is observed that the \( J_2 \) effect (\( C_{2,0} \) in figure) and moon perturbation are one of the primary sources of orbital perturbation. Hence, our models and altitude choice are consistent.   
 
 \begin{figure}[H]
 	\centering
@@ -183,19 +190,27 @@ Possible perturbations are charted in \ref{fig:orbit perturbations}. It is obser
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{pg10d.eps}
 		\caption{}
-		\label{fig:1a}
+		\label{fig:5a}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{pgro4orb.eps}
 		\caption{}
-		\label{fig:1b}
+		\label{fig:5b}
 	\end{subfigure}
 	
-	\caption{Ground track of the perturbed orbits: (a) Nominal orbit during 10 days; (b) Repeating orbit during 4 orbits. Ground track of unperturbed (\reddashedline), Starting point (\textcolor{red}{$\bullet$}), Ending point (\textcolor{red}{$\blacksquare$}); Ground track of perturbed (\greendashedline), Starting point (\textcolor{green}{$\bullet$}), Ending point (\textcolor{green}{$\blacksquare$}).
+	\vspace{1cm} 
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{zoompgro4orb.eps}
+		\caption{}
+		\label{fig:5c}
+	\end{subfigure}
+	
+	\caption{Ground track of the perturbed orbits: (a) Nominal orbit during 10 days; (b) Repeating orbit during 4 orbits; (c) Perturbation effect for repeating orbit. Ground track of unperturbed (\reddashedline), Starting point (\textcolor{red}{$\bullet$}), Ending point (\textcolor{red}{$\blacksquare$}); Ground track of perturbed (\greendashedline), Starting point (\textcolor{green}{$\bullet$}), Ending point (\textcolor{green}{$\blacksquare$}).
 	}
 \end{figure}
 
+It is observed that the perturbations have a great impact on the ground track path of the satellite. Both the nominal and repeating orbits get out of phase with relation to the unperturbed case. From \ref{fig:5c}, the repeating ground track orbit proposed does not work in the presence of assigned perturbations. 
 
 \section{Orbit Propagation}
 
@@ -233,22 +248,23 @@ R_{\theta + \omega} = \begin{bmatrix}
 
 \subsection{History of the Keplerian Elements} 
 
-The Keplerian elements were obtained through the integration of the equation of motion and 
-of the Gauss planetary equations. The propagation time is taken as 10 years, so it's sufficient to see the perturbations fully developed for this project's case. The evolution of the data and of the relative error between both methods of integration are below:
+The Keplerian elements were obtained through the integration of the equation of motion and of the Gauss planetary equations. The propagation time is taken as 10 years, so it's sufficient to see the perturbations properly developed for this project's case. The evolution of the data and of the relative error between both methods of integration are presented below:
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{orbitprop10yrs.eps}
-	\caption{Orbit Perturbations.}
+	\caption{Evolution of the data.}
 	\label{fig:orbitprop10yrs}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{relative_error10yrs.eps}
-	\caption{Orbit Perturbations.}
+	\caption{Relative error between both methods of integration.}
 	\label{fig:relative_error10yrs}
 \end{figure}
+
+It is possible to distinguish a long-periodic behaviour and a short-periodic behaviour by looking at the evolution of orbital elements. It is very clear for eccentricity \( e \), inclination \( i \), and also for argument of perigee \( \omega \) to a sufficient extent. Semi-major axis presents both short-periodic and long-periodic behaviour. As for the right ascension of ascending node \( \Omega \), and true anomaly \( f \), the short-periodic behaviour is less visible but still present. From the figure \ref{fig:relative_error10yrs} of relative error between Gauss’ resolution and Cartesian resolution, it can be observed that the two methods are equivalent if the precision of the two is compared.
 
 \subsection{Representation of the Evolution of the Orbit} 
 
@@ -264,7 +280,7 @@ of the Gauss planetary equations. The propagation time is taken as 10 years, so 
 		\caption{}
 		\label{fig:1b}
 	\end{subfigure}
-	\caption{Orbit evolution representation in the 3D plane. Color are used in order to let the reader understand the evolution of the orbit: in chronological order there are: blue, orange, yellow, purple, green, light blue and magenta.
+	\caption{Orbit evolution representation in the 3D plane. Colors are used in order to let the reader understand the evolution of the orbit: in chronological order there are (\bluedashedline), (\orangedashedline), (\yellowdashedline), (\purpledashedline), (\reddashedline), (\greendashedline), (\cyandashedline), and (\magentadashedline). The initial position of spacecraft is (\textcolor{blue}{*}) and the final position of spacecraft is (\textcolor{red}{*}).
 	}
 \end{figure}
 
@@ -276,10 +292,11 @@ The filtering of results is now performed to see how the perturbations generate 
 	\centering
 	\includegraphics[width=1\textwidth]{filter0.5year.eps}
 	\caption{Orbit Perturbations.}
-	\label{fig:relative_error10yrs}
+	\label{fig:filtering}
 \end{figure}
 
-Here, long-periodic behaviour is related to moon perturbation and short-periodic perturbation is related to J2 effect. This is due to the fact that the J2 perturbation is related to the oblateness of the Earth and of the S/C’s orbit, whose period is much lower than the Moon orbit period
+Here, long-periodic behaviour is related to moon perturbation and short-periodic perturbation is related to J2 effect. This is due to the fact that the J2 perturbation is related to the oblateness of the Earth and of the S/C’s orbit, whose period is much lower than the Moon orbit period. Two different filters are used: the filter used to remove short-term behaviour has a cut-off frequency of \(100 \, \text{days}^{-1}\), instead, the filter used to remove long-term behaviour has a cut-off frequency of \(1 \, \text{days}^{-1}\).
+
 
 \section{Comparison with Real Data}
 
