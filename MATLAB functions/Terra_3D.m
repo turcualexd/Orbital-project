@@ -1,29 +1,14 @@
-function Terra_3D(Rt)
+function Terra_3D(r,n)
 
-% Terra_3D.m - Earth texture loaded in a plot.
-%
-% PROTOTYPE:
-%   Terra_3D(Rt)
-%
-% DESCRIPTION:
-%   Function to load the Earth modelled as a sphere inside a figure.
-%
-% INPUT:
-%   Rt          [1x1]       Earth mean radius       [km]
-%
-% OUTPUT:
-%   []          [figure]    Figure open with the Earth picture loaded
-%
-% AUTHOR:
-%   Marco Nugnes, 2020, MATLAB, Terra_3D.m
-% ------------------------------------------------------------------------
 
 %% Default Input
 
 % Set the default value for the Earth radius in case of no inputs.
-if nargin < 1
-    Rt = 6371;                                       % [km]
+if nargin < 2
+    n = 1;
 end
+Rt = astroConstants(23) * n / astroConstants(2);
+r = r / astroConstants(2);
 
 %%  Load the Earth image from a website
 %Earth_image = 'https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg';
@@ -31,11 +16,7 @@ Earth_image = 'Terra.jpg';
 
 %% Figure
 
-% Choose the color of the figure background
-background_plot = 'w';
-
 % Create the figure
-figure('Color', background_plot);
 hold on;
 grid on;
 
@@ -43,9 +24,9 @@ grid on;
 axis equal;
 
 % Put the axes labels
-xlabel('X [km]', 'FontSize', 15);
-ylabel('Y [km]', 'FontSize', 15);
-zlabel('Z [km]', 'FontSize', 15);
+xlabel('X [AU]', 'FontSize', 15);
+ylabel('Y [AU]', 'FontSize', 15);
+zlabel('Z [AU]', 'FontSize', 15);
 
 % Set initial view
 view(120,30);
@@ -56,7 +37,7 @@ view(120,30);
 npanels = 180;  
 
 % Create a 3D meshgrid of the sphere points using the ellipsoid function
-[x, y, z] = ellipsoid(0, 0, 0, Rt, Rt, Rt, npanels);
+[x, y, z] = ellipsoid(r(1), r(2), -r(3), Rt, Rt, Rt, npanels);
 
 % Create the globe with the surf function
 globe = surf(x, y, -z, 'FaceColor', 'none', 'EdgeColor', 'none');
@@ -75,4 +56,3 @@ alpha = 1;
 set(globe, 'FaceColor', 'texturemap', 'CData', cdata, 'FaceAlpha', alpha, 'EdgeColor', 'none');
 
 end
-
