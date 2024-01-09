@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  9 JAN 2024 19:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  9 JAN 2024 23:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1290,7 +1290,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//logo_polimi_ing_indinf-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//logo_polimi_ing_indinf-eps-converted-to.pdf, id=66, 493.845pt x 227.85126pt>
+<Images//logo_polimi_ing_indinf-eps-converted-to.pdf, id=70, 493.845pt x 227.85126pt>
 File: Images//logo_polimi_ing_indinf-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//logo_polimi_ing_indinf-eps-converted-to.pdf>
 Package pdftex.def Info: Images//logo_polimi_ing_indinf-eps-converted-to.pdf  used on input line 9.
@@ -1332,7 +1332,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//raggiera_polimi-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//raggiera_polimi-eps-converted-to.pdf, id=67, 502.87875pt x 502.87875pt>
+<Images//raggiera_polimi-eps-converted-to.pdf, id=71, 502.87875pt x 502.87875pt>
 File: Images//raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//raggiera_polimi-eps-converted-to.pdf>
 Package pdftex.def Info: Images//raggiera_polimi-eps-converted-to.pdf  used on input line 13.
@@ -1348,9 +1348,7 @@ Package pdftex.def Info: Images//raggiera_polimi-eps-converted-to.pdf  used on i
 
 ]
 Chapter 1.
-(Body/Chapter_1/01_symbols.tex
-\ltmcbox=\box139
-) (Body/Chapter_1/02_introduction.tex) (Body/Chapter_1/03_algorithms_description.tex [1
+(Body/Chapter_1/02_introduction.tex) (Body/Chapter_1/03_algorithms_description.tex [1
 
 
 ]
@@ -1396,10 +1394,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) h
 l.76         \Return
                      $i, j, k$
 Package epstopdf Info: Source file: <Images//chip_1.eps>
-(epstopdf)                    date: 2024-01-09 16:52:48
+(epstopdf)                    date: 2024-01-09 19:21:08
 (epstopdf)                    size: 8226862 bytes
 (epstopdf)             Output file: <Images//chip_1-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-09 16:52:48
+(epstopdf)                    date: 2024-01-09 19:21:08
 (epstopdf)                    size: 1501117 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//chip_1-eps-converted-to.pdf Images//chip_1.eps>
 (epstopdf)             \includegraphics on input line 106.
@@ -1407,16 +1405,16 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//chip_1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//chip_1-eps-converted-to.pdf, id=163, 421.575pt x 316.18124pt>
+<Images//chip_1-eps-converted-to.pdf, id=166, 421.575pt x 316.18124pt>
 File: Images//chip_1-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//chip_1-eps-converted-to.pdf>
 Package pdftex.def Info: Images//chip_1-eps-converted-to.pdf  used on input line 106.
 (pdftex.def)             Requested size: 245.82962pt x 184.37427pt.
 Package epstopdf Info: Source file: <Images//chip_2.eps>
-(epstopdf)                    date: 2024-01-09 16:52:48
+(epstopdf)                    date: 2024-01-09 19:21:08
 (epstopdf)                    size: 8947818 bytes
 (epstopdf)             Output file: <Images//chip_2-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-09 16:52:48
+(epstopdf)                    date: 2024-01-09 19:21:08
 (epstopdf)                    size: 1726862 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//chip_2-eps-converted-to.pdf Images//chip_2.eps>
 (epstopdf)             \includegraphics on input line 106.
@@ -1424,7 +1422,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//chip_2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//chip_2-eps-converted-to.pdf, id=164, 421.575pt x 316.18124pt>
+<Images//chip_2-eps-converted-to.pdf, id=167, 421.575pt x 316.18124pt>
 File: Images//chip_2-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//chip_2-eps-converted-to.pdf>
 Package pdftex.def Info: Images//chip_2-eps-converted-to.pdf  used on input line 106.
@@ -1432,7 +1430,7 @@ Package pdftex.def Info: Images//chip_2-eps-converted-to.pdf  used on input line
 [3]
 
 pdfTeX warning: pdflatex (file ./Images//chip_tof_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//chip_tof_1.pdf, id=195, 421.575pt x 316.18124pt>
+<Images//chip_tof_1.pdf, id=198, 421.575pt x 316.18124pt>
 File: Images//chip_tof_1.pdf Graphic file (type pdf)
 <use Images//chip_tof_1.pdf>
 Package pdftex.def Info: Images//chip_tof_1.pdf  used on input line 136.
@@ -1440,38 +1438,44 @@ Package pdftex.def Info: Images//chip_tof_1.pdf  used on input line 136.
 
 
 pdfTeX warning: pdflatex (file ./Images//chip_tof_2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//chip_tof_2.pdf, id=196, 421.575pt x 316.18124pt>
+<Images//chip_tof_2.pdf, id=199, 421.575pt x 316.18124pt>
 File: Images//chip_tof_2.pdf Graphic file (type pdf)
 <use Images//chip_tof_2.pdf>
 Package pdftex.def Info: Images//chip_tof_2.pdf  used on input line 136.
 (pdftex.def)             Requested size: 245.82962pt x 184.37427pt.
-[4 <./Images//chip_1-eps-converted-to.pdf> <./Images//chip_2-eps-converted-to.pdf>]) (Body/Chapter_1/05_conclusion_results.tex) [5 <./Images//chip_tof_1.pdf> <./Images//chip_tof_2.pdf>]
+[4 <./Images//chip_1-eps-converted-to.pdf> <./Images//chip_2-eps-converted-to.pdf>]) (Body/Chapter_1/05_conclusion_results.tex
+<Images//solar_system.jpg, id=226, 2140.99875pt x 1606.0pt>
+File: Images//solar_system.jpg Graphic file (type jpg)
+<use Images//solar_system.jpg>
+Package pdftex.def Info: Images//solar_system.jpg  used on input line 60.
+(pdftex.def)             Requested size: 384.11221pt x 288.11182pt.
+ [5 <./Images//chip_tof_1.pdf> <./Images//chip_tof_2.pdf>]) [6 <./Images//solar_system.jpg>]
 Chapter 2.
-[6
+[7
 
 ] (Orbital_report.bbl
 LaTeX Font Info:    Trying to load font information for T1+jkptt on input line 7.
  (C:\Miktex\tex/latex/kpfonts\t1jkptt.fd
 File: t1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for T1/jkptt.
-)) [7
+)) [8
 
 
 ] (Orbital_report.aux)
 Package rerunfilecheck Info: File `Orbital_report.out' has not changed.
-(rerunfilecheck)             Checksum: CA8D2D36D4B42838B65FE16CB2E7E8A9;2292.
+(rerunfilecheck)             Checksum: 0CAD0B43FF5160B26553A74DA7FE0A68;2487.
  ) ) 
 Here is how much of TeX's memory you used:
- 32860 strings out of 475385
- 595296 string characters out of 2793321
- 1030132 words of memory out of 3000000
- 53512 multiletter control sequences out of 15000+600000
- 622908 words of font info for 217 fonts, out of 8000000 for 9000
+ 32861 strings out of 475385
+ 595340 string characters out of 2793321
+ 1030133 words of memory out of 3000000
+ 53510 multiletter control sequences out of 15000+600000
+ 615939 words of font info for 201 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,16n,80p,1169b,839s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 83i,16n,80p,1169b,841s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Miktex/fonts/enc/dvips/base/8r.enc} <C:\Users\danie\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm10.pk>{C:/Miktex/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}<C:/Miktex/fonts/type1/public/kpfonts/jkpbmi.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbsy.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpex.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpsyc.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on Orbital_report.pdf (9 pages, 15349722 bytes).
+Output written on Orbital_report.pdf (10 pages, 15632160 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
- 71 named destinations out of 1000 (max. 500000)
- 163 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 352 PDF objects out of 1000 (max. 8388607)
+ 77 named destinations out of 1000 (max. 500000)
+ 176 words of extra memory for PDF output out of 10000 (max. 10000000)
 

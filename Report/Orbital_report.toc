@@ -2,17 +2,16 @@
 \contentsline {chapter}{Abstract}{I}{Doc-Start}%
 \contentsline {chapter}{Contents}{II}{chapter*.1}%
 \contentsline {chapter}{\numberline {1}Interplanetary mission}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Symbols}{1}{section.1.1}%
-\contentsline {subsubsection}{Analisi della missione}{1}{subsubsection*.2}%
-\contentsline {subsubsection}{Analisi della missione 2}{1}{subsubsection*.3}%
-\contentsline {section}{\numberline {1.2}Introduction}{1}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Description of the problem}{1}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Assigned data and constraints}{1}{subsection.1.2.2}%
-\contentsline {section}{\numberline {1.3}Algorithms description}{1}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Refined brute force algorithm}{2}{subsection.1.3.1}%
-\contentsline {section}{\numberline {1.4}Reduction of the time windows}{2}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Resonance period analysis}{2}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Cost-plot analysis}{3}{subsection.1.4.2}%
-\contentsline {section}{\numberline {1.5}Conclusion and results}{5}{section.1.5}%
-\contentsline {chapter}{\numberline {2}Planetary mission}{6}{chapter.2}%
-\contentsline {chapter}{Bibliography}{7}{chapter*.14}%
+\contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Description of the problem}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Assigned data and constraints}{1}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Algorithms description}{1}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Refined brute force algorithm}{2}{subsection.1.2.1}%
+\contentsline {section}{\numberline {1.3}Reduction of the time windows}{2}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Resonance period analysis}{2}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Cost-plot analysis}{3}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Conclusion and results}{5}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Heliocentric legs}{5}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Gravity assist}{6}{subsection.1.4.2}%
+\contentsline {chapter}{\numberline {2}Planetary mission}{7}{chapter.2}%
+\contentsline {chapter}{Bibliography}{8}{chapter*.18}%
