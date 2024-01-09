@@ -12,9 +12,21 @@ v_m = V_m - VP;
 
 v_p = V_p - VP;
 
-delta = acos(dot(v_m, v_p) / (norm(v_m) * norm(v_p)));
+%delta = acos(dot(v_m, v_p) / (norm(v_m) * norm(v_p)));
 
-rp = compute_delta(mu_E, norm(v_m), norm(v_p), delta, RE);
+x = dot(v_m, v_p) / (norm(v_m) * norm(v_p));
+
+if x > 1
+
+    delta = 0;
+
+else
+
+    delta = acos(x);
+
+end
+
+rp = compute_rp(mu_E, norm(v_m), norm(v_p), delta, RE);
 
 v_mn = norm(v_m);
 

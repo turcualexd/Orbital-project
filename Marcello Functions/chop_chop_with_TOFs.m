@@ -1,7 +1,7 @@
 clear; close all; clc;
 
 earl_dep_date = [2028 01 01 00 00 00];
-late_arr_date = [2058 01 01 00 00 00];
+late_arr_date = [2041 01 01 00 00 00];
 
 
 num             = 200; %number of elements of array of mjd2000 
