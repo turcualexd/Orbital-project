@@ -8,18 +8,24 @@ function [dv_min, dep_date, fb_date, arr_date] = brute_force(T_dep, TOF1, TOF2)
 % minimum total cost, computed as the injection cost on first Lambert
 % arc, assist cost at pericentre of flyby hyperbola and exit cost from second
 % Lambert arc.
+%
 %--------------------------------------------------------------------------
+% 
 % INPUT:
 % T_dep      [1xN]:  in mjd2000;
-% TOF_1      [1xM]:  in mjd2000;
+% TOF_1      [1xM]:  in mjd2000;\Delta V_i
 % TOF_2      [1xK]:  in mjd2000;
+%
 % OUTPUT:
 % dv_min     [1x1]: in km/s;
 % dep_date   [1x1]: in mjd2000;
 % fb_date    [1x1]: in mjd2000;
 % arr_date   [1x1]: in mjd2000;
 %
-
+%--------------------------------------------------------------------------
+%
+%
+%
 dv_min = 1e10;
 wait = waitbar(0, 'Minimum search... (0%)');
 for i = 1 : length(T_dep)
