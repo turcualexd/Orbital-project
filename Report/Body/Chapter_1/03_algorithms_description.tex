@@ -12,29 +12,36 @@ Regarding the formulation of the Lambert's problem, it requires the knowledge of
 
 Once the two heliocentric legs are determined, the powered gravity assist follows as the geocentric velocity vectors are known.
 
-Two methods were implemented to solve the optimization problem: \textbf{brute force algorithm} and the \textbf{gradient descent algorithm}.
+The method implemented to solve the optimization problem is the \textbf{brute force algorithm} refined with the \textbf{gradient descent algorithm}. Then, to validate the results, the \textbf{brute force algorithm} has been used solely with a more dense search grid in a reasonable domain. 
 
-\subsection{Brute force algorithm}
+\subsection{Refined brute force algorithm}
 \label{subsec:brute_force_algo}
+
+The presented \autoref{alg:brute} is reliable, yet  computationally demanding since the research of the minimum is performed through a triple-nested \textit{for} loop. The time of the execution highly depends on the refinement chosen for the three selected periods of time. From this considerations and also noticing that the function to minimize presents high irregularities, it is clear that narrow time windows can help in the overall research. Moreover, with this last observation, it is possible to use a less fine grid of research, since it is reasonable to think that the function will present less irregularities.
 
 \begin{algorithm}
     \caption{Bruteforce algorithm} \label{alg:brute}
     \begin{algorithmic}
-    \Require $T_{dep}, T_{fly by}, T_{arr}$
-    \Ensure $\Delta V_{min}$
+    \Require $T_{dep}, \Delta T_{1}, \Delta T_{2}$
     \State $\Delta V_{min} = 10^{10}$
     \For{$i$ in $T_{dep}$}
-        \For{$j$ in $T_{fly by}$}
-            \For{$k$ in $T_{arr}$}
-                \State 
+        \For{$j$ in $\Delta T_{1}$} 
+            \State Calculate $T_{fly-by}$, first Lambert's arc, Mars' velocity at $T_{dep}$ and  $\Delta V_1$
+            \For{$k$ in $\Delta T_{2}$}
+                \State Calculate $T_{arr}$, second Lambert's arc, Asteroid's velocity at $T_{arr}$, $\Delta V_2$, $\Delta V_3$, $\Delta V_{tot}$
+                \If{$\Delta v_{tot} < \Delta v_{min}$ and $r_p > r_{Earth} + 500 \; km$}
+                \State $\Delta v_{min} = \Delta v_{tot}$
+                \State $T_{dep,min} = T_{dep} $;   $T_{fb,min}  = T_{fb}$;   $T_{arr,min} = T_{arr}$
+                \EndIf
             \EndFor
         \EndFor
     \EndFor
+\State Minimize cost using \textit{fminunc} with initial guess  $\left(T_{dep,min};T_{fb,min};T_{arr,min} \right)$
+\\
+\Return $\Delta V_{min}$; $T_{dep,min}$; $T_{fb,min}$; $T_{arr,min}$
     \end{algorithmic}
 \end{algorithm}
 
+As a consequence, it was decided to perform a physical analysis (\autoref{sec:time_red}) in order to wisely reduce the time domains for departure, fly-by and arrival. The idea of \autoref{alg:brute} is that, once this reduction is performed, the brute-force search can be carried out on a small but refined grid. To speed up the process and refine the solution, \textit{fminunc} of \textit{MATLAB} was used. The selected initial guess is the outcome of the brute force research.
 
-\subsection{Gradient descent algorithm}
-\label{subsec:gradient_algo}
-
-\autoref{alg:brute}
+In order to completely validate the results, the robustness of the brute force algorithm has been exploited. Referring to \autoref{alg:brute}, \textit{fminunc} was removed after the for-loop search and the research grid was refined. Moreover, with this computation it is possible to validate the time reduction analyzed in \autoref{sec:time_red}.

@@ -1,4 +1,100 @@
 \section{Conclusion and results}
 \label{sec:conclusion}
 
-\cite{curtis_book}
+It was then used \autoref{alg:brute} in the time domain selected at the end of \autoref{subsec:cost_plot_analysis},  using 40 elements for each array. The obtained results in terms of cost and dates are reported in the following tables:
+
+\vspace{0.5cm}
+
+\begin{minipage}{0.5\linewidth}
+    \centering
+    \captionsetup{type=table}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        $\Delta V_1 \, [km/s]$ & $\Delta V_2 \, [km/s]$ & $\Delta V_3 \, [km/s]$ & $\Delta V_{tot} \, [km/s]$\\
+        \hline
+        $4.0813$ & $3.3130$ & $2.7715 \cdot 10^{-6}$ & $7.3942$\\
+        \hline
+    \end{tabular}
+    \caption{Costs $\Delta V$ of the optimal mission}
+    \label{table:cost_optimal}
+\end{minipage}\hfill
+\begin{minipage}{0.5\linewidth}
+    \centering
+    \captionsetup{type=table}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Dep. Date & Fb. Date & Arr. Date \\
+        \hline
+        $\left[03/06/2033 \right]$ & $\left[10/02/2034\right]$ & $\left[27/03/2036\right]$ \\
+        \hline
+    \end{tabular}
+    \caption{Optimal mission dates in Gregorian calendar}
+    \label{table:date_optimal}
+\end{minipage}
+\vspace*{5pt}
+
+The obtained results were validated through the pure brute-force algorithm, with a more refined grid of search in the same domain. In particular 100 elements where considered, the data obtained were:
+
+... put the two tables of brute force algorithm
+
+\subsection{Heliocentric legs}
+\label{subsec:heliocentric}
+The two heliocentric legs associated with the solution computed through \autoref{alg:brute} can be characterized through the keplerian elements shown in \autoref{table:Orb_Par}:
+\begin{table}[H]
+
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    Arc &  $a  \ [AU]$ & $e \ [-]$ & $i \ [deg]$ & $\Omega \ [deg]$ & $\omega \ [deg]$ & $\theta_{dep} \ [deg]$ & $\theta_{arr} \ [deg]$ \\
+    \hline
+    M$\to$E &  $1.1602$ & $0.2870$ & $1.18$ & $321.55$ & $105.97$ & $195.38$ & $74.03$ \\
+    \hline
+    E$\to$G & $1.9445$ & $0.5029$ & $4.17$ & $141.55$ & $339.91$ & $20.09$ & $231.37$ \\
+    \hline
+    \end{tabular}
+    
+    \caption{Heliocentric legs}
+    \label{table:Orb_Par}
+\end{table}
+\cfig{solar_system.jpg}{Optimal transfer trajectory - planet's dimension not in scale}{solar_system}{0.6}
+
+The two heliocentric legs are displayed in \autoref{fig:solar_system}. The represented positions of Mars, Earth and 1036 Ganymed are respectively at departure, fly-by and arrival. All the orbits are plotted in the Heliocentric ecliptic inertial frame.
+\subsection{Gravity assist}
+\label{subsec:ga}
+
+Known the incoming and outcoming heliocentric velocities of the spacecraft and the Earth's velocity at the fly-by date, it was possible to completely characterize the two branches of hyperbola in an Earth-centred ecliptic frame. The main parameters of the hyperbola are reported in \autoref{table:ga}:
+
+\begin{table}[H]
+
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    $r_p \ [km]$ &  $\delta _{tot} \ [\deg]$ & $v_{\infty}^{-} \ [km/s]$ & $v_{\infty}^{+} \ [km/s]$ & $e_{-} \ [-]$ & $e_{+} \ [-]$ & $\Delta T_{soi} \ [days]$ & $\Delta V_{helio} \ [km/s]$ \\
+    \hline
+    $7763.39$ &  $54.8918$ & $7.743439$ & $7.743435$ & $2.167834$ & $2.167833$ & $2.6871$ & $7.1381$ \\
+    \hline
+    \end{tabular}
+    
+    \caption{Gravity assist data}
+    \label{table:ga} 
+\end{table}
+
+It can be noticed that the fly-by hyperbola respect the constraint on the pericentre radius given in \autoref{subsec:data_constraints}. Moreover, the impulse given by the engine at the pericentre (\autoref{table:cost_optimal}) is negligible with respect to the heliocentric fly-by manoeuvre cost, calculated as $\Delta V_{helio} = \lVert\boldsymbol{V_{\infty}^{+} - V_{\infty}^{-}} \rVert$. This confirms the efficiency effect of the examined fly-by. 
+
+The permanence time passed inside the sphere of influence has been computed using the hyperbolic time law. In particular, considering the intersection between the two hyperbolic arcs and the radius of the Earth's sphere of influence (\autoref{eq:soi}), the true anomalies at entry and exit of SOI are computed.
+
+\begin{equation}
+    \label{eq:soi}
+r_{SOI,E} = r_{S \to E}\left(\frac{M_E}{M_S}\right)^{2/5} = 9.24647 \cdot 10^{5} \ km
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+

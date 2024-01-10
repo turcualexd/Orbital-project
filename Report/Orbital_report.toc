@@ -1,31 +1,30 @@
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{Abstract}{1}{Doc-Start}%
-\contentsline {chapter}{Contents}{2}{chapter*.1}%
-\contentsline {chapter}{\numberline {1}Interplanetary mission}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Introduction}{3}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Description of the problem}{3}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Assigned data and constraints}{3}{subsection.1.1.2}%
-\contentsline {section}{\numberline {1.2}Algorithms description}{3}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Brute force algorithm}{3}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Gradient descent algorithm}{4}{subsection.1.2.2}%
-\contentsline {section}{\numberline {1.3}Reduction of the time windows}{4}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Resonance period analysis}{4}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Cost-plot analysis}{5}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Final time window selection}{5}{subsection.1.3.3}%
-\contentsline {section}{\numberline {1.4}Conclusion and results}{5}{section.1.4}%
-\contentsline {chapter}{\numberline {2}Planetary mission}{6}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Introduction}{6}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Nominal Orbit}{6}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}Groundtrack}{6}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Unperturbed Groundtrack}{7}{subsection.2.2.1}%
-\contentsline {subsubsection}{Nominal Orbit Groundtrack}{7}{subsubsection*.12}%
-\contentsline {subsubsection}{Repeating Groundtrack}{7}{subsubsection*.14}%
-\contentsline {subsection}{\numberline {2.2.2}Perturbed Groundtrack}{8}{subsection.2.2.2}%
-\contentsline {subsubsection}{Assigned Perturbations}{8}{subsubsection*.17}%
-\contentsline {subsubsection}{Nominal and Repeating Groundtrack}{8}{subsubsection*.22}%
-\contentsline {section}{\numberline {2.3}Orbit Propagation}{9}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}History of the Keplerian Elements}{9}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Representation of the Evolution of the Orbit}{11}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Filtering}{11}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Comparison with Real Data}{12}{section.2.4}%
-\contentsline {chapter}{Bibliography}{12}{chapter*.32}%
+\contentsline {chapter}{Contents}{1}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Interplanetary mission}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{2}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Description of the problem}{2}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Assigned data and constraints}{2}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Algorithms description}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Refined brute force algorithm}{2}{subsection.1.2.1}%
+\contentsline {section}{\numberline {1.3}Reduction of the time windows}{3}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Resonance period analysis}{3}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Cost-plot analysis}{4}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Conclusion and results}{6}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Heliocentric legs}{6}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Gravity assist}{7}{subsection.1.4.2}%
+\contentsline {chapter}{\numberline {2}Planetary mission}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Nominal Orbit}{7}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Groundtrack}{8}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Unperturbed Groundtrack}{8}{subsection.2.2.1}%
+\contentsline {subsubsection}{Nominal Orbit Groundtrack}{8}{subsubsection*.20}%
+\contentsline {subsubsection}{Repeating Groundtrack}{9}{subsubsection*.22}%
+\contentsline {subsection}{\numberline {2.2.2}Perturbed Groundtrack}{9}{subsection.2.2.2}%
+\contentsline {subsubsection}{Assigned Perturbations}{9}{subsubsection*.25}%
+\contentsline {subsubsection}{Nominal and Repeating Groundtrack}{10}{subsubsection*.30}%
+\contentsline {section}{\numberline {2.3}Orbit Propagation}{11}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}History of the Keplerian Elements}{11}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Representation of the Evolution of the Orbit}{12}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Filtering}{12}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Comparison with Real Data}{13}{section.2.4}%
+\contentsline {chapter}{Bibliography}{14}{chapter*.41}%

@@ -1,7 +1,7 @@
 \section{Orbit Propagation}
 \label{sec:orbit_propagation}
 
-Orbits were propagated using Cartesian coordinates (Newton’s equations of motion), or Keplerian elements (Gauss’ planetary equations). Gauss' equations are presented in the Radial-Transversal-Out-of-plane reference frame (RSW). All formulas can be found in (CITE CURTIS HERE!).
+Orbits were propagated using Cartesian coordinates (Newton’s equations of motion), or Keplerian elements (Gauss’ planetary equations). Gauss' equations are presented in the Radial-Transversal-Out-of-plane reference frame (RSW). All formulas can be found in \cite{curtis_book}.
 
 \begin{equation}
 	\begin{aligned}
@@ -56,7 +56,7 @@ It is possible to distinguish a long-periodic behaviour and a short-periodic beh
 
 \subsection{Filtering} 
 
-The filtering of results is now performed to see how the perturbations generate behaviours with different frequencies, and to retrieve the long-period and the secular evolution of the data.
+The filtering of the results is now performed using the \textit{movemean} function to see how the perturbations generate behaviours with different frequencies, and to retrieve the long-period and the secular evolution of the data. A period of 6 months has been chosen to for better visualization. 
 
 \cfig{filter0.5year.eps}{Orbit Perturbations}{filtering}{1}
 

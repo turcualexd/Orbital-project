@@ -7,16 +7,18 @@
 
 \input{Configuration files/title_page}
 
-\vspace*{20mm}
-\input{Body/abstract}
-
-\clearpage
+%\vspace*{20mm}
+%\input{Body/abstract}
 
 %---------------------------------------------------------------------------
 % INDEX
 %---------------------------------------------------------------------------
 
-{\hypersetup{linkcolor=black}\tableofcontents}
+{\let\clearpage\relax
+\vspace*{10mm}
+\hypersetup{linkcolor=black}
+\small
+\tableofcontents}
 \clearpage
 
 %{\hypersetup{linkcolor=black}\listoftables}
@@ -39,7 +41,10 @@
 
 %---------------------------------------------------------------------------
 
-\chapter{Planetary mission}
+{\let\clearpage\relax
+\vspace*{50mm}
+\chapter{Planetary mission}}
+
 \input{Body/Chapter_2/01_introduction}
 \input{Body/Chapter_2/02_groundtrack}
 \input{Body/Chapter_2/03_orbit_propagation}
@@ -50,7 +55,7 @@
 %---------------------------------------------------------------------------
 
 {\let\clearpage\relax
-\vspace*{15mm}
+\vspace*{20mm}
 \bibliography{bibliography}}
 
 \end{document}

@@ -93,6 +93,7 @@ theta_p = linspace(0, lim_p, n);
 r_pn = a_p * (1 - e_p^2) ./ (1 + e_p * cos(theta_p));
 r_per_p = r_pn .* [cos(theta_p); sin(theta_p); zeros(1,n)];
 
+% plot in perifocal frame
 % figure
 % hold on
 % axis equal
@@ -104,7 +105,7 @@ v_m_unit = v_m / norm(v_m);
 v_p_unit = v_p / norm(v_p);
 xp = rodrigues(v_m_unit,u,-beta_m);
 yp = cross(u, xp);
-R = [xp yp u]; % Rotation from perifocal to inertial
+R = [xp yp u];          % Rotation from perifocal to inertial
 R_N_m = R * r_per_m;
 R_N_p = R * r_per_p;
 
@@ -122,7 +123,7 @@ plot3(C_N_m(1) + v_m_unit(1) * [-5 0] * 1e4, C_N_m(2) + v_m_unit(2) * [-5 0] * 1
 plot3(C_N_p(1) + v_p_unit(1) * [0 5] * 1e4, C_N_p(2) + v_p_unit(2) * [0 5] * 1e4, C_N_p(3) + v_p_unit(3) * [0 5] * 1e4, 'r--')
 legend('', 'Incoming hyperbola', 'Outcoming hyperbola', 'Apse line', 'Asymptote for incoming hyperbola', 'Asymptote for outcoming hyperbola')
 
-
+return
 %% time in soi
 R = astroConstants(2);
 G = astroConstants(1); 
