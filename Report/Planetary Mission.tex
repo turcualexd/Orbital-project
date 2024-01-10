@@ -53,7 +53,7 @@ From the provided orbital parameters this satellite heavily contains geosynchron
 		\hline
 	\end{tabular}
 	\caption{Keplerian elements of the orbit.}
-	\label{tab:keplerian_elements}
+	\label{tab:keplerian_elements of nominal orbit}
 \end{table}
 
 The unperturbed nominal orbit is propagated as below in the Earth-centered reference frame:
@@ -63,7 +63,7 @@ The unperturbed nominal orbit is propagated as below in the Earth-centered refer
 	\centering
 	\includegraphics[width=0.8\textwidth]{nominal_orbit.eps}
 	\caption{Assigned orbit.}
-	\label{fig:nominal_orbit}
+	\label{fig:nominal orbit}
 \end{figure}
 
 \section{Groundtrack}
@@ -85,13 +85,13 @@ The first required analysis of the ground track is for the nominal orbit conside
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{ug1orb.eps}
 		\caption{}
-		\label{fig:1a}
+		\label{fig:2a}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{ug1d.eps}
 		\caption{}
-		\label{fig:1b}
+		\label{fig:2b}
 	\end{subfigure}
 	
 	% Second row with two figures
@@ -99,13 +99,13 @@ The first required analysis of the ground track is for the nominal orbit conside
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{ug10d.eps}
 		\caption{}
-		\label{fig:1c}
+		\label{fig:2c}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{ugstartend.png}
 		\caption{}
-		\label{fig:1d}
+		\label{fig:2d}
 	\end{subfigure}
 	\caption{Ground track of the unperturbed nominal orbit during: (a) 1 orbit; (b) 1 day; (c) 10 days. Ground track path (\reddashedline), Starting point (\textcolor{red}{$\bullet$}), Ending point (\textcolor{red}{$\blacksquare$})
 	}
@@ -136,13 +136,13 @@ For establishing a good communication with the network of ground stations of Pol
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{ugro1orb.eps}
 		\caption{}
-		\label{fig:1a}
+		\label{fig:3a}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{ugro4orb.eps}
 		\caption{}
-		\label{fig:1b}
+		\label{fig:3b}
 	\end{subfigure}
 	
 	\caption{Ground track of the unperturbed repeating orbit during: (a) 1 orbit; (b) 4·k=4 orbits. Ground track path (\reddashedline), Starting point (\textcolor{red}{$\bullet$}), Ending point (\textcolor{red}{$\blacksquare$})
@@ -273,12 +273,12 @@ It is possible to distinguish a long-periodic behaviour and a short-periodic beh
 	\begin{subfigure}[b]{0.5\textwidth}
 		\includegraphics[width=\textwidth]{evolutionorbit2.eps}
 		\caption{}
-		\label{fig:1a}
+		\label{fig:8a}
 	\end{subfigure}%
 	\begin{subfigure}[b]{0.5\textwidth}
 		\includegraphics[width=\textwidth]{evolutionorbit3.eps}
 		\caption{}
-		\label{fig:1b}
+		\label{fig:8b}
 	\end{subfigure}
 	\caption{Orbit evolution representation in the 3D plane. Colors are used in order to let the reader understand the evolution of the orbit: in chronological order there are (\bluedashedline), (\orangedashedline), (\yellowdashedline), (\purpledashedline), (\reddashedline), (\greendashedline), (\cyandashedline), and (\magentadashedline). The initial position of spacecraft is (\textcolor{blue}{*}) and the final position of spacecraft is (\textcolor{red}{*}).
 	}
@@ -286,7 +286,7 @@ It is possible to distinguish a long-periodic behaviour and a short-periodic beh
 
 \subsection{Filtering} 
 
-The filtering of results is now performed to see how the perturbations generate behaviours with different frequencies, and to retrieve the long-period and the secular evolution of the data.
+The filtering of the results is now performed using the movemean function to see how the perturbations generate behaviours with different frequencies, and to retrieve the long-period and the secular evolution of the data. A period of 6 months has been chosen to for better visualization. 
 
 \begin{figure}[H]
 	\centering
@@ -300,19 +300,38 @@ Here, long-periodic behaviour is related to moon perturbation and short-periodic
 
 \section{Comparison with Real Data}
 
+To evaluate the precision of the methods used for the assignment, the models were compared with real data of the payload SDO, NORAD Catalogue Number 36395, from the site Space-Track.org. This choice was motivated because the payload’s orbit is similar to the nominal orbit of the assignment. The altitude of the orbit is also in the GSO region, which means the J2 effect and Moon disturbances are very prominent in the region. It is also important to note that a payload will correct its orbit using active propulsion. As the numerical model does not consider this kind of manoeuvres, a worse coincidence between results is expected. To compute the orbit propagation, the initial orbital elements were those collected from Space-Track at the initial time, shown on the table. To propagate the orbit, Gauss’ planetary equations in RSW frame were solved numerically using ode113. A low-pass filter of frequency $0.4949  day^{-1}$ was used to get the mean value every two orbits, considering the initial period. Filtering was done using \( N = \lceil \frac{T_{cut}}{\Delta t} \rceil \). \( T_{cut} \) is the period of the oscillation to discard and \( \Delta t \) is the time step of the propagation. 
+
+%cite: space-track.org
+%cite: https://www.n2yo.com/satellite/?s=36395
+
+\begin{table}[ht]
+	\centering
+	\caption{Keplerian elements of orbit}
+	\label{tab:keplerian_elements}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		a [km] & e [-] & i [°] & $\Omega$ [°] & $\omega$ [°] & altitude at perigee [km] \\
+		\hline
+		42165.38456 & 0.000069 & 27.833 & 169.5864 & 245.7244 & 35,783.9 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+
 \begin{figure}[H]
 	\centering
 	% First row with two figures
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{a_TLE.eps}
 		\caption{}
-		\label{fig:1a}
+		\label{fig:10a}
 	\end{subfigure}%
     \hfill
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{e_TLE.eps}
 		\caption{}
-		\label{fig:1b}
+		\label{fig:10b}
 	\end{subfigure}%
 	
 	% Second row with two figures
@@ -320,13 +339,13 @@ Here, long-periodic behaviour is related to moon perturbation and short-periodic
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{i_TLE.eps}
 		\caption{}
-		\label{fig:1c}
+		\label{fig:10c}
 	\end{subfigure}%
     \hfill
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{RAAN_TLE.eps}
 		\caption{}
-		\label{fig:1d}
+		\label{fig:10d}
 	\end{subfigure}%
 	
  % third row with two figures
@@ -334,20 +353,20 @@ Here, long-periodic behaviour is related to moon perturbation and short-periodic
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{w_TLE.eps}
 		\caption{}
-		\label{fig:1c}
+		\label{fig:1e}
 	\end{subfigure}%
 	\hfill
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{TA_TLE.eps}
 		\caption{}
-		\label{fig:1d}
+		\label{fig:1f}
 	\end{subfigure}
 	
 	\caption{Numerical, filtered and TLE data
 	}
 \end{figure}
 
-
+From the figures above, it can be observed that the numerical approach is capable of estimating the orbit with good reliability as the trends of both results are very similar. The differences seen on each plot were expected, as only J2 and Moon perturbations were taken into account for the numerical model. There’s a great difference in the short-term behaviour between numerical simulation and the real data. As the numerical simulation can generate data for any time interval, it can evaluate the short-term oscillations, while the real data is measured with a broader list of other elements that can change the values of the Keplerian data. 
 
 	
 \end{document}

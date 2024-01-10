@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2023.12.31)  9 JAN 2024 16:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2023.12.31)  10 JAN 2024 10:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -437,66 +437,6 @@ File: l3backend-pdftex.def 2023-11-09 L3 backend support: PDF output (pdfTeX)
 
 LaTeX Warning: Label `tab:keplerian_elements' multiply defined.
 
-
-LaTeX Warning: Label `fig:1a' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:1a' multiply defined.
-
-
-LaTeX Warning: Label `fig:1b' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:1b' multiply defined.
-
-
-LaTeX Warning: Label `fig:1a' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:1a' multiply defined.
-
-
-LaTeX Warning: Label `fig:1b' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:1b' multiply defined.
-
-
-LaTeX Warning: Label `fig:1a' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:1a' multiply defined.
-
-
-LaTeX Warning: Label `fig:1b' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:1b' multiply defined.
-
-
-LaTeX Warning: Label `fig:1c' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:1c' multiply defined.
-
-
-LaTeX Warning: Label `fig:1d' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:1d' multiply defined.
-
-
-LaTeX Warning: Label `fig:1c' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:1c' multiply defined.
-
-
-LaTeX Warning: Label `fig:1d' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:1d' multiply defined.
-
 )
 \openout1 = `"Planetary Mission.aux"'.
 
@@ -867,102 +807,102 @@ File: filter0.5year-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: filter0.5year-eps-converted-to.pdf  used on input line
  293.
 (pdftex.def)             Requested size: 472.03123pt x 227.19148pt.
+ [7 <./evolutionorbit2-eps-converted-to.pdf> <./evolutionorbit3-eps-converted-t
+o.pdf> <./filter0.5year-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <a_TLE.eps>
-(epstopdf)                    date: 2024-01-08 17:14:03
-(epstopdf)                    size: 311894 bytes
+(epstopdf)                    date: 2024-01-10 09:46:18
+(epstopdf)                    size: 303416 bytes
 (epstopdf)             Output file: <a_TLE-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-08 17:18:33
-(epstopdf)                    size: 102120 bytes
+(epstopdf)                    date: 2024-01-10 09:47:29
+(epstopdf)                    size: 113011 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=a_TLE-eps-converted-
 to.pdf a_TLE.eps>
-(epstopdf)             \includegraphics on input line 307.
+(epstopdf)             \includegraphics on input line 326.
 Package epstopdf Info: Output file is already uptodate.
-<a_TLE-eps-converted-to.pdf, id=206, 421.575pt x 316.18124pt>
+<a_TLE-eps-converted-to.pdf, id=224, 421.575pt x 316.18124pt>
 File: a_TLE-eps-converted-to.pdf Graphic file (type pdf)
 <use a_TLE-eps-converted-to.pdf>
-Package pdftex.def Info: a_TLE-eps-converted-to.pdf  used on input line 307.
+Package pdftex.def Info: a_TLE-eps-converted-to.pdf  used on input line 326.
 (pdftex.def)             Requested size: 212.41261pt x 159.31084pt.
 Package epstopdf Info: Source file: <e_TLE.eps>
-(epstopdf)                    date: 2024-01-08 17:14:11
-(epstopdf)                    size: 289861 bytes
+(epstopdf)                    date: 2024-01-10 09:46:30
+(epstopdf)                    size: 258898 bytes
 (epstopdf)             Output file: <e_TLE-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-08 17:18:34
-(epstopdf)                    size: 101981 bytes
+(epstopdf)                    date: 2024-01-10 09:47:30
+(epstopdf)                    size: 91473 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=e_TLE-eps-converted-
 to.pdf e_TLE.eps>
-(epstopdf)             \includegraphics on input line 313.
+(epstopdf)             \includegraphics on input line 332.
 Package epstopdf Info: Output file is already uptodate.
-<e_TLE-eps-converted-to.pdf, id=207, 421.575pt x 316.18124pt>
+<e_TLE-eps-converted-to.pdf, id=225, 421.575pt x 316.18124pt>
 File: e_TLE-eps-converted-to.pdf Graphic file (type pdf)
 <use e_TLE-eps-converted-to.pdf>
-Package pdftex.def Info: e_TLE-eps-converted-to.pdf  used on input line 313.
+Package pdftex.def Info: e_TLE-eps-converted-to.pdf  used on input line 332.
 (pdftex.def)             Requested size: 212.41261pt x 159.31084pt.
 Package epstopdf Info: Source file: <i_TLE.eps>
-(epstopdf)                    date: 2024-01-08 17:14:50
-(epstopdf)                    size: 145030 bytes
+(epstopdf)                    date: 2024-01-10 09:46:42
+(epstopdf)                    size: 149971 bytes
 (epstopdf)             Output file: <i_TLE-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-08 17:18:36
-(epstopdf)                    size: 54765 bytes
+(epstopdf)                    date: 2024-01-10 09:47:31
+(epstopdf)                    size: 58464 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=i_TLE-eps-converted-
 to.pdf i_TLE.eps>
-(epstopdf)             \includegraphics on input line 321.
+(epstopdf)             \includegraphics on input line 340.
 Package epstopdf Info: Output file is already uptodate.
-<i_TLE-eps-converted-to.pdf, id=208, 421.575pt x 316.18124pt>
+<i_TLE-eps-converted-to.pdf, id=226, 421.575pt x 316.18124pt>
 File: i_TLE-eps-converted-to.pdf Graphic file (type pdf)
 <use i_TLE-eps-converted-to.pdf>
-Package pdftex.def Info: i_TLE-eps-converted-to.pdf  used on input line 321.
+Package pdftex.def Info: i_TLE-eps-converted-to.pdf  used on input line 340.
 (pdftex.def)             Requested size: 212.41261pt x 159.31084pt.
 Package epstopdf Info: Source file: <RAAN_TLE.eps>
-(epstopdf)                    date: 2024-01-08 17:15:07
-(epstopdf)                    size: 143473 bytes
+(epstopdf)                    date: 2024-01-10 09:47:01
+(epstopdf)                    size: 122068 bytes
 (epstopdf)             Output file: <RAAN_TLE-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-08 17:18:37
-(epstopdf)                    size: 54548 bytes
+(epstopdf)                    date: 2024-01-10 09:47:32
+(epstopdf)                    size: 45252 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=RAAN_TLE-eps-convert
 ed-to.pdf RAAN_TLE.eps>
-(epstopdf)             \includegraphics on input line 327.
+(epstopdf)             \includegraphics on input line 346.
 Package epstopdf Info: Output file is already uptodate.
-<RAAN_TLE-eps-converted-to.pdf, id=209, 421.575pt x 316.18124pt>
+<RAAN_TLE-eps-converted-to.pdf, id=227, 421.575pt x 316.18124pt>
 File: RAAN_TLE-eps-converted-to.pdf Graphic file (type pdf)
 <use RAAN_TLE-eps-converted-to.pdf>
-Package pdftex.def Info: RAAN_TLE-eps-converted-to.pdf  used on input line 327.
+Package pdftex.def Info: RAAN_TLE-eps-converted-to.pdf  used on input line 346.
 
 (pdftex.def)             Requested size: 212.41261pt x 159.31084pt.
 Package epstopdf Info: Source file: <w_TLE.eps>
-(epstopdf)                    date: 2024-01-08 17:15:19
-(epstopdf)                    size: 189973 bytes
+(epstopdf)                    date: 2024-01-10 09:47:09
+(epstopdf)                    size: 181396 bytes
 (epstopdf)             Output file: <w_TLE-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-08 17:18:38
-(epstopdf)                    size: 73085 bytes
+(epstopdf)                    date: 2024-01-10 09:47:34
+(epstopdf)                    size: 67345 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=w_TLE-eps-converted-
 to.pdf w_TLE.eps>
-(epstopdf)             \includegraphics on input line 335.
+(epstopdf)             \includegraphics on input line 354.
 Package epstopdf Info: Output file is already uptodate.
-<w_TLE-eps-converted-to.pdf, id=210, 421.575pt x 316.18124pt>
+<w_TLE-eps-converted-to.pdf, id=228, 421.575pt x 316.18124pt>
 File: w_TLE-eps-converted-to.pdf Graphic file (type pdf)
 <use w_TLE-eps-converted-to.pdf>
-Package pdftex.def Info: w_TLE-eps-converted-to.pdf  used on input line 335.
+Package pdftex.def Info: w_TLE-eps-converted-to.pdf  used on input line 354.
 (pdftex.def)             Requested size: 212.41261pt x 159.31084pt.
 Package epstopdf Info: Source file: <TA_TLE.eps>
-(epstopdf)                    date: 2024-01-08 17:16:05
-(epstopdf)                    size: 137934 bytes
+(epstopdf)                    date: 2024-01-10 09:47:20
+(epstopdf)                    size: 128565 bytes
 (epstopdf)             Output file: <TA_TLE-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-08 17:18:39
-(epstopdf)                    size: 50167 bytes
+(epstopdf)                    date: 2024-01-10 09:47:35
+(epstopdf)                    size: 47204 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=TA_TLE-eps-converted
 -to.pdf TA_TLE.eps>
-(epstopdf)             \includegraphics on input line 341.
+(epstopdf)             \includegraphics on input line 360.
 Package epstopdf Info: Output file is already uptodate.
-<TA_TLE-eps-converted-to.pdf, id=211, 421.575pt x 316.18124pt>
+<TA_TLE-eps-converted-to.pdf, id=229, 421.575pt x 316.18124pt>
 File: TA_TLE-eps-converted-to.pdf Graphic file (type pdf)
 <use TA_TLE-eps-converted-to.pdf>
-Package pdftex.def Info: TA_TLE-eps-converted-to.pdf  used on input line 341.
+Package pdftex.def Info: TA_TLE-eps-converted-to.pdf  used on input line 360.
 (pdftex.def)             Requested size: 212.41261pt x 159.31084pt.
- [7 <./evolutionorbit2-eps-converted-to.pdf> <./evolutionorbit3-eps-converted-t
-o.pdf> <./filter0.5year-eps-converted-to.pdf>] [8 <./a_TLE-eps-converted-to.pdf
-> <./e_TLE-eps-converted-to.pdf> <./i_TLE-eps-converted-to.pdf> <./RAAN_TLE-eps
--converted-to.pdf> <./w_TLE-eps-converted-to.pdf> <./TA_TLE-eps-converted-to.pd
-f>] (Planetary Mission.aux)
+ [8] [9 <./a_TLE-eps-converted-to.pdf> <./e_TLE-eps-converted-to.pdf> <./i_TLE-
+eps-converted-to.pdf> <./RAAN_TLE-eps-converted-to.pdf> <./w_TLE-eps-converted-
+to.pdf> <./TA_TLE-eps-converted-to.pdf>] [10] (Planetary Mission.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-12-11>
@@ -975,32 +915,33 @@ Package rerunfilecheck Info: File `"Planetary Mission".out' has not changed.
 (rerunfilecheck)             Checksum: D80241226BC9156C8D2D2ED24EA85411;2404.
  ) 
 Here is how much of TeX's memory you used:
- 16512 strings out of 474495
- 321294 string characters out of 5743934
+ 16536 strings out of 474495
+ 321572 string characters out of 5743934
  1940460 words of memory out of 5000000
- 38594 multiletter control sequences out of 15000+600000
+ 38615 multiletter control sequences out of 15000+600000
  562707 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,760b,920s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,1248b,920s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\tamim\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk><C:/Users/tamim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/tamim/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmbx12.pfb><C:/Users/tamim/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmex10.pfb><C:/Users/tamim/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/tamim/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/tamim/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tamim/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/ta
-mim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/U
-sers/tamim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pf
-b><C:/Users/tamim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb><C:/Users/tamim/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmsy7.pfb><C:/Users/tamim/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmtt10.pfb><C:/Users/tamim/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "Planetary Mission.pdf" (8 pages, 14635874 bytes).
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/tamim/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/tamim/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/t
+amim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/
+Users/tamim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.p
+fb><C:/Users/tamim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr9.pfb><C:/Users/tamim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb><C:/Users/tamim/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmsy7.pfb><C:/Users/tamim/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tamim/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on "Planetary Mission.pdf" (10 pages, 14636390 bytes).
 PDF statistics:
- 351 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
+ 368 PDF objects out of 1000 (max. 8388607)
+ 37 named destinations out of 1000 (max. 500000)
  223 words of extra memory for PDF output out of 10000 (max. 10000000)
 
