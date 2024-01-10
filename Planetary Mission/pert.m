@@ -1,5 +1,36 @@
 function acc = pert(time,state,fr,perturb,kep)
 
+% perturbation Function that computes the Moon and J2 acceleration 
+% disturbances (both, only Moon or only J2). The output can be in different
+% reference frames, to be chosen by the user.
+%
+% INPUTS
+% time [1]          Time in MJD2000 to compute the Moon disturbance [days].
+% state [6x1]       Initial state. Can be a Cartesian state vector in
+%                   the format [r;v] where r is the position and
+%                   v is the initial velocity. [L] and [L/T].
+%                   Can also be a vector with the initial
+%                   Keplerian elements [Semi-major axis, eccentricity,
+%                   inclination, RAAN, Argument of perigee, True anomaly].
+%                   The units are [[L], [-], [rad], [rad], [rad], [rad]].
+% frame [char]      Reference frame in which the disturbance will be 
+%                   computed. Must be:
+%                       - 'XYZ': Earth centered Inertial.
+%                       - 'RSW': Radial transversal out-of-plane.
+%                       - 'TNH': Tangential normal out-of-plane.
+% perturb [char]    (Optional) Which perturbances will be considered. Must
+%                   be:
+%                       - 'MOON': only Moon disturbance is computed;
+%                       - 'J2': only J2 disturbance is computed;
+%                       - 'BOTH': (default) Moon and J2 disturbances are
+%                       computed.
+% kep [logical]     (Optional) If the input "state" are the Keplerian
+%                   elements, this input must be a logical true. By default
+%                   it's false.
+%
+% OUTPUT
+% acc [3x1]         Disturbing acceleration in the respective reference
+%                   frame. [L/T^2].
 
 muE = astroConstants(13);   % planetary constant of Earth - [kg3/s2]
 R_E = astroConstants(23);   % radius of Earth

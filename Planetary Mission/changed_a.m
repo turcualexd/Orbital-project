@@ -11,9 +11,6 @@ function a = changed_a(k,m,mu,Te)
 % OUTPUT
 % a [1]     Required semi-major axis to have a repeating groundtrack with
 %           ratio k:m. [L]
-
-
-
 a = (((Te*m/k/2/pi)^2)*mu)^(1/3);
 end
 

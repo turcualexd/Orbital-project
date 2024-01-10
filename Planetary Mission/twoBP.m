@@ -1,23 +1,6 @@
 function ds = twoBP(state,a_dist,mu,fr)
 
 % Function for the ODE of the Two Body Problem, both for the perturbed and unperturbed 
-% INPUTS
-% state [6x1]   Initial state. Can be cartesian state vector [r;v] or keplerian elements vector.
-%               fr=='XYZ', it is cartesian vector.
-%               fr=='TNH' or fr=='RSW', it is Keplerian
-%               elements vector.
-% a_dist [3x1]  Disturbing acceleration in the respective reference
-%               frame
-% mu [1]        Gravitational parameter of the central body  
-% fr [char]     Reference frame in which the two body problem ODE will be 
-%               computed. Must be:
-%                   - 'XYZ': Earth centered Inertial
-%                   - 'RSW': Radial transversal out-of-plane
-%                   - 'TNH': Tangential normal out-of-plane
-%
-% OUTPUT
-% ds [6x1]      Derivatives of the state vector with respect to time in
-%               it's respective reference frame (same as input).
 
 if strcmp(fr,'XYZ')
     % slices the variables

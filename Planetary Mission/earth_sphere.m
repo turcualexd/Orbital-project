@@ -33,6 +33,9 @@ function [xx,yy,zz] = earth_sphere(varargin)
 %   Clay M. Thompson 4-24-1991, CBM 8-21-92.
 %   Will Campbell, 3-30-2010
 %   Copyright 1984-2010 The MathWorks, Inc. 
+%   
+%   Modification: Tamim Harunor
+%   Date: 08-01-2024
 
 %% Input Handling
 [cax,args,nargs] = axescheck(varargin{:}); % Parse possible Axes input
@@ -88,7 +91,9 @@ if nargout == 0
     cax = newplot(cax);
 
     % Load and define topographic data
-    load('topo.mat','topo','topomap1');
+
+    % load('topo.mat','topo','topomap1');
+    earthTexture = imread('EarthTexture.jpg');
 
     % Rotate data to be consistent with the Earth-Centered-Earth-Fixed
     % coordinate conventions. X axis goes through the prime meridian.
@@ -96,17 +101,22 @@ if nargout == 0
     %
     % Note that if you plot orbit trajectories in the Earth-Centered-
     % Inertial, the orientation of the contintents will be misleading.
-    topo2 = [topo(:,181:360) topo(:,1:180)]; %#ok<NODEF>
+
+    % topo2 = [topo(:,181:360) topo(:,1:180)]; %#ok<NODEF>
     
     % Define surface settings
     props.FaceColor= 'texture';
     props.EdgeColor = 'none';
     props.FaceLighting = 'phong';
-    props.Cdata = topo2;
+    % props.Cdata = topo2;
+    props.Cdata = earthTexture;
 
     % Create the sphere with Earth topography and adjust colormap
+    % surface(x,y,z,props,'parent',cax)
+    % colormap(topomap1)
     surface(x,y,z,props,'parent',cax)
-    colormap(topomap1)
+    colormap(cax, 'default')
+
 
 % Replace the calls to surface and colormap with these lines if you do 
 % not want the Earth's topography displayed.

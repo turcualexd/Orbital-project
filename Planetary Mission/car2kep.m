@@ -18,7 +18,6 @@ function [kep] = car2kep(r, v, mu)
 % th           [1x1]  True anomaly              [rad]
 % mu           [1x1]  Gravitational parameter   [km^3/s^2]
 
-
 r_norm = norm(r); 
 v_norm = norm(v);
 

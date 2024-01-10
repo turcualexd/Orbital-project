@@ -1,7 +1,20 @@
 function data = extract2LE(filename,wrap)
-% extracts the orbital elements from a TLE file and computes the true
-% anomaly and the semi-major axis from the data
-
+% Function to read the orbital elements from a TLE file. It also computes
+% the true anomaly and the semi-major axis from the data.
+% 
+% INPUT:
+%  filename [char]  Name/path of the file containing the TLE data
+%  wrap [logical]   (Optional) If you want to wrap the angles between
+%                   [0,360] it must be a logical true. To keep values
+%                   unwraped it must be a logical false.
+%                   By default it's false.
+%
+% OUTPUT
+% data [nx7]        Matrix with 7 columns and 1 line for each data point in
+%                   the TLE file. Each column represents one element:
+%                   Time in MJD2000, Semi-major axis, Eccentricity, RAAN,
+%                   Argument of Perigee, True Anomaly.
+%                   Units: Days, km, [-], deg, deg, deg, deg.
 
 if nargin == 1
     wrap = false;

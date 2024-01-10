@@ -1,13 +1,28 @@
 function groundtrack_plotting(long,lat,fig_title,n_fig,fig_param)
-
-% Function plotting the groundtrack path of the satellite
+% Function that plots the groundtrack path of the satellite.
+%
+% INPUT
+% long [n]          Vector with the longitudes of the groundtrack path[rad]
+% lat [n]           Vector with the latitudes of the groundtrack path [rad]
+% fig_title [char]  (Optional) Title of the figure.
+% n_fig [1]         (Optional) Number of the figure that will be created.
+%                   If the value is not provided, then a new figure is
+%                   created. This argument is useful for plotting two
+%                   different groundtracks on the same figure.
+%                   If n_fig matches with an existing figure, it will
+%                   keeps the previous plot and add the new one.
+% fig_param [cell]  (Optional) Additional parameters for the plot. Must be
+%                   a cell structure as {Param1,Value1,Param2,Value2,...}
+%
+% OUTPUT
+% This function doesn't returns anything, but a new figure is created
 
 if nargin <= 3
    n_fig = length(findobj('type','figure'))+1; 
 end
 
 % open the map of the Earth for the background of the plots
-earth_bg = imread('world_map_1.jpg');
+earth_bg = imread('world_map_2.jpg');
 
 % add a NaN everytime longitude goes from 180 to -180 or from -180 to 180
 n = length(long)*2;

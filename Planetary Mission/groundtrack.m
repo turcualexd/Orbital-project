@@ -1,4 +1,46 @@
 function [lat,long] = groundtrack(s0,tspan,t0,G0,fr,perturb,wrap)
+% Function that solves the groundtrack problem for a satellite orbiting
+% Earth, considering or not the effects of J2 and Moon perturbations.
+% The function can run in diferrent reference frames and solve the 2BP with
+% different methods.
+% Firstly it solves the 2BP to get the position of the satellite along
+% time.
+% Then it computes the ground track latitude and longitude for each time
+% instant.
+%
+% INPUTS
+% s0 [3x2] or [6]   Initial state. Can be a Cartesian state matrix [3x2] on
+%                   the format [r0 v0] where r0 is the initial position and
+%                   v0 is the initial velocity. [L] and [L/T].
+%                   Can also be a vector of length 6 with the initial
+%                   Keplerian elements [Semi-major axis, eccentricity,
+%                   inclination, RAAN, Argument of perigee, True anomaly].
+%                   The units are [[L], [-], [rad], [rad], [rad], [rad]].
+% tspan [n]         Time span vector where the groundtrack will be
+%                   evaluated. It must be in seconds. [s]
+% t0 [1]            Initial time in MJD2000. It's necessary for Moon's
+%                   perturbation. [days]
+% G0 [1]            Initial Greenwich latitude at time t0. [rad]
+% frame [char]      Reference frame in which the inputs are given and the
+%                   calculations will be done. Must be:
+%                       - 'XYZ': Earth centered Inertial. Solves with
+%                       Cartesian equations;
+%                       - 'RSW': Radial transversal out-of-plane. Solves
+%                       with Gauss equations on RSW frame;
+%                       - 'TNH': Tangential normal out-of-plane. Solves
+%                       with Gauss equations on TNH frame;
+% perturb [char]    (Optional) Perturbations to be considered during orbit
+%                   propagation. Can be:
+%                       - 'MOON': only Moon perturbation;
+%                       - 'J2': only J2 effect;
+%                       - 'BOTH': J2 and Moon effects;
+%                       - false (default): no perturbations.
+% wrap [logical]    (Optional) Wrap values of longitude to [-pi;pi]. For
+%                   default it's true and wraps the values.
+%
+% OUTPUTS
+% lat [nx1]         Vector of latitudes computed by the groundtrack [rad].
+% lon [nx1]         Vector of longitudes computed by the groundtrack [rad].
 
 muE = astroConstants(13);   
 w_E = deg2rad(15.04)/3600;  
