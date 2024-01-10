@@ -12,19 +12,19 @@
 \contentsline {section}{\numberline {1.4}Conclusion and results}{6}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Heliocentric legs}{6}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Gravity assist}{7}{subsection.1.4.2}%
-\contentsline {chapter}{\numberline {2}Planetary mission}{7}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Introduction}{7}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Nominal Orbit}{7}{subsection.2.1.1}%
+\contentsline {chapter}{\numberline {2}Planetary mission}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{8}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Nominal Orbit}{8}{subsection.2.1.1}%
 \contentsline {section}{\numberline {2.2}Groundtrack}{8}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Unperturbed Groundtrack}{8}{subsection.2.2.1}%
-\contentsline {subsubsection}{Nominal Orbit Groundtrack}{8}{subsubsection*.20}%
-\contentsline {subsubsection}{Repeating Groundtrack}{9}{subsubsection*.22}%
+\contentsline {subsubsection}{Nominal Orbit Groundtrack}{8}{subsubsection*.23}%
+\contentsline {subsubsection}{Repeating Groundtrack}{9}{subsubsection*.25}%
 \contentsline {subsection}{\numberline {2.2.2}Perturbed Groundtrack}{9}{subsection.2.2.2}%
-\contentsline {subsubsection}{Assigned Perturbations}{9}{subsubsection*.25}%
-\contentsline {subsubsection}{Nominal and Repeating Groundtrack}{10}{subsubsection*.30}%
+\contentsline {subsubsection}{Assigned Perturbations}{9}{subsubsection*.28}%
+\contentsline {subsubsection}{Nominal and Repeating Groundtrack}{10}{subsubsection*.33}%
 \contentsline {section}{\numberline {2.3}Orbit Propagation}{11}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}History of the Keplerian Elements}{11}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Representation of the Evolution of the Orbit}{12}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Filtering}{12}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.2}Representation of the Evolution of the Orbit}{13}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Filtering}{13}{subsection.2.3.3}%
 \contentsline {section}{\numberline {2.4}Comparison with Real Data}{13}{section.2.4}%
-\contentsline {chapter}{Bibliography}{14}{chapter*.41}%
+\contentsline {chapter}{Bibliography}{15}{chapter*.44}%

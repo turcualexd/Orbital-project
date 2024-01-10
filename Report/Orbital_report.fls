@@ -935,6 +935,13 @@ INPUT .\Images\\solar_system.jpg
 INPUT .\Images\\solar_system.jpg
 INPUT .\Images\\solar_system.jpg
 INPUT .\Images\\solar_system.jpg
+INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\vf\public\kpfonts\jkpmn7t.vf
+INPUT .\Images\\hyperbola.jpg
+INPUT Images\\hyperbola.jpg
+INPUT .\Images\\hyperbola.jpg
+INPUT .\Images\\hyperbola.jpg
+INPUT .\Images\\hyperbola.jpg
+INPUT .\Images\\hyperbola.jpg
 INPUT .\Body\Chapter_2\01_introduction.tex
 INPUT .\Body\Chapter_2\01_introduction.tex
 INPUT Body\Chapter_2\01_introduction.tex
@@ -958,8 +965,6 @@ INPUT Body\Chapter_2\02_groundtrack.tex
 INPUT .\Body\Chapter_2\02_groundtrack.tex
 INPUT .\Body\Chapter_2\02_groundtrack.tex
 INPUT Body\Chapter_2\02_groundtrack.tex
-INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\vf\public\kpfonts\jkpmn7c.vf
-INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kpfonts\jkpmnc.tfm
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\kpfonts\t1jkptt.fd
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\kpfonts\t1jkptt.fd
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex\latex\kpfonts\t1jkptt.fd
@@ -1029,15 +1034,14 @@ INPUT .\Images\\ugro4orb-eps-converted-to.pdf
 INPUT .\Images\\ugro4orb-eps-converted-to.pdf
 INPUT .\Images\\ugro4orb-eps-converted-to.pdf
 INPUT .\Images\\ugro4orb-eps-converted-to.pdf
+INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\vf\public\kpfonts\jkpmn7c.vf
+INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kpfonts\jkpmnc.tfm
 INPUT .\Images\\Perturbation chart.png
 INPUT Images\\Perturbation chart.png
 INPUT .\Images\\Perturbation chart.png
 INPUT .\Images\\Perturbation chart.png
 INPUT .\Images\\Perturbation chart.png
 INPUT .\Images\\Perturbation chart.png
-INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\vf\public\kpfonts\jkpmn7t.vf
-INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kpfonts\jkpmne.tfm
-INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kpfonts\jkpmn8r.tfm
 INPUT .\Images\\pg10d.eps
 INPUT Images\\pg10d.eps
 INPUT .\Images\\pg10d.eps
@@ -1071,6 +1075,9 @@ INPUT .\Images\\zoompgro4orb-eps-converted-to.pdf
 INPUT .\Images\\zoompgro4orb-eps-converted-to.pdf
 INPUT .\Images\\zoompgro4orb-eps-converted-to.pdf
 INPUT .\Images\\zoompgro4orb-eps-converted-to.pdf
+INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\vf\public\kpfonts\jkpmn7t.vf
+INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kpfonts\jkpmne.tfm
+INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kpfonts\jkpmn8r.tfm
 INPUT .\Body\Chapter_2\03_orbit_propagation.tex
 INPUT .\Body\Chapter_2\03_orbit_propagation.tex
 INPUT Body\Chapter_2\03_orbit_propagation.tex

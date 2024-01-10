@@ -1,18 +1,20 @@
+\vspace*{-0.3cm}
 \section{Conclusion and results}
 \label{sec:conclusion}
 
 It was then used \autoref{alg:brute} in the time domain selected at the end of \autoref{subsec:cost_plot_analysis},  using 40 elements for each array. The obtained results in terms of cost and dates are reported in the following tables:
 
-\vspace{0.5cm}
+\vspace{0.3cm}
 
 \begin{minipage}{0.5\linewidth}
     \centering
+    \small
     \captionsetup{type=table}
     \begin{tabular}{|c|c|c|c|}
         \hline
         $\Delta V_1 \, [km/s]$ & $\Delta V_2 \, [km/s]$ & $\Delta V_3 \, [km/s]$ & $\Delta V_{tot} \, [km/s]$\\
         \hline
-        $4.0813$ & $3.3130$ & $2.7715 \cdot 10^{-6}$ & $7.3942$\\
+        $4.0813$ & $3.3130$ & $2.8919 \cdot 10^{-6}$ & $7.3942$\\
         \hline
     \end{tabular}
     \caption{Costs $\Delta V$ of the optimal mission}
@@ -20,12 +22,13 @@ It was then used \autoref{alg:brute} in the time domain selected at the end of \
 \end{minipage}\hfill
 \begin{minipage}{0.5\linewidth}
     \centering
+    \small
     \captionsetup{type=table}
-    \begin{tabular}{|c|c|c|}
+    \begin{tabular}{|c|c|c|c|}
         \hline
-        Dep. Date & Fb. Date & Arr. Date \\
+        Dep. Date & Fb. Date & Arr. Date & $\text{TOF}_{tot}$ (yrs) \\
         \hline
-        $\left[03/06/2033 \right]$ & $\left[10/02/2034\right]$ & $\left[27/03/2036\right]$ \\
+        $\left[03/06/2033 \right]$ & $\left[10/02/2034\right]$ & $\left[27/03/2036\right]$ & $2.8146$\\
         \hline
     \end{tabular}
     \caption{Optimal mission dates in Gregorian calendar}
@@ -33,23 +36,54 @@ It was then used \autoref{alg:brute} in the time domain selected at the end of \
 \end{minipage}
 \vspace*{5pt}
 
-The obtained results were validated through the pure brute-force algorithm, with a more refined grid of search in the same domain. In particular 100 elements where considered, the data obtained were:
+The obtained results were validated through the pure brute-force algorithm, with a grid of search in the 13 years reduced domain. In particular 100 elements where considered, the data obtained were:
 
-... put the two tables of brute force algorithm
+\vspace{0.2cm}
+
+\begin{minipage}{0.5\linewidth}
+    \centering
+    \small
+    \captionsetup{type=table}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        $\Delta V_1 \, [km/s]$ & $\Delta V_2 \, [km/s]$ & $\Delta V_3 \, [km/s]$ & $\Delta V_{tot} \, [km/s]$\\
+        \hline
+        $4.5786$ & $2.1223$ & $1.0347$ & $7.7357$\\
+        \hline
+    \end{tabular}
+    \caption{Costs validation}
+    \label{table:cost_validation}
+\end{minipage}\hfill
+\begin{minipage}{0.5\linewidth}
+    \centering
+    \small
+    \captionsetup{type=table}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Dep. Date & Fb. Date & Arr. Date & $\text{TOF}_{tot}$ (yrs) \\
+        \hline
+        $\left[07/07/2033 \right]$ & $\left[04/03/2034\right]$ & $\left[23/03/2035\right]$ & $1.7073$\\
+        \hline
+    \end{tabular}
+    \caption{Mission dates validation}
+    \label{table:date_validation}
+\end{minipage}
 
 \subsection{Heliocentric legs}
 \label{subsec:heliocentric}
 The two heliocentric legs associated with the solution computed through \autoref{alg:brute} can be characterized through the keplerian elements shown in \autoref{table:Orb_Par}:
+\vspace*{-0.2cm}
 \begin{table}[H]
 
     \centering
+    \small
     \begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
     Arc &  $a  \ [AU]$ & $e \ [-]$ & $i \ [deg]$ & $\Omega \ [deg]$ & $\omega \ [deg]$ & $\theta_{dep} \ [deg]$ & $\theta_{arr} \ [deg]$ \\
     \hline
-    M$\to$E &  $1.1602$ & $0.2870$ & $1.18$ & $321.55$ & $105.97$ & $195.38$ & $74.03$ \\
+    M$\to$E &  $1.1602$ & $0.2870$ & $1.18$ & $321.54$ & $105.98$ & $195.38$ & $74.02$ \\
     \hline
-    E$\to$G & $1.9445$ & $0.5029$ & $4.17$ & $141.55$ & $339.91$ & $20.09$ & $231.37$ \\
+    E$\to$G & $1.9445$ & $0.5029$ & $4.17$ & $141.54$ & $339.92$ & $20.09$ & $231.36$ \\
     \hline
     \end{tabular}
     
@@ -69,9 +103,9 @@ Known the incoming and outcoming heliocentric velocities of the spacecraft and t
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
-    $r_p \ [km]$ &  $\delta _{tot} \ [\deg]$ & $v_{\infty}^{-} \ [km/s]$ & $v_{\infty}^{+} \ [km/s]$ & $e_{-} \ [-]$ & $e_{+} \ [-]$ & $\Delta T_{soi} \ [days]$ & $\Delta V_{helio} \ [km/s]$ \\
+    $r_p \ [km]$ &  $\delta _{tot} \ [\deg]$ & $v_{\infty}^{-} \ [km/s]$ & $v_{\infty}^{+} \ [km/s]$ & $e_{-} \ [-]$ & $e_{+} \ [-]$ & $\Delta T_{soi} \ [h]$ & $\Delta V_{helio} \ [km/s]$ \\
     \hline
-    $7763.39$ &  $54.8918$ & $7.743439$ & $7.743435$ & $2.167834$ & $2.167833$ & $2.6871$ & $7.1381$ \\
+    $7762.47$ &  $54.8918$ & $7.743345$ & $7.743341$ & $2.167669$ & $2.167667$ & $64.4900$ & $7.1386$ \\
     \hline
     \end{tabular}
     
@@ -88,13 +122,4 @@ The permanence time passed inside the sphere of influence has been computed usin
 r_{SOI,E} = r_{S \to E}\left(\frac{M_E}{M_S}\right)^{2/5} = 9.24647 \cdot 10^{5} \ km
 \end{equation}
 
-
-
-
-
-
-
-
-
-
-
+\cfig{hyperbola.jpg}{Gravity assist manoeuvre}{hyperbola}{0.8}
