@@ -24,20 +24,12 @@ The method implemented to solve the optimization problem is the \textbf{brute fo
     \State $\Delta V_{min} = 10^{10}$
     \For{$i$ in $T_{dep}$}  
         \For{$j$ in $\Delta T_{1}$} 
-            \State Calculate $T_{fly-by}$
-            \State Calculate first Lambert's arc 
-            \State Calculate Mars' velocity at $T_{dep}$ 
-            \State Calculate $\Delta V_1$
+            \State Calculate $T_{fly-by}$, first Lambert's arc, Mars' velocity at $T_{dep}$ and  $\Delta V_1$
             \For{$k$ in $\Delta T_{2}$}
-                \State Calculate $T_{arr}$
-                \State Calculate second Lambert's arc
-                \State Calculate Asteroid's velocity at $T_{arr}$ 
-                \State Calculate $\Delta V_2$, $\Delta V_3$, $\Delta V_{tot}$
+                \State Calculate $T_{arr}$, second Lambert's arc, Asteroid's velocity at $T_{arr}$, $\Delta V_2$, $\Delta V_3$, $\Delta V_{tot}$
                 \If{$\Delta v_{tot} < \Delta v_{min}$ and $r_p > r_{Earth} + 500 \; km$}
                 \State $\Delta v_{min} = \Delta v_{tot}$
-                \State $T_{dep,min} = T_{dep} $
-                \State $T_{fb,min}  = T_{fb}$
-                \State $T_{arr,min} = T_{arr}$
+                \State $T_{dep,min} = T_{dep} $;   $T_{fb,min}  = T_{fb}$;   $T_{arr,min} = T_{arr}$
                 \EndIf
             \EndFor
         \EndFor

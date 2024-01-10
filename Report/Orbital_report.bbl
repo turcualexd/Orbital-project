@@ -18,4 +18,40 @@ Gianmarco~Radice Pierluigi Di~Lizia.
 \newblock Paper, 2004.
 \newblock Site: \url{https://www.esa.int/gsp/ACT/resources/act_papers}.
 
+\bibitem{perigee_alt}
+ESA.
+\newblock Altitude at perigee for geo.
+\newblock Website, 2020.
+\newblock Site: \url{
+  https://www.esa.int/ESA_Multimedia/Images/2020/03/Geostationary_orbit}.
+
+\bibitem{vallado}
+David~A. Vallado.
+\newblock {\em Fundamentals of Astrodynamics and Applications}.
+\newblock Microcosm Press and Springer, 2013.
+
+\bibitem{thesis_chart}
+T.~G.~R. Reid.
+\newblock Orbital diversity for global navigation satellite systems.
+\newblock Stanford University, 2017.
+\newblock Site:
+  \url{https://www.researchgate.net/publication/323245224_Orbital_Diversity_for_Global_Navigation_Satellite_Systems}.
+
+\bibitem{curtis_book}
+Howard~D. Curtis.
+\newblock {\em Orbital Mechanics for Engineering Students}.
+\newblock Elsevier, 2014.
+
+\bibitem{space_track}
+Space Track.
+\newblock Tles data.
+\newblock Website, 2024.
+\newblock Site: \url{https://www.space-track.org/auth/login}.
+
+\bibitem{n2yo}
+N2YO.
+\newblock Details on compared mission sto.
+\newblock Website, 2024.
+\newblock Site: \url{https://www.n2yo.com/satellite/?s=36395}.
+
 \end{thebibliography}

@@ -6,11 +6,16 @@
 
 The first part of the assignment aims at designing an interplanetary transfer from Mars to asteroid 1036 Ganymed exploiting a powered gravity assist on Earth. The problem is analyzed through the patched conics method, without considering the injection and arrival hyperbolae. The initial and final velocity vector of the satellite are assumed to be the same of the respective celestial body. The two heliocentric legs are calculated through the Lambert problem. The trajectory is selected with the only criteria of minimizing the cost of the mission, assessed through the total $\Delta V$. The latter is computed by summing different contributions:
 
+
 \begin{equation}
-    \Delta V_{tot}= \Delta V_1 + \Delta V_2 + \Delta V_3
+        \Delta V_{tot}= \Delta V_1 + \Delta V_2 + \Delta V_3
+    \qquad
+        \Delta V_i= \lVert \boldsymbol{V_{+,i}} - \boldsymbol{V_{-,i}} \rVert
 \end{equation}
 
-Where the three terms are defined as:
+
+Where $\boldsymbol{V_{-,i}}$ and $\boldsymbol{V_{+,i}}$ are the velocity vectors before and after the i-th manoeuvre respectively.
+The three terms are defined as:
 
 \begin{itemize}
     [wide,itemsep=3pt,topsep=3pt]
@@ -21,13 +26,6 @@ Where the three terms are defined as:
 
 All the manoeuvres are assumed to be impulsive, i.e. they change only the velocity vector of the spacecraft, mantaining invariated the position vector. Note that $\Delta V_{1}$ and $\Delta V_{2}$ are related to heliocentric velocities, while $\Delta V_{3}$ is calculated through relative geocentric velocities. 
 
-For each manoeuvre the cost is computed as:
-
-\begin{equation}
-    \Delta V_i= \lVert \boldsymbol{V_{+,i}} - \boldsymbol{V_{-,i}} \rVert
-\end{equation}
-
-where $\boldsymbol{V_{-,i}}$ and $\boldsymbol{V_{+,i}}$ are the velocity vectors before and after the i-th manoeuvre respectively.
 
 \subsection{Assigned data and constraints}
 \label{subsec:data_constraints}
