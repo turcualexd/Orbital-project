@@ -1,13 +1,24 @@
+%This code displays the cost plot of the two  heliocentric legs.
+%The first is the contour plot of the injection cost in the first
+% heliocentric leg. On the x axis there is the departure date, in mjd2000,
+% from Mars; on the y axis there is the TOF in the first leg, in mjd2000. 
+%%The second is the contour plot of the exit cost from the second
+% heliocentric leg. On the x axis there is the fly by , in mjd2000,
+% from Earth; on the y axis there is the TOF in the second leg in mjd2000.
+%In both the contour plot, the cost is expressed  in km/s
+%Authors: Marcello Pareschi, Daniele Paternoster
+%% Input Data: first 13 years of the given 
 clear; close all; clc;
 
-earl_dep_date = [2028 01 01 00 00 00];
-late_arr_date = [2058 01 01 00 00 00];
+earl_dep_date = [2028 01 01 00 00 00]; %gregorian calendar
+late_arr_date = [2041 01 01 00 00 00]; %gregorian calendar
 
 
 num             = 200; %number of elements of array of mjd2000 
 
 earl_dep_mjd2000 = date2mjd2000(earl_dep_date);
 late_arr_mjd2000 = date2mjd2000(late_arr_date);
+%%
 
 [kep_mars, ~] = uplanet (earl_dep_mjd2000, 4);
 
