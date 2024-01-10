@@ -94,20 +94,18 @@
 
 \DeclareMathOperator{\atantwo}{atan2}
 
-\newcommand{\twofig}[6]{
+\newcommand{\twofig}[5]{
 \begin{figure}[H]
 	\begin{minipage}{0.48\linewidth}
 		\centering
-		\includegraphics[width=\linewidth]{#1}
-		\caption{#2}
-		\label{fig:#3}
+		\includegraphics[width=#5\linewidth]{#1}
 	\end{minipage}\hfill
 	\begin{minipage}{0.48\linewidth}
 		\centering
-		\includegraphics[width=\linewidth]{#4}
-		\caption{#5}
-		\label{fig:#6}
+		\includegraphics[width=#5\linewidth]{#2}
 	\end{minipage}
+	\caption{#4}
+	\label{fig:#3}
 \end{figure}
 }
 
@@ -125,6 +123,30 @@
 		\caption{#5}
 		\label{fig:#6}
 	\end{minipage}
+\end{figure}
+}
+
+\newcommand{\IVfig}[7]{
+\begin{figure}[H]
+	\begin{minipage}{0.48\linewidth}
+		\centering
+		\includegraphics[width=#7\linewidth]{#1}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\centering
+		\includegraphics[width=#7\linewidth]{#2}
+	\end{minipage}
+	\vfill
+	\begin{minipage}{0.48\linewidth}
+		\centering
+		\includegraphics[width=#7\linewidth]{#3}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\centering
+		\includegraphics[width=#7\linewidth]{#4}
+	\end{minipage}
+	\caption{#6}
+	\label{fig:#5}
 \end{figure}
 }
 
@@ -156,6 +178,16 @@
 	\vspace*{-13pt}
 \end{wrapfigure}
 }
+
+% Second chapter commands
+\newcommand{\reddashedline}{\textcolor{red}{---}}
+\newcommand{\orangedashedline}{\textcolor{orange}{---}}
+\newcommand{\yellowdashedline}{\textcolor{yellow}{---}}
+\newcommand{\greendashedline}{\textcolor{green}{---}}
+\newcommand{\bluedashedline}{\textcolor{blue}{---}}
+\newcommand{\purpledashedline}{\textcolor{purple}{---}}
+\newcommand{\cyandashedline}{\textcolor{cyan}{---}}
+\newcommand{\magentadashedline}{\textcolor{magenta}{---}}
 
 %-------------------------------------------------------------------------
 %	MAIN BODY OF THE REPORT

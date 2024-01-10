@@ -1,0 +1,28 @@
+\section{Introduction}
+\label{sec:introduction_cap2}
+
+The PoliMi Space Agency wants to launch a Planetary Explorer Mission, to  perform  Earth Observation. This section carries out relevant orbital analysis and groundtrack estimation while also considering two perturbation models. A modified groundtrack was proposed for a repeating groundtrack, and two propagation methods are used to perform the analysis which are then compared. A comparison between the real data of a satellite and its analytical results obtained with the code model is also performed for model validity.
+
+
+\subsection{Nominal Orbit}
+
+From the provided orbital parameters this satellite heavily contains geosynchronous orbital characteristics. Hence, the altitude at perigee is chosen as 35786 km - where it is possible to see the moon and J2 perturbation effect. $\Omega$ (right ascension of ascending node), $\omega$ (argument of perigee), and $f_0$ (initial true anomaly) are chosen arbitrarily for a simpler analysis.
+
+%citation for GSO: https://www.esa.int/ESA_Multimedia/Images/2020/03/Geostationary_orbit
+
+\begin{table}[ht]
+	\centering
+	\label{tab:keplerian_elements}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		a [km] & e [-] & i [°] & $\Omega$ [°] & $\omega$ [°] & altitude at perigee [km] \\
+		\hline
+		42159 & 0.0007 & 32.5934 & 0 & 85 & 35786 \\
+		\hline
+	\end{tabular}
+	\caption{Keplerian elements of the orbit}
+\end{table}
+
+The unperturbed nominal orbit is propagated as below in the Earth-centered reference frame:
+
+\cfig{nominal_orbit.eps}{Assigned orbit}{nominal_orbit}{1}
