@@ -14,6 +14,7 @@ TOF = (arrival - departure)*24*3600;
 
 deltav1 = norm(VI'-V1);
 
+%deltav2 = norm(VF'-V2);
 
 VI = VI';
 
@@ -21,4 +22,4 @@ VF = VF';
 
 deltav_tot = deltav1;
 
-end
+return
