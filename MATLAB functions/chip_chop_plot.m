@@ -89,7 +89,7 @@ axis tight;
 figure;
 [X,Y] = meshgrid(array_mjd2000, array_mjd2000);
 contour(X,Y,dV_2,linspace(1,10,500), 'LineWidth',1.5);
-title('Earth - Asteroid65 Leg', 'Interpreter','latex', 'FontSize',15)
+title('Earth - 1036 Ganymed Leg', 'Interpreter','latex', 'FontSize',12)
 xlabel("Departure MJD2000", 'Interpreter','latex');
 ylabel('Arrival MJD2000', 'Interpreter','latex')
 clr2 = colorbar;
