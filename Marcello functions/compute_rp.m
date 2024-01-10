@@ -15,5 +15,3 @@ fun = @(rp) Delta(rp) ;
 options.Display = 'off';
 
 rp = fsolve(fun, R_plan, options);
-
-return
