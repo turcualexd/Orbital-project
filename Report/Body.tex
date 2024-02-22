@@ -1,0 +1,57 @@
+\begin{document}
+%\pagenumbering{Roman}
+
+%---------------------------------------------------------------------------
+% TITLE PAGE
+%---------------------------------------------------------------------------
+
+\input{Configuration files/title_page}
+
+%\vspace*{20mm}
+%\input{Body/abstract}
+
+%---------------------------------------------------------------------------
+% INDEX
+%---------------------------------------------------------------------------
+
+{\let\clearpage\relax
+\vspace*{10mm}
+\hypersetup{linkcolor=black}
+\small
+\tableofcontents}
+\clearpage
+
+%{\hypersetup{linkcolor=black}\listoftables}
+
+%{\hypersetup{linkcolor=black}\listoffigures}
+
+%---------------------------------------------------------------------------
+% BEGINNING OF THE WRITTEN PART
+%---------------------------------------------------------------------------
+
+%\setcounter{page}{1}
+%\pagenumbering{arabic}
+
+\chapter{Interplanetary mission}
+%\input{Body/Chapter_1/01_symbols}
+\input{Body/Chapter_1/02_introduction}
+\input{Body/Chapter_1/03_algorithms_description}
+\input{Body/Chapter_1/04_time_windows_reduction}
+\input{Body/Chapter_1/05_conclusion_results}
+
+%---------------------------------------------------------------------------
+
+\chapter{Planetary mission}
+
+\input{Body/Chapter_2/01_introduction}
+\input{Body/Chapter_2/02_groundtrack}
+\input{Body/Chapter_2/03_orbit_propagation}
+\input{Body/Chapter_2/04_comparison}
+
+%---------------------------------------------------------------------------
+% BIBLIOGRAFIA
+%---------------------------------------------------------------------------
+
+\bibliography{bibliography}
+
+\end{document}

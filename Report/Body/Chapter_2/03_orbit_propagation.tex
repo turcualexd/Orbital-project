@@ -1,0 +1,63 @@
+\section{Orbit Propagation}
+\label{sec:orbit_propagation}
+
+Orbits were propagated using Cartesian coordinates (Newton’s equations of motion), or Keplerian elements (Gauss’ planetary equations). Gauss' equations are presented in the Radial-Transversal-Out-of-plane reference frame (RSW). All formulas can be found in \cite{curtis_book}.
+
+\begin{equation}
+	\begin{aligned}
+		\frac{da}{dt} &= \frac{2a^2}{h} \left( e\sin f a_r + \frac{p}{r} a_s \right) \\
+		\frac{de}{dt} &= \frac{1}{h} \left( p\sin f a_r + \left( (p + r) \cos f + re \right) a_s \right) \\
+		\frac{di}{dt} &= \frac{r\cos (f + \omega)}{h} a_w \\
+		\frac{d\Omega}{dt} &= \frac{r\sin (f + \omega)}{h\sin i} a_w \\
+		\frac{d\omega}{dt} &= \frac{1}{he} \left( -p\cos f a_r + (p + r)\sin f a_s \right) - \frac{r\sin(f + \omega) \cos i}{h\sin i} a_w \\
+		\frac{df}{dt} &= \frac{h}{r^2} + \frac{1}{eh} \left( p\cos f a_r - (p + r)\sin f a_s \right)
+	\end{aligned}
+\end{equation}
+\vspace*{3pt}
+
+For the moon perturbation, which cannot be directly expressed in RSW frame, it's possible to transform the perturbing accelerations from Cartesian to RSW. The three rotation matrices for this are shown below where a rotation of \(\Omega\) around the third axis of the inertial frame is performed, then a rotation of \(i\) around the first axis of the rotated frame, and finally a rotation of an angle \(\theta\ + \omega\) around the third axis of the last frame.
+
+\begin{equation}
+	R_{\Omega} = \begin{bmatrix}
+		\cos \Omega & \sin \Omega & 0 \\
+		-\sin \Omega & \cos \Omega & 0 \\
+		0 & 0 & 1
+	\end{bmatrix}; \quad
+	R_{i} = \begin{bmatrix}
+		1 & 0 & 0 \\
+		0 & \cos i & \sin i \\
+		0 & -\sin i & \cos i
+	\end{bmatrix}; \quad
+	R_{\theta + \omega} = \begin{bmatrix}
+		\cos (\theta + \omega) & \sin (\theta + \omega) & 0 \\
+		-\sin (\theta + \omega) & \cos (\theta + \omega) & 0 \\
+		0 & 0 & 1
+	\end{bmatrix}
+\end{equation}
+
+
+\subsection{History of the Keplerian Elements} 
+
+The Keplerian elements were obtained through the integration of the equation of motion and of the Gauss planetary equations. The propagation time is taken as 10 years, so it's sufficient to see the perturbations properly developed for this project's case. The evolution of the data and of the relative error between both methods of integration are presented below:
+
+\cfig{orbitprop10yrs.eps}{Evolution of the data}{orbitprop10yrs}{1}
+
+\cfig{relative_error10yrs.eps}{Relative error between both methods of integration}{relative_error10yrs}{1}
+
+It is possible to distinguish a long-periodic behaviour and a short-periodic behaviour by looking at the evolution of orbital elements. It is very clear for eccentricity \( e \), inclination \( i \), and also for argument of perigee \( \omega \) to a sufficient extent. Semi-major axis presents both short-periodic and long-periodic behaviour. As for the right ascension of ascending node \( \Omega \), and true anomaly \( f \), the short-periodic behaviour is less visible but still present. From \autoref{fig:relative_error10yrs} of relative error between Gauss’ resolution and Cartesian resolution, it can be observed that the two methods are equivalent if the precision of the two is compared.
+
+
+\subsection{Representation of the Evolution of the Orbit}
+
+\twofig{evolutionorbit2.eps}{evolutionorbit3.eps}{orbit_evolution}{
+	Orbit evolution representation in the 3D plane. Colors are used in order to let the reader understand the evolution of the orbit: in chronological order there are (\bluedashedline), (\orangedashedline), (\yellowdashedline), (\purpledashedline), (\reddashedline), (\greendashedline), (\cyandashedline), and (\magentadashedline). The initial position of spacecraft is (\textcolor{blue}{*}) and the final position of spacecraft is (\textcolor{red}{*}).
+}{1}
+
+
+\subsection{Filtering} 
+
+The filtering of the results is now performed using the \textit{movemean} function to see how the perturbations generate behaviours with different frequencies, and to retrieve the long-period and the secular evolution of the data. A period of 6 months has been chosen to for better visualization. 
+
+\cfig{filter0.5year.eps}{Orbit Perturbations}{filtering}{1}
+
+Here, long-periodic behaviour is related to moon perturbation and short-periodic perturbation is related to J2 effect. This is due to the fact that the J2 perturbation is related to the oblateness of the Earth and of the S/C’s orbit, whose period is much lower than the Moon orbit period. Two different filters are used: the filter used to remove short-term behaviour has a cut-off frequency of \(100 \, \text{days}^{-1}\), instead, the filter used to remove long-term behaviour has a cut-off frequency of \(1 \, \text{days}^{-1}\).

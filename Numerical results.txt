@@ -1,0 +1,8 @@
+Departure date: 	12207.3866
+Fly by date: 		12458.7280
+Arrival date: 		13235.4569
+DV_tot: 		7.394
+Fly by rp: 		7762.47
+T_SOI: 			64.490
+Ratio: 			4.05112524 * 10^-7
+Semi-major axis: 	42166.167

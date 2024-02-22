@@ -1,0 +1,152 @@
+\section{Reduction of the time windows}
+\label{sec:time_red}
+
+\subsection{Resonance period analysis}
+\label{subsec:res_period}
+
+The first natural reduction on the domain of interest that could come to mind is to search the frequency on which the three celestial bodies repeat the relative positions on their orbits. On the approximation of circular orbits, this particular time period would be the synodic period generalized for the case of three bodies.
+However, this path is unviable because the orbit of the asteroid has a relevant eccentricity. To better comprehend the problem of having that eccentricity, particular attention have to be paid on the definitions of phasing and synodic period for two bodies:
+
+\begin{itemize}
+    [wide,itemsep=3pt,topsep=3pt]
+    \item \textbf{Phasing $\bm{\phi}$} $\rightarrow$ the angle between two celestial bodies, calculated as the difference in their \textbf{true anomalies}:
+    \vspace*{-8pt}
+    \begin{equation}
+        \phi (t) = \theta^{(2)} (t) - \theta^{(1)} (t)
+    \end{equation}
+
+    \item \textbf{Synodic period $\bm{T_{syn}}$} $\rightarrow$ if two celestial bodies have initial phasing $\phi_0$, they will return to the same phasing after a synodic period $T_{syn}$:
+    \vspace*{-10pt}
+    \begin{equation}
+        \phi (t_0) = \phi_0 \quad \rightarrow \quad
+        \phi (t_0 + T_{syn}) = \phi_0
+    \end{equation}
+\end{itemize}
+
+As the definitions rely on the \textbf{true anomalies} of celestial bodies, non-circular orbits mean that the same phasing does NOT imply the same relative positions between them.
+In other words, once the synodic period has passed, the phasing of the three considered bodies keeps unchanged but it could result in a completely different relative positions with respect to the initial condition.
+
+The problem needs to be reformulated. The goal is to find the period of time that elapses between a state of orbital positions of the bodies and the next occurrence of the same state. In literature, this particular period is called \textbf{period of orbital resonance} and it will be here indicated as $T_{res}$. Supposing that the orbits keep the other Keplerian elements unchanged during the revolution, the relation on true anomalies can be expressed as:
+
+\begin{equation}
+    \begin{dcases}
+        \theta^{(1)} (t_0) = \theta_0^{(1)} \\
+        \theta^{(2)} (t_0) = \theta_0^{(2)} \\
+        \theta^{(3)} (t_0) = \theta_0^{(3)}
+    \end{dcases}
+    \quad \rightarrow \quad
+    \begin{dcases}
+        \theta^{(1)} (t_0 + T_{res}) = \theta_0^{(1)} \\
+        \theta^{(2)} (t_0 + T_{res}) = \theta_0^{(2)} \\
+        \theta^{(3)} (t_0 + T_{res}) = \theta_0^{(3)}
+    \end{dcases}
+\end{equation}
+
+Since the true anomaly for an orbit repeats itself every orbital period $T$, it results:
+
+\begin{equation} \label{eq:t_res}
+    \begin{dcases}
+        \theta_0^{(1)} = \theta^{(1)} (t_0 + i T^{(1)}) =
+        \theta^{(1)} (t_0 + T_{res}) \\
+        \theta_0^{(2)} = \theta^{(2)} (t_0 + j T^{(2)}) =
+        \theta^{(2)} (t_0 + T_{res}) \\
+        \theta_0^{(3)} = \theta^{(3)} (t_0 + k T^{(3)}) =
+        \theta^{(3)} (t_0 + T_{res})
+    \end{dcases}
+    \quad \rightarrow \quad
+    T_{res} = i T^{(1)} = j T^{(2)} = k T^{(3)}
+    \qquad
+    (i, j, k \in \mathbbm{N})
+\end{equation}
+\vspace*{5pt}
+
+As obtained in \autoref{eq:t_res}, the resonance period $T_{res}$ must be a multiple of all the three orbital periods. To find three compatible natural numbers for $i, j, k$, the following procedure can be followed:
+
+\vspace*{5pt}
+\begin{minipage}{0.65\linewidth}
+    \begin{algorithmic}
+        \State $i = 1; \quad j = i \cdot T^{(1)}/T^{(2)}; \quad
+        k = i \cdot T^{(1)}/T^{(3)}$
+        \While{$j \notin \mathbbm{N}$ or $k \notin \mathbbm{N}$}
+        \Comment a tolerance $tol$ must be implemented
+        \State $i = i + 1$
+        \State $j = i \cdot T^{(1)}/T^{(2)}$
+        \State $k = i \cdot T^{(1)}/T^{(3)}$
+        \EndWhile\\
+        \Return $i, j, k$
+    \end{algorithmic}
+\end{minipage}
+\vspace*{5pt}
+
+Note that, since a perfect resonance of three celestial bodies is realistically impossible, a certain tolerance $tol$ must be introduced when evaluating $j, k \in \mathbbm{N}$ in order to compute a reasonable $T_{res}$. In the specific case of this report, the execution of the above algorithm returned the following results:
+
+\begin{table}[H]
+
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    $\bm{tol}$ & $\bm{i \; (Earth)}$ & $\bm{j \; (Mars)}$ & $\bm{k \; (1036 \, Ganymed)}$ \\
+    \hline
+    $0.1159$ & $13$ & $6.9119$ & $4.8841$ \\
+    \hline
+    \end{tabular}
+    
+    \caption{Results of the resonance analysis}
+    \label{table:resonance}
+    
+\end{table}
+
+$T_{res}$ results to be 13 Earth's sidereal years, so the time domain can be restricted accordingly. It is important to keep in mind that this is an approximation, but since the mission has to departure in a reasonable date, it is acceptable to restrain the time window to the first 13 years. In any case, the cost of the mission will repeat similarly after 13 years.
+
+
+\subsection{Cost-plot analysis}
+\label{subsec:cost_plot_analysis}
+The reduction of the departure time window in \autoref{subsec:res_period} is a powerful but not sufficient restriction for the domain to analyze with \autoref{alg:brute}. Hence, a more detailed analysis has to be performed, including some restrictions for the first and second time of flight. The present paragraph presents and studies in detail two cost-plots. The first is related to the injection cost on the first Lambert's arc while the second exit cost is referred to the second Lambert's arc. Notice that the pork-chop plot of each leg can't be plotted, since the
+the two arcs are linked at the fly-by position. Given this consideration, the two cost plot obtained with the 13-year constrained departure window are following.
+
+\twofigII{chip_1.pdf}{Cost plot for 1st leg}{chip_1}{chip_2.pdf}{Cost plot for 2nd leg}{chip_2}{1}
+
+The contour plot are set to a maximum value for the $\Delta V$ of 10 km/s, greater values are excluded since they wouldn't be relevant for the present study. Moreover, it was decided to use symmetrical time domains for departure and arrival, expressed in \textit{mjd2000} units. 
+Some important information can be retrieved from the contour plot of \autoref{fig:chip_1}.
+\begin{itemize}
+    [wide,itemsep=3pt,topsep=3pt]
+    \item All the local minima that reach the lowest values are located along the diagonal, indicating that there is a constraint on the time of flight for the first arc. This behaviour is present also in the second arc \autoref{fig:chip_2}. Above the diagonal of both the plots the minima are higher \autoref{fig:chip_2}, or not existent \autoref{fig:chip_1} for the set of contour lines considered. This is related to the fact that the Lambert's arc were calculated without considering the multi-revolution solutions \autoref{subsec:data_constraints}. Indeed, if the time of flight imposed is higher, the Lambert'arc solution will have a higher semi-major axis. This results in a higher $\Delta V$ to inject or exit the transfer arc since the energy difference between orbits becomes considerable. The solution that embraces multi-revolution arcs would benefit in this sense and could open new scenarios for the interplanetary arcs, as cited in \cite{phd_menzio}.
+    \item It can be noticed that a repetion pattern of the minima is present in both the figures. With particular emphasis on the Mars-Earth leg, the minimum shown as the blue-coloured zone, repeats every synodic period \autoref{table:syn_res}. This is due to the quasi-circular orbits of both the planets. 
+    \item A repetition pattern is noticeable also in \autoref{fig:chip_2}. To better analyze the plot, the values of the last three columns of \autoref{table:syn_res} can be exploited. It can be noticed that the synodic period $T_{syn}^{E,G}$  can not explain the reoccurence of the minima while the resonance periods are both meaningful. The high tolerance resonance period $T_{res,1}^{E,G}$ fits all the repeated minima along the diagonal. The low tolerance resonance period $T_{res,2}^{E,G}$ can catch a lower frequency pattern, appreciable by focusing on the first and second-last \textit{P-shaped} minima along the diagonal.
+    \item Regarding the cost-plot of Earth-to-Mars transfer \autoref{fig:chip_1}, a particular behaviour of the minimum can be noticed on the zoomed box. The focus allows to appreciate a yellow ridge that separates the minimum zone in to two sub-area that contains mainly two minimum zones. As mentioned in \cite{phd_menzio}, the two zones correspond to two solutions for the Lambert's problem, in particular to the value of the transfer angle $\Delta \theta$. The upper zone is related to $\Delta \theta > \pi$ while the lower zone corresponds to $\Delta \theta < \pi$. When  $\Delta \theta = \pi$, since the orbital planes of Earth and Mars are not exactly coincident, the plane of the heliocentric transfer leg becomes almost perpendicular to the ecliptic, increasing the injection cost of the mission \cite{battin}. When the co-planar and the circular assumptions on Earth and Mars orbits are made, the central part of the minimum lobe in the zoomed box coincides with the Hohmann transfer \cite{phd_menzio}.
+\end{itemize}
+
+\begin{table}[H]
+
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    $T_{syn}^{M,E} \; [mjd2000]$ & $T_{syn}^{E,G} \; [mjd2000]$ & $T_{res,1}^{E,G} \; \text{(high $tol$)} \; [mjd2000]$ & $T_{res,2}^{E,G} \; \text{(low $tol$)} \; [mjd2000]$ \\
+    \hline
+    $779.9418$ & $585.0697$ & $1095.7711$ & $2922.0562$ \\
+    \hline
+    \end{tabular}
+    
+    \caption{Results of the resonance analysis}
+    \label{table:syn_res}
+    
+\end{table}
+
+From the observations presented above, it was decided to analyze the same cost graph but plotting the time of flight on the y-axis. In order to consider reasonable time of flight domains, some coarse reduction was adopted. In particular, long times of flight are excluded for the already mentioned reasons, while very short times of flight are not taken into the domain since they are associated to high transfer-costs. Infact, this last situation corresponds to the yellow diagonal line of the plots in \autoref{fig:chip_1} and \autoref{fig:chip_2}.
+
+\twofigII{chip_tof_1.pdf}{Cost plot for 1st leg}{chip_tof_1}{chip_tof_2.pdf}{Cost plot for 2nd leg}{chip_tof_2}{1}
+
+For the Earth-Mars transfer, multiples and sub-multiples of the Hohmann transfer time were considered. The hypothesis is reasonable since Mars and Earth have almost circular and co-planar orbits \cite{global_optimisation}.
+
+The same hypothesis can't be applied on the second heliocentric leg because of Ganymed's eccentric orbit and Hohmann's hypothesis doesn't hold. 
+A relevant area of lowest minima can be noticed in \autoref{fig:chip_tof_2}, in particular the vertical bar in the narrow of the fly-by date $1.25 \cdot 10^4$ \textit{mjd2000}. This means that by choosing this flyby date, the choice of the second time of flight is less relevant since the minima develops along all the plotted vertical. In addition to this, the Hohmann's time of flight multiples and submultiples can be considered for the first time of flight by subtracting them to the considered fly-by date. This operation generates a resized domain for the departure dates.
+Summing up all the considerations, the following restricted time domain was selected:
+\begin{itemize}
+    [wide,itemsep=3pt,topsep=3pt]
+    \item $T_{dep} = 1.25 \cdot 10^4 - \left[0.65, 2\right]\cdot \Delta T_{Hoh} $ \textit{mjd2000}
+    \item $\Delta T_1 =  \left[0.65, 2\right]\cdot \Delta T_{Hoh}$ \textit{mjd2000}
+    \item $\Delta T_2 = \left[200, 800\right]$ \textit{mjd2000}
+\end{itemize}
+
+
+\label{subsec:final_window}
